@@ -1,0 +1,64 @@
+<div class="modal-header green-bg with-button">
+    <div class="pull-right">
+        <div class="searchbox"><input type="text" class="form-control" placeholder="Search for Surveyors..."></div>
+        <button class="btn btn-clear" ng-click="$dismiss()">
+      <i class="ln-cross"></i>
+    </button>
+    </div>
+    <h5 class="modal-title">Assign a new surveyor</h5>
+</div>
+<div class="modal-body">
+    <table class="file-list table hover-btn">
+        <tbody>
+            <tr ng-repeat="r in repeat">
+                <td width="70">
+                    <div class="img-thumbu">
+                        <img src="img/surve.png" class="full-image">
+                    </div>
+                </td>
+                <td>Manya Surve</td>
+                <td width="150">
+                    <div class="input-group">
+                        <input type="text" name="assignFrom" placeholder="From" class="form-control" uib-datepicker-popup="{{format}}" ng-model="formData.assignFrom"
+                            is-open="popup.assignFrom" ng-change="change(formData.assignFrom)" datepicker-options="dateOptions"
+                            readonly/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="popup.assignFrom = true">
+                                <i class="fa fa-calendar"></i>
+                            </button>
+                        </span>
+                    </div>
+                </td>
+                <td width="120">
+                    <ui-select ng-model="formData.toTime">
+                        <ui-select-match placeholder="Select Time">{{$select.selected}}</ui-select-match>
+                        <ui-select-choices repeat="t in time | filter: $select.search">{{t}}</ui-select-choices>
+                    </ui-select>
+
+                </td>
+                <td width="150">
+                    <div class="input-group">
+                        <input type="text" name="assignTo" placeholder="To" class="form-control
+                           " uib-datepicker-popup="{{format}}" ng-model="formData.assignTo" is-open="popup.assignTo" ng-change="change(formData.assignTo)"
+                            datepicker-options="dateOptions" readonly/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="popup.assignTo=t rue">
+                                <i class="fa fa-calendar"></i>
+                            </button>
+                        </span>
+                    </div>
+                </td>
+                <td width="120">
+                    <ui-select ng-model="formData.fromTime">
+                        <ui-select-match placeholder="Select Time">{{$select.selected}}</ui-select-match>
+                        <ui-select-choices repeat="t in time | filter: $select.search">{{t}}</ui-select-choices>
+                    </ui-select>
+                </td>
+                <td width="70" class="text-right">
+                    <button class="btn btn-success btn-block">Assign</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
