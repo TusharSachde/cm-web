@@ -9,27 +9,17 @@ var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function ($http) {
     var navigation = [{
-        name: "Employee",
+        name: "Profile",
         classis: "active",
-        anchor: "company",
+        sref: "coach-profile", //Keep sref empty if subnav
         icon: "user",
-        subnav: [{
-            name: "Profile",
-            classis: "active",
-            anchor: "coach.profile",
-            icon: "user"
-        }]
+        subnav: []
     }, {
         name: "Timeline",
         classis: "active",
-        anchor: "timeline",
+        sref: "timeline", //Keep sref empty if subnav
         icon: "calendar",
-        subnav: [{
-            name: "Music Broadcast Ltd",
-            classis: "active",
-            anchor: "timeline",
-            icon: "music"
-        }]
+        subnav: []
     }];
 
 
