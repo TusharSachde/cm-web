@@ -25,11 +25,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('LoginCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("login");
     $scope.menutitle = NavigationService.makeactive("Login");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+
+    $scope.formData = {};
+    $scope.formData.loginType = 'Athelete'
 })
 
 .controller('TimelineCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {

@@ -1159,7 +1159,7 @@ img.uploadingImage {
 }
 
 .login-section {
-    padding: 20px 0 20px;
+    padding: 20px 0 30px;
     .btn,
     .form-control {
         border-radius: 75px;
@@ -1177,6 +1177,22 @@ img.uploadingImage {
 .red-skin {
     background-color: $red;
     border-color: $red !important;
+}
+
+.blue-skin {
+    background-color: $blue;
+    border-color: $blue !important;
+}
+
+.form-invalid {
+    color: $brand-danger;
+    .form-control {
+        border-color: $brand-danger;
+        color: $brand-danger;
+        &::-webkit-input-placeholder {
+            color: $brand-danger;
+        }
+    }
 }
 
 
