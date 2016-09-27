@@ -9,9 +9,9 @@
 @import "../bower_components/angular-toastr/dist/angular-toastr.css";
 @import "../bower_components/angular-hotkeys/build/hotkeys.css";
 @import "icons";
-$blue: #1fc8ec;
+$blue: #004a9b;
 $orange: #f29c2c;
-$red: #ea5249;
+$red: #c70e17;
 $green: #35c565;
 $yellow: #f4dc11;
 $google: #4285F4;
@@ -22,6 +22,9 @@ $brand-warning: $orange;
 $brand-danger: $red;
 $brand-success: $green;
 $body-color-font: #505050;
+$brand-primary: $blue !default;
+$brand-danger: $red !default;
+$brand-success: $green !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "template/icons";
 @import "template/main";
@@ -33,13 +36,17 @@ input {
     outline: none !important;
 }
 
-body {}
-
 img.loading {
     text-align: center;
     opacity: 1;
     width: 32px !important;
     height: auto;
+}
+
+.logo {
+    >a {
+        margin-top: 7px;
+    }
 }
 
 img {
@@ -717,17 +724,11 @@ form.search-form {
     overflow-y: auto;
 }
 
-.form-control,
-.table td {
-    text-transform: capitalize;
-}
-
 .text-upper {
     text-transform: uppercase;
 }
 
-.text-lower,
-input[type="email"].form-control {
+.text-lower {
     text-transform: lowercase;
 }
 
@@ -1000,6 +1001,11 @@ img.uploadingImage {
     padding: 0 !important;
 }
 
+.no-pad-up {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
 .ml-25 {
     margin-left: 25px;
 }
@@ -1118,6 +1124,59 @@ img.uploadingImage {
 
 .pad-verti {
     padding: 40px 0;
+}
+
+.account-top-bar {
+    background: white;
+    border-bottom: none;
+    float: left;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+.ul-justified {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: table;
+    width: 100%;
+    >li {
+        display: table-cell;
+        cursor: pointer;
+        font-weight: 700;
+        color: #868383;
+        padding: 20px 0 15px;
+        font-size: 16px;
+        text-transform: uppercase;
+        border-bottom: 5px solid transparent;
+        @include transition(all 300ms ease);
+        &.active,
+        &:hover {
+            border-color: $brand-primary;
+            color: #555;
+        }
+    }
+}
+
+.login-section {
+    padding: 20px 0 20px;
+    .btn,
+    .form-control {
+        border-radius: 75px;
+        padding: 10px 20px;
+    }
+    p>a {
+        text-decoration: underline;
+    }
+}
+
+.thick-font {
+    font-weight: 600 !important;
+}
+
+.red-skin {
+    background-color: $red;
+    border-color: $red !important;
 }
 
 

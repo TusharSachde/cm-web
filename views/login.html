@@ -3,21 +3,37 @@
         <div class="account-top-bar">
             <div class="container">
                 <div class="logo">
-                    <a ui-sref="login" title="Absolute"><img src="img/logo.png" alt="Absolute" height="45"></a>
+                    <a ui-sref="login" title="Coach Mentor"><img src="img/logo.png" alt="Coach Mentor" height="45"></a>
                 </div>
             </div>
         </div>
         <div class="acount-sec">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 col-md-offset-4">
-                        <div class="contact-sec">
-                            <div class="widget-title text-center">
-                                <h3 class="text-center">Google Login</h3>
-                                <span>Login with your Google ID</span>
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="contact-sec no-pad-up">
+                            <div class="login-tab text-center">
+                                <ul class="ul-justified ul-nav">
+                                    <li class="active">Athlete</li>
+                                    <li>Coach</li>
+                                    <li>Author</li>
+                                </ul>
                             </div>
-                            <div class="clearfix"></div>
-                            <a class="btn btn-google btn-icon btn-block" ui-sref="dashboard"><i class="fa fa-google"></i>Sign In with Google</a>
+                            <form name="login" class="login-section">
+                                <p class="text-center">Fill in you details to login or <a ui-sref="register">Register Now</a></p>
+                                <div class="form-group">
+                                    <input type="email" class="form-control thick-font" placeholder="Email Address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control thick-font" placeholder="Password">
+                                </div>
+                                <div class="text-right">
+                                    Forgot Password ?
+                                </div>
+                                <div class="text-center">
+                                    <a class="btn btn-primary thick-font" ui-sref="coach-profile">Log In</a>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
