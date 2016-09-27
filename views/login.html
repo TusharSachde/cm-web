@@ -14,13 +14,13 @@
                         <div class="contact-sec no-pad-up">
                             <div class="login-tab text-center">
                                 <ul class="ul-justified ul-nav">
-                                    <li ng-class="{'active' : formData.loginType == 'Athelete'}" ng-click="formData.loginType = 'Athelete'">Athlete</li>
-                                    <li ng-class="{'active' : formData.loginType == 'Coach'}" ng-click="formData.loginType = 'Coach'">Coach</li>
-                                    <li ng-class="{'active' : formData.loginType == 'Author'}" ng-click="formData.loginType = 'Author'">Author</li>
+                                    <li ng-class="{'active' : formData.loginType == 'athlete'}" ng-click="formData.loginType = 'athlete'">Athlete</li>
+                                    <li ng-class="{'active' : formData.loginType == 'coach'}" ng-click="formData.loginType = 'coach'">Coach</li>
+                                    <li ng-class="{'active' : formData.loginType == 'author'}" ng-click="formData.loginType = 'author'">Author</li>
                                 </ul>
                             </div>
                             <form name="login" class="login-section" ng-submit="doLogin(formData);">
-                                <p class="text-center">Fill in you details to login or <a ui-sref="register">Register Now</a></p>
+                                <p class="text-center">Fill in you details to login or <a ui-sref="register-coach">Register Now</a></p>
                                 <div class="form-group" ng-class="{'form-invalid': login.email.$invalid && login.email.$touched}">
                                     <input type="email" name="email" ng-model="formData.email" class="form-control thick-font" placeholder="Email Address" required>
                                 </div>

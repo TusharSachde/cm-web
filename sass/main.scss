@@ -30,6 +30,11 @@ $brand-success: $green !default;
 @import "template/main";
 @import "template/responsive";
 @import "custom-switch";
+@mixin flexer($number) {
+    @include flex(0 0 $number);
+    max-width: $number;
+}
+
 button,
 div,
 input {
@@ -1132,6 +1137,14 @@ img.uploadingImage {
     float: left;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
     width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+.account-sec {
+    padding-top: 72px;
 }
 
 .ul-justified {
@@ -1162,7 +1175,9 @@ img.uploadingImage {
     padding: 20px 0 30px;
     .btn,
     .form-control {
-        border-radius: 75px;
+        border-radius: 5px;
+    }
+    .btn {
         padding: 10px 20px;
     }
     p>a {
@@ -1192,6 +1207,44 @@ img.uploadingImage {
         &::-webkit-input-placeholder {
             color: $brand-danger;
         }
+    }
+}
+
+.account-user-sec {
+    z-index: 9;
+}
+
+.round-form {
+    .form-control {
+        border-radius: 5px;
+    }
+}
+
+.flex-row {
+    padding: 0;
+    width: 100%;
+    @include display(flex);
+    .flex-col {
+        @include flex(1);
+        width: 100%;
+        +.flex-col {
+            padding-left: 5px;
+        }
+    }
+    .flex-col-10 {
+        @include flexer(10%);
+    }
+    .flex-col-20 {
+        @include flexer(20%);
+    }
+    .flex-col-25 {
+        @include flexer(25%);
+    }
+    .flex-col-33 {
+        @include flexer(33%);
+    }
+    .flex-col-50 {
+        @include flexer(50%);
     }
 }
 
