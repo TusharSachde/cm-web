@@ -29,6 +29,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 
+    $scope.header = 'views/header2.html';
+
     $scope.formData = {};
     $scope.formData.loginType = 'coach';
 })
@@ -37,6 +39,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Coach Registeration");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.header = 'views/header2.html';
 })
 
 .controller('TimelineCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
