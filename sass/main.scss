@@ -12,7 +12,7 @@
 $blue: #004a9b;
 $orange: #f29c2c;
 $red: #c70e17;
-$green: #35c565;
+$green: #369e57;
 $yellow: #f4dc11;
 $google: #4285F4;
 $border-color: #e5e5e5;
@@ -28,7 +28,6 @@ $brand-success: $green !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "template/icons";
 @import "template/main";
-@import "template/responsive";
 @import "custom-switch";
 button,
 div,
@@ -249,9 +248,17 @@ $trans-black: rgba( black, .15);
     border-radius: 5px;
     padding: 10px;
     height: 87px;
-    .btn {
-        font-size: 12px;
-        min-width: 110px;
+    padding-right: 38px;
+    .btn-right {
+        font-size: 14px;
+        min-width: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        padding: 6px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 }
 
@@ -278,9 +285,8 @@ $trans-black: rgba( black, .15);
 
 .info-pic {
     position: absolute;
-    left: 50%;
+    left: 10px;
     top: -7px;
-    @include transform(translateX(-50%));
     >span {
         display: inline-block;
         -webkit-border-radius: 100%;
@@ -294,6 +300,36 @@ $trans-black: rgba( black, .15);
         -moz-border-radius: 100%;
         -ms-border-radius: 100%;
         border-radius: 100%;
+    }
+}
+
+.compny {
+    padding-left: 113px;
+    display: inline-block;
+}
+
+.basic-info {
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    top: 50%;
+    right: 38px;
+    @include transform(translateY(-50%));
+    .info-item {
+        display: inline-block;
+        min-width: 70px;
+        overflow: hidden;
+        >p {
+            line-height: 100%;
+            font-weight: 300;
+            font-size: 16px;
+        }
+        >h1 {
+            margin: 0;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
     }
 }
 
@@ -1105,7 +1141,7 @@ img.uploadingImage {
 }
 
 .main-content {
-    padding: 80px 45px 50px 265px;
+    padding: 100px 45px 50px 265px;
 }
 
 .mce-btn button {
@@ -1334,4 +1370,5 @@ img.uploadingImage {
 /* Start writing sass here */
 
 @import "fancybox-override";
+@import "template/responsive";
 @import "other/mobile";

@@ -1,68 +1,34 @@
 <div class="panel-content">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="widget">
-                <div class="table-area">
-                    <div class="widget-title">
-                        <div class="pull-right">
-                            <form class="search-form mr-form">
-                                <input type="text" ng-change="showAll(true)" placeholder="Search Here..." ng-model="search.keyword" />
-                                <button type="submit">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </form>
-                            <a class="btn btn-primary" ui-sref="createemployee">Add New</a>
-                        </div>
-                        <h3>List of Employee
-                            <span class="tableTotal">(Total :
-                              {{totalItems}})
-                          </span>
-                        </h3>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <!-- <th>#</th> -->
-                                    <th>Name</th>
-                                    <th>Mobile</th>
-                                    <th>Email</th>
-                                    <th>Designation</th>
-                                    <th>Posted At</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody ng-show="totalItems>0">
-                                <tr ng-repeat="data in modelList">
-                                    <!-- <td>$index</td> -->
-                                    <td>{{data.firstName + " " + data.lastName || "-"}}</td>
-                                    <td>{{data.mobile || "-"}}</td>
-                                    <td>{{data.email || "-"}}</td>
-                                    <td>{{data.grade.name + " " + data.func.name || "-"}}</td>
-                                    <td>{{data.postedAt.name || "-"}}</td>
-                                    <td>
-                                        <a class="btn btn-blue" ui-sref="editemployee({id:data._id})">
-                                            <i class="fa fa-pencil"></i>
-                                        </a>
-                                        <a class="btn btn-red" ng-click="deleteEmployee(data._id)">
-                                            <i class="fa fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tableData" ng-show="totalItems == 0">
-                        <h5>No data found</h5>
-                    </div>
-                    <div class="tableData" ng-show="totalItems == undefined">
-                        <h5>Loading Data</h5>
-                    </div>
-                    <ul ng-if="totalItems" ng-change="changePage(currentPage);" uib-pagination total-items="totalItems" items-per-page="maxRow"
-                        ng-model="currentPage" max-size="template.pageMax" class="pagination-sm" boundary-links="true" force-ellipses="true"></ul>
+    <div class="profile-sec">
+        <div class="info-holder">
 
+            <div class="info-pic">
+                <span><img src="img/varun-khali.png" alt="Varun Dhawan" class="dp" /></span>
+            </div>
+
+            <div class="compny">
+                <h3>Varun Dhawan</h3>
+                <p><i class="ln-envelope"></i> coach@gmail.com</p>
+                <p><i class="ln-map-marker"></i> Manchester, London</p>
+            </div>
+
+            <div class="basic-info">
+                <div class="info-item">
+                    <p>2 years</p>
+                    <h1>Experience</h1>
+                </div>
+                <div class="info-item">
+                    <p>32 years</p>
+                    <h1>Age</h1>
+                </div>
+                <div class="info-item">
+                    <p>Male</p>
+                    <h1>Gender</h1>
                 </div>
             </div>
+
+            <button class="btn-right btn btn-success"><i class="ln-pencil"></i></button>
+
         </div>
     </div>
 </div>
