@@ -19,13 +19,13 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
 
         .state('login', {
         url: "/login",
-        templateUrl: "views/login.html",
+        templateUrl: "views/template2.html",
         controller: 'LoginCtrl'
     })
 
     .state('register-coach', {
         url: "/coach/register",
-        templateUrl: "views/register-coach.html",
+        templateUrl: "views/template2.html",
         controller: 'RegisterCoachCtrl'
     })
 

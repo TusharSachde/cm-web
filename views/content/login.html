@@ -1,0 +1,33 @@
+<div class="acount-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="contact-sec no-pad-up">
+                    <div class="login-tab text-center">
+                        <ul class="ul-justified ul-nav">
+                            <li ng-class="{'active' : loginType == 'athlete'}" ng-click="loginType = 'athlete'">Athlete</li>
+                            <li ng-class="{'active' : loginType == 'coach'}" ng-click="loginType = 'coach'">Coach</li>
+                            <li ng-class="{'active' : loginType == 'author'}" ng-click="loginType = 'author'">Author</li>
+                        </ul>
+                    </div>
+                    <form name="login" class="login-section" ng-submit="doLogin(formData);">
+                        <p class="text-center">Fill in you details to login or <a ui-sref="register-coach">Register Now</a></p>
+                        <div class="form-group" ng-class="{'form-invalid': login.email.$invalid && login.email.$touched}">
+                            <input type="email" name="email" ng-model="formData.email" class="form-control thick-font" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group" ng-class="{'form-invalid': login.password.$invalid && login.password.$touched}">
+                            <input type="password" name="password" ng-model="formData.password" class="form-control thick-font" placeholder="Password"
+                                required>
+                        </div>
+                        <div class="text-right">
+                            <a ui-sref="forgot-password">Forgot Password ?</a>
+                        </div>
+                        <div class="text-center">
+                            <a class="btn btn-primary thick-font" ui-sref="coach-profile">Log In</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

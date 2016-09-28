@@ -1,0 +1,152 @@
+<div class="acount-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="contact-sec no-pad-up">
+                    <div class="login-tab text-center">
+                        <ul class="ul-justified ul-nav">
+                            <li class="active">Coach Registeration</li>
+                        </ul>
+                    </div>
+                    <form name="registerCoach" ng-submit="register(formData);" class="login-section">
+                        <p>All the fields below are mandatory.</p>
+
+                        <div class="step1">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.name.$invalid && registerCoach.name.$touched}">
+                                        <label>Name:</label>
+                                        <input type="text" name="name" ng-model="formData.name" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.surname.$invalid && registerCoach.surname.$touched}">
+                                        <label>Surname:</label>
+                                        <input type="text" name="surname" ng-model="formData.surname" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.email.$invalid && registerCoach.email.$touched}">
+                                        <label>Email:</label>
+                                        <input type="email" name="email" ng-model="formData.email" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.number.$invalid && registerCoach.number.$touched}">
+                                        <label>Contact Number:</label>
+                                        <div class="flex-row">
+                                            <div class="flex-col flex-col-25">
+                                                <input type="text" name="numberex" ng-model="formData.numberex" class="form-control" required>
+                                            </div>
+                                            <div class="flex-col">
+                                                <input type="text" name="number" ng-model="formData.number" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.password.$invalid && registerCoach.password.$touched}">
+                                        <label>Password:</label>
+                                        <input type="password" name="password" ng-model="formData.password" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.password2.$invalid && registerCoach.password2.$touched}">
+                                        <label>Re-enter Password:</label>
+                                        <input type="password" name="password2" ng-model="formData.password2" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.gender.$invalid && registerCoach.gender.$touched}">
+                                        <label>Gender:</label>
+                                        <select name="gender" ng-model="formData.gender" class="form-control" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.dob.$invalid && registerCoach.dob.$touched}">
+                                        <label>Date of Birth:</label>
+                                        <input type="date" name="dob" ng-model="formData.dob" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.stAddress.$invalid && registerCoach.stAddress.$touched}">
+                                        <label>Street Address:</label>
+                                        <textarea name="stAddress" ng-model="formData.stAddress" class="form-control" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.pobox.$invalid && registerCoach.pobox.$touched}">
+                                        <label>P.O. Box:</label>
+                                        <input type="text" name="pobox" ng-model="formData.pobox" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.city.$invalid && registerCoach.city.$touched}">
+                                        <label>City/Town:</label>
+                                        <input type="text" name="city" ng-model="formData.city" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.state.$invalid && registerCoach.state.$touched}">
+                                        <label>State/Province:</label>
+                                        <input type="text" name="state" ng-model="formData.state" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.postalCode.$invalid && registerCoach.postalCode.$touched}">
+                                        <label>Postal Code:</label>
+                                        <input type="text" name="postalCode" ng-model="formData.postalCode" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.country.$invalid && registerCoach.country.$touched}">
+                                        <label>Country:</label>
+                                        <select name="country" ng-model="formData.country" class="form-control" required>
+                                                    <option value="UK">United Kingdom</option>
+                                                    <option value="US">United States</option>
+                                                    <option value="IN">India</option>
+                                                </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.discipline.$invalid && registerCoach.discipline.$touched}">
+                                        <label>Discipline:</label>
+                                        <select name="discipline" ng-model="formData.discipline" class="form-control" required>
+                        <option value="Track and Field">Track and Field</option>
+                        <option value="Road Running">Road Running</option>
+                        <option value="Hill/Fell Running">Hill/Fell Running</option>
+                        <option value="Race walking">Race walking</option>
+                        <option value="Cross Country">Cross Country</option>
+                        <option value="Other">Other</option>
+                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step2">
+
+                        </div>
+
+                        <div class="text-center">
+                            <a class="btn btn-primary thick-font">Next</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

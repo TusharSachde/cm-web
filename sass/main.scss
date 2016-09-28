@@ -30,11 +30,6 @@ $brand-success: $green !default;
 @import "template/main";
 @import "template/responsive";
 @import "custom-switch";
-@mixin flexer($number) {
-    @include flex(0 0 $number);
-    max-width: $number;
-}
-
 button,
 div,
 input {
@@ -48,7 +43,7 @@ img.loading {
     height: auto;
 }
 
-.logo {
+.top-bar .logo {
     >a {
         margin-top: 7px;
     }
@@ -1144,7 +1139,7 @@ img.uploadingImage {
 }
 
 .account-sec {
-    padding-top: 72px;
+    padding-top: 65px;
 }
 
 .ul-justified {
@@ -1220,6 +1215,11 @@ img.uploadingImage {
     }
 }
 
+@mixin flexer($number) {
+    @include flex(0 0 $number);
+    max-width: $number;
+}
+
 .flex-row {
     padding: 0;
     width: 100%;
@@ -1246,6 +1246,90 @@ img.uploadingImage {
     .flex-col-50 {
         @include flexer(50%);
     }
+}
+
+.ham-menu {
+    position: absolute;
+    height: 19px;
+    width: 32px;
+    margin-top: 25px;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    .bars {
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+        display: block;
+        +.bars {
+            margin-top: 5px;
+        }
+    }
+}
+
+.account-sec .container {
+    position: relative;
+}
+
+.menu-login {
+    display: inline-block;
+    margin: 0;
+    >li {
+        position: relative;
+        &:hover {
+            .dropdown-menu {
+                display: block;
+            }
+        }
+        >a {
+            display: inline-block;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid transparent;
+            cursor: pointer;
+            @include transition(all 300ms ease);
+            padding: 0 25px;
+            &.active,
+            &:hover {
+                border-bottom-color: $blue;
+                >span {
+                    color: #000;
+                }
+            }
+            >span {
+                line-height: 59px;
+                font-weight: 600;
+                font-size: 14px;
+                display: block;
+            }
+        }
+    }
+    .dropdown-menu {
+        margin: 0;
+        padding: 0;
+        >li {
+            +li {
+                margin-top: 3px;
+            }
+            >a {
+                font-weight: 600;
+                border-left: 3px solid Transparent;
+                font-size: 14px;
+                color: #666666;
+                padding: 10px;
+                &:hover,
+                &:focus,
+                &.active {
+                    color: #000;
+                    background-color: transparent;
+                    border-color: $blue;
+                }
+            }
+        }
+    }
+}
+
+.no-bg {
+    background: none !important;
 }
 
 

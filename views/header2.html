@@ -1,11 +1,32 @@
-<div class="container">
+<div class="container text-right">
     <div class="logo">
         <a ui-sref="login" title="Coach Mentor"><img src="img/logo.png" alt="Coach Mentor" height="45"></a>
     </div>
 
-    <div class="ham-menu">
-        <i class="bars"></i>
-        <i class="bars"></i>
-        <i class="bars"></i>
+    <ul class="menu-login list-inline hidden-xs">
+        <li><a ui-sref="home" ui-sref-active="active"><span>Home</span></a></li>
+        <li>
+            <a><span>About <span class="caret"></span></span></a>
+            <ul class="dropdown-menu">
+                <li><a>About Us</a></li>
+                <li><a>Product</a></li>
+                <li><a>Product Demo</a></li>
+            </ul>
+        </li>
+        <li>
+            <a><span>Register <span class="caret"></span></span></a>
+            <ul class="dropdown-menu">
+                <li><a>Athlete</a></li>
+                <li><a ui-sref="register-coach" ui-sref-active="active">Coach</a></li>
+                <li><a>Author</a></li>
+            </ul>
+        </li>
+        <li><a ui-sref="login" ui-sref-active="active"><span>Login</span></a></li>
+    </ul>
+
+    <div class="ham-menu visible-xs" ng-class="{'ac': toggleMenu == true}" ng-click="toggleMenu = !toggleMenu;">
+        <i class="bars one"></i>
+        <i class="bars two"></i>
+        <i class="bars three"></i>
     </div>
 </div>

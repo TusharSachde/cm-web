@@ -25,21 +25,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('LoginCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+    $scope.template = TemplateService.changecontent("login");
     $scope.menutitle = NavigationService.makeactive("Login");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 
-    $scope.header = 'views/header2.html';
+    $scope.template.header = 'views/header2.html';
 
     $scope.formData = {};
-    $scope.formData.loginType = 'coach';
+    $scope.loginType = 'coach';
 })
 
 .controller('RegisterCoachCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+    $scope.template = TemplateService.changecontent("register-coach");
     $scope.menutitle = NavigationService.makeactive("Coach Registeration");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    $scope.header = 'views/header2.html';
+
+    $scope.template.header = 'views/header2.html';
 })
 
 .controller('TimelineCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
