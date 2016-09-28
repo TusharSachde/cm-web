@@ -16,7 +16,6 @@ var jsArray = [
     './bower_components/ui-router/release/angular-ui-router.min.js',
     './bower_components/angular-bootstrap/ui-bootstrap.min.js',
     './bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
-    './bower_components/angular-flexslider/angular-flexslider.js',
     './bower_components/angular-translate/angular-translate.js',
     './bower_components/lodash/lodash.js',
     './bower_components/angulartics/dist/angulartics.min.js',
@@ -45,7 +44,7 @@ var replacehostTo = "http://wohlig.co.in/demo2/";
 
 var ftpString = "U2FsdGVkX19KJ4w0W1pxaUyRsJcjQO5RL98s2rfWnmpoGlaoPfxb8Ibdl0yu5NoHaLfSDmk2WnqRVpQfIAB8wv/Srsy/Y9OUyx5gs3ZutJ2MdGMlS8IaMJmfLSp77xVx1yuRD4aFlRuo0yQ/Ldy2pA==";
 
-var uploadingFolder = "coachmentor";
+var uploadingFolder = "coachmentor1";
 var password = "";
 
 
