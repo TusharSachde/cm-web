@@ -1,3 +1,12 @@
+@media (max-width:$screen-sm-max) {
+  .profile-detail .profile-option {
+    width: 23%;
+  }
+  .profile-detail .option-detail {
+    width: 77%;
+  }
+}
+
 @media (max-width:$screen-xs-max) {
   .info-holder {
     height: auto;
@@ -42,5 +51,44 @@
   }
   .quick-links {
     padding-top: 25px;
+  }
+  .profile-detail {
+    padding: 18px 12px 5px;
+  }
+  .profile-detail .profile-option,
+  .profile-detail .option-detail {
+    p {
+      line-height: 14px;
+      font-size: 12px;
+    }
+  }
+  .profile-detail .profile-option {
+    width: 32%;
+  }
+  .profile-detail .option-detail {
+    width: 68%;
+  }
+}
+
+@media (max-width:480px) {
+  .profile-detail {
+    padding: 18px 12px 5px;
+  }
+  .profile-detail .profile-option {
+    width: 43%;
+    // width: 41%;
+  }
+  .profile-detail .option-detail {
+    width: 57%;
+    // width: 59%;
+  }
+  .profile-detail .profile-option,
+  .profile-detail .option-detail {
+    p {
+      line-height: 12px;
+      // margin-bottom: 6px;
+      font-size: 10px;
+      height: 30px;
+    }
   }
 }
