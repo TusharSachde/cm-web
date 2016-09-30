@@ -1,0 +1,47 @@
+<form name="competitionScore" ng-submit="register(formData);">
+    <div class="modal-header blue-bg">
+        <div class="pull-right">
+            <button class="btn btn-clear" ng-click="$dismiss()">
+      <i class="ln-cross"></i>
+    </button>
+        </div>
+        <h5 class="modal-title">Score For Event "Mumbai Half Marathon"</h5>
+    </div>
+    <div class="modal-body round-form">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group" ng-class="{'form-invalid': competitionScore.athlete.$invalid && competitionScore.athlete.$touched}">
+                    <label>Select Athlete</label>
+                    <select name="athlete" class="form-control" required>
+                        <option value="- Select Athlete -">- Select Athlete -</option>
+                        <option value="Rahul Dravid">Rahul Dravid</option>
+                        <option value="Sachin Tendulkar">Sachin Tendulkar</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group" ng-class="{'form-invalid': competitionScore.performance.$invalid && competitionScore.performance.$touched}">
+                    <label>Performance</label>
+                    <select name="performance" class="form-control" required>
+                        <option value="- Select Performance -">- Select Performance -</option>
+                        <option value="Outstanding">Outstanding</option>
+                        <option value="Excellent">Excellent</option>
+                        <option value="Good">Good</option>
+                        <option value="Average">Average</option>
+                        <option value="Poor">Poor</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group" ng-class="{'form-invalid': competitionScore.eventscore.$invalid && competitionScore.eventscore.$touched}">
+                    <label>Event Score</label>
+                    <input type="text" name="eventscore" ng-model="formData.eventscore" class="form-control" placeholder="Enter Event Score between 0 to 100"
+                        required>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-blue btn-round" type="submit">Save Event Score</button>
+    </div>
+</form>

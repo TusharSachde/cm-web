@@ -41,6 +41,24 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
         controller: 'CoachAthletesCoachedCtrl'
     })
 
+    .state('coach-competition', {
+        url: "/coach/competition",
+        templateUrl: "views/template.html",
+        controller: 'CoachCompetitionCtrl'
+    })
+
+    .state('coach-testing', {
+        url: "/coach/testing",
+        templateUrl: "views/template.html",
+        controller: 'CoachTestingCtrl'
+    })
+
+    .state('coach-testing-create', {
+        url: "/coach/testing/create",
+        templateUrl: "views/template.html",
+        controller: 'CoachTestingCreateCtrl'
+    })
+
     .state('createemployee', {
         url: "/employee-create}",
         templateUrl: "views/template.html",

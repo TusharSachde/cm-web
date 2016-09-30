@@ -1,0 +1,51 @@
+<form name="testScore" ng-submit="register(formData);">
+    <div class="modal-header blue-bg">
+        <div class="pull-right">
+            <button class="btn btn-clear" ng-click="$dismiss()">
+      <i class="ln-cross"></i>
+    </button>
+        </div>
+        <h5 class="modal-title">Test Score For "Some Test 123"</h5>
+    </div>
+    <div class="modal-body round-form">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group" ng-class="{'form-invalid': testScore.athlete.$invalid && testScore.athlete.$touched}">
+                    <label>Training Plan</label>
+                    <select name="athlete" class="form-control" required>
+                        <option value="- Select Training Plan -">- Select Training Plan -</option>
+                        <option value="Mast Plan">Mast Plan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group" ng-class="{'form-invalid': testScore.athlete.$invalid && testScore.athlete.$touched}">
+                    <label>Select Athlete</label>
+                    <select name="athlete" class="form-control" required>
+                        <option value="- Select Athlete -">- Select Athlete -</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group" ng-class="{'form-invalid': testScore.activity.$invalid && testScore.activity.$touched}">
+                    <label>Activity</label>
+                    <select name="activity" class="form-control" required>
+                        <option value="- Select Activity -">- Select Activity -</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group" ng-class="{'form-invalid': testScore.eventscore.$invalid && testScore.eventscore.$touched}">
+                    <label>Test Score</label>
+                    <input type="text" name="eventscore" ng-model="formData.eventscore" class="form-control" placeholder="Enter Test Score between 0 to 100"
+                        required>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-blue btn-round" type="submit">Save Test Score</button>
+    </div>
+</form>

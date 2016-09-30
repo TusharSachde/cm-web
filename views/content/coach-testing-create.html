@@ -1,0 +1,134 @@
+<div class="panel-content ng-scope">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="contact-sec no-pad-up">
+                <div class="login-tab text-center">
+                    <ul class="ul-justified ul-nav">
+                        <li ng-class="{'active' : loginType == 'test'}" ng-click="loginType = 'test'">Create Test</li>
+                        <li ng-class="{'active' : loginType == 'activity'}" ng-click="loginType = 'activity'">Select Activity</li>
+                        <li ng-class="{'active' : loginType == 'plan'}" ng-click="loginType = 'plan'">Training Plan</li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="widget">
+                            <div class="create-head">
+                                <div class="widget-title">
+                                    <h3 class="text-uppercase">My Testing</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <form name="createTest" ng-submit="register(formData);">
+                            <div class="round-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group" ng-class="{'form-invalid': createTest.testname.$invalid && createTest.testname.$touched}">
+                                            <label>Test Name:</label>
+                                            <input type="text" name="testname" ng-model="formData.testname" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group" ng-class="{'form-invalid': createTest.testdate.$invalid && createTest.testdate.$touched}">
+                                            <label>Date:</label>
+                                            <input type="date" name="testdate" ng-model="formData.testdate" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group" ng-class="{'form-invalid': createTest.goal.$invalid && createTest.goal.$touched}">
+                                            <label>Goal:</label>
+                                            <textarea name="goal" ng-model="formData.goal" class="form-control" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<button class="btn btn-blue btn-round" type="submit" ng-disabled="createTest.$invalid">Next</button>-->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="widget">
+                            <div class="create-head">
+                                <div class="widget-title">
+                                    <h3 class="text-uppercase">Create Test Activity</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <form name="createTest" ng-submit="register(formData);">
+                            <div class="round-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group" ng-class="{'form-invalid': createTest.testname.$invalid && createTest.testname.$touched}">
+                                            <label>Test Name:</label>
+                                            <input type="text" name="testname" ng-model="formData.testname" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group" ng-class="{'form-invalid': createTest.testdate.$invalid && createTest.testdate.$touched}">
+                                            <label>Date:</label>
+                                            <input type="date" name="testdate" ng-model="formData.testdate" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group" ng-class="{'form-invalid': createTest.goal.$invalid && createTest.goal.$touched}">
+                                            <label>Goal:</label>
+                                            <textarea name="goal" ng-model="formData.goal" class="form-control" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<button class="btn btn-blue btn-round" type="submit" ng-disabled="createTest.$invalid">Next</button>-->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="widget">
+                            <div class="create-head">
+                                <div class="widget-title">
+                                    <h3 class="text-uppercase">Select Training Plan for Test</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <form name="createTest" ng-submit="register(formData);">
+                            <div class="round-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group" ng-class="{'form-invalid': createTest.testname.$invalid && createTest.testname.$touched}">
+                                            <label>Test Name:</label>
+                                            <input type="text" name="testname" ng-model="formData.testname" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group" ng-class="{'form-invalid': createTest.testdate.$invalid && createTest.testdate.$touched}">
+                                            <label>Date:</label>
+                                            <input type="date" name="testdate" ng-model="formData.testdate" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group" ng-class="{'form-invalid': createTest.goal.$invalid && createTest.goal.$touched}">
+                                            <label>Goal:</label>
+                                            <textarea name="goal" ng-model="formData.goal" class="form-control" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<button class="btn btn-blue btn-round" type="submit" ng-disabled="createTest.$invalid">Next</button>-->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-blue btn-round" type="submit" ng-disabled="createTest.$invalid">Previous</button>
+                    <button class="btn btn-blue btn-round" type="submit" ng-disabled="createTest.$invalid">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

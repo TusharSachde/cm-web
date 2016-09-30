@@ -195,6 +195,69 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 })
 
+.controller('CoachCompetitionCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("coach-competition");
+    $scope.menutitle = NavigationService.makeactive("Competition");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+
+    $scope.addCompetition = function () {
+        var modalInstance = $uibModal.open({
+            scope: $scope,
+            templateUrl: 'views/modal/modal-competition-add.html'
+        });
+    };
+
+    $scope.assignCompetition = function () {
+        var modalInstance = $uibModal.open({
+            scope: $scope,
+            templateUrl: 'views/modal/modal-competition-assign.html'
+        });
+    };
+
+    $scope.scoreCompetition = function () {
+        var modalInstance = $uibModal.open({
+            scope: $scope,
+            templateUrl: 'views/modal/modal-competition-score.html',
+            size: 'lg'
+        });
+    };
+})
+
+
+
+.controller('CoachTestingCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("coach-testing");
+    $scope.menutitle = NavigationService.makeactive("Testing");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    $scope.assignTesting = function () {
+        var modalInstance = $uibModal.open({
+            scope: $scope,
+            templateUrl: 'views/modal/modal-testing-assign.html'
+        });
+    };
+
+    $scope.scoreTesting = function () {
+        var modalInstance = $uibModal.open({
+            scope: $scope,
+            templateUrl: 'views/modal/modal-testing-score.html',
+            size: 'lg'
+        });
+    };
+})
+
+.controller('CoachTestingCreateCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("coach-testing-create");
+    $scope.menutitle = NavigationService.makeactive("Testing Create");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+
+})
+
 .controller('CreateEmployeeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("employee-detail");
