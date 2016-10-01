@@ -54,21 +54,15 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
     })
 
     .state('coach-testing-create', {
-        url: "/coach/testing/create",
+        url: "/coach/testing-create",
         templateUrl: "views/template.html",
         controller: 'CoachTestingCreateCtrl'
     })
 
-    .state('createemployee', {
-        url: "/employee-create}",
+    .state('coach-blog', {
+        url: "/coach/blog",
         templateUrl: "views/template.html",
-        controller: 'CreateEmployeeCtrl'
-    })
-
-    .state('editemployee', {
-        url: "/employee-edit",
-        templateUrl: "views/template.html",
-        controller: 'EditEmployeeCtrl'
+        controller: 'CoachBlogCtrl'
     })
 
     .state('forbidden', {
@@ -76,12 +70,6 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
         templateUrl: "views/template.html",
         controller: 'ForbiddenCtrl'
     })
-
-    .state('timeline', {
-        url: "/timeline",
-        templateUrl: "views/template.html",
-        controller: 'TimelineCtrl'
-    });
 
     $urlRouterProvider.otherwise("/login");
     $locationProvider.html5Mode(isproduction);

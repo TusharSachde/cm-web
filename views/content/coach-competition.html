@@ -17,13 +17,11 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <!--<th></th>-->
                                     <th>Name</th>
                                     <th>Location</th>
-                                    <th>Start Date</th>
-                                    <th>End Date</th>
-                                    <th>Competition Time</th>
-                                    <th>Competition Level</th>
+                                    <th>Start</th>
+                                    <th>End</th>
+                                    <th>Level</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -31,15 +29,14 @@
                                 <tr class="ng-scope">
                                     <td>Mumbai Half Marathon</td>
                                     <td>Mumbai</td>
-                                    <td>30-Jan-2016</td>
-                                    <td>30-Jan-2016</td>
-                                    <td>7:30 am</td>
+                                    <td>30-Jan-2016 <span class="between-space">|</span> 7:30 am</td>
+                                    <td>30-Jan-2016 <span class="between-space">|</span> 4:00 am</td>
                                     <td>International</td>
                                     <td>
-                                        <a class="btn btn-primary" ng-click="assignCompetition();"><i class="ln ln-user"></i></a>
-                                        <a class="btn btn-success" ng-click="scoreCompetition();"><span class="ln ln-register"></span></a>
-                                        <a class="btn btn-blue"><i class="ln ln-pencil"></i></a>
-                                        <a class="btn btn-red"><span class="ln ln-trash2"></span></a>
+                                        <a class="btn btn-primary" ng-click="assignCompetition();" tooltip-placement="bottom" uib-tooltip="Assign"><i class="ln ln-user"></i></a>
+                                        <a class="btn btn-success" ng-click="scoreCompetition();" tooltip-placement="bottom" uib-tooltip="Score"><span class="ln ln-register"></span></a>
+                                        <a class="btn btn-blue" ng-click="editCompetition();" tooltip-placement="bottom" uib-tooltip="Edit"><i class="ln ln-pencil"></i></a>
+                                        <a class="btn btn-red" tooltip-placement="bottom" uib-tooltip="Delete"><span class="ln ln-trash2"></span></a>
                                     </td>
                                 </tr>
                                 <!-- ngRepeat: company in allCompanies -->

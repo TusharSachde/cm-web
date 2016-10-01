@@ -18,25 +18,25 @@ var navigationservice = angular.module('navigationservice', [])
         name: "Athletes Coached",
         classis: "active",
         sref: "coach-athletes-coached", //Keep sref empty if subnav
-        icon: "user",
+        icon: "timer",
         subnav: []
     }, {
         name: "Competition",
         classis: "active",
         sref: "coach-competition", //Keep sref empty if subnav
-        icon: "user",
+        icon: "users",
         subnav: []
     }, {
         name: "Testing",
         classis: "active",
         sref: "coach-testing", //Keep sref empty if subnav
-        icon: "user",
+        icon: "speed-slow",
         subnav: []
     }, {
-        name: "Timeline",
+        name: "Blog",
         classis: "active",
-        sref: "timeline", //Keep sref empty if subnav
-        icon: "calendar",
+        sref: "coach-blog", //Keep sref empty if subnav
+        icon: "archive",
         subnav: []
     }];
 

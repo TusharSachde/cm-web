@@ -7,7 +7,7 @@
                         <div class="pull-right">
                             <form class="search-form mr-form ng-pristine ng-valid"><input type="text" ng-change="showAllCountries(true)" placeholder="Search Here..." ng-model="search.keyword"
                                     class="ng-pristine ng-untouched ng-valid ng-empty"> <button type="submit"><i class="fa fa-search"></i></button></form>
-                            <a class="btn btn-primary">create testing
+                            <a class="btn btn-primary" ui-sref="coach-testing-create">Create Testing
                                 <!--<span>2</span>-->
                             </a>
                         </div>
@@ -29,10 +29,10 @@
                                     <td>Some Goal 123</td>
                                     <td>30-Jan-2016</td>
                                     <td>
-                                        <a class="btn btn-primary" ng-click="assignTesting();"><i class="ln ln-user"></i></a>
-                                        <a class="btn btn-success" ng-click="scoreTesting();"><span class="ln ln-register"></span></a>
-                                        <a class="btn btn-blue"><i class="ln ln-pencil"></i></a>
-                                        <a class="btn btn-red"><span class="ln ln-trash2"></span></a>
+                                        <a class="btn btn-primary" ng-click="assignTesting();" tooltip-placement="bottom" uib-tooltip="Assign"><i class="ln ln-user"></i></a>
+                                        <a class="btn btn-success" ng-click="scoreTesting();" tooltip-placement="bottom" uib-tooltip="Score"><span class="ln ln-register"></span></a>
+                                        <a class="btn btn-blue" ui-sref="coach-testing-create" tooltip-placement="bottom" uib-tooltip="Edit"><i class="ln ln-pencil"></i></a>
+                                        <a class="btn btn-red" tooltip-placement="bottom" uib-tooltip="Delete"><span class="ln ln-trash2"></span></a>
                                     </td>
                                 </tr>
                                 <!-- ngRepeat: company in allCompanies -->
