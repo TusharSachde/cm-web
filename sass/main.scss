@@ -1371,6 +1371,13 @@ img.uploadingImage {
     display: table;
     float: left;
     width: 100%;
+    p {
+        font-weight: 400;
+        color: #000;
+    }
+    .p-title {
+        font-weight: 700;
+    }
     .profile-option {
         float: left;
         width: 16%;
@@ -1387,7 +1394,7 @@ img.uploadingImage {
         // width: 73%; for 60% widget
         p {
             color: #000;
-            line-height: 30px;
+            line-height: 1.42857;
         }
     }
 }
@@ -1549,6 +1556,16 @@ img.uploadingImage {
     .btn {
         margin: 10px 0;
     }
+}
+
+.tag-box {
+    padding: 2px 8px;
+    background: transparent;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    border: 1px solid #ddd;
 }
 
 
