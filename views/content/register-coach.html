@@ -121,17 +121,63 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.coaching.$invalid && registerCoach.coaching.$touched}">
+                                        <label>Coaching Focus:</label>
+                                        <select name="coaching" ng-model="formData.coaching" class="form-control" required>
+                                            <option value="Sprinting">Sprinting</option>
+                                            <option value="Middle Distance"> Middle Distance</option>
+                                            <option value="Endurance">Endurance</option>
+                                            <option value="Throws">Throws</option>
+                                            <option value="Hurdles">Hurdles</option>
+                                            <option value="Race walking">Race walking</option>
+                                            <option value="Hill/Fell Running">Hill/Fell Running</option>
+                                            <option value="Cross Country">Cross Country</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.credential.$invalid && registerCoach.credential.$touched}">
+                                        <label>Credential/Qualification:</label>
+                                        <select name="credential" ng-model="formData.coaching" class="form-control" required>
+                                            <option value="Level 1">Level 1</option>
+                                            <option value="Level 2">Level 2</option>
+                                            <option value="Level 3">Level 3</option>
+                                            <option value="Level 4">Level 4</option>
+                                            <option value="Level 5">Level 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.specialization.$invalid && registerCoach.specialization.$touched}">
+                                        <label>Specialization:</label>
+                                        <select name="specialization" ng-model="formData.coaching" class="form-control" required>
+                                            <option value="Coaching female athletes">Coaching female athletes</option>
+                                            <option value="Eating disorders"> Eating disorders</option>
+                                            <option value="First aid">First aid</option>
+                                            <option value="Long-term athlete development">Long-term athlete development</option>
+                                            <option value="Mentored practice">Mentored practice</option>
+                                            <option value="Strength and conditioning">Strength and conditioning</option>
+                                            <option value="Fitness in Running and Walking">Fitness in Running and Walking</option>
+                                            <option value=" Children in Athletics">Children in Athletics</option>
+                                            <option value=" Others">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.year.$invalid && registerCoach.year.$touched}">
+                                        <label>Year of Coaching:</label>
+                                        <input type="text" name="year" ng-model="formData.state" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-12">
-                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.discipline.$invalid && registerCoach.discipline.$touched}">
-                                        <label>Discipline:</label>
-                                        <select name="discipline" ng-model="formData.discipline" class="form-control" required>
-                        <option value="Track and Field">Track and Field</option>
-                        <option value="Road Running">Road Running</option>
-                        <option value="Hill/Fell Running">Hill/Fell Running</option>
-                        <option value="Race walking">Race walking</option>
-                        <option value="Cross Country">Cross Country</option>
-                        <option value="Other">Other</option>
-                    </select>
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.freeText.$invalid && registerCoach.freeText.$touched}">
+                                        <label>Free Text:</label>
+                                        <textarea name="freeText" ng-model="formData.stAddress" class="form-control" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -142,7 +188,7 @@
                         </div>
 
                         <div class="text-center">
-                            <a class="btn btn-primary thick-font">Next</a>
+                            <a class="btn btn-primary thick-font">Submit</a>
                         </div>
                     </form>
                 </div>

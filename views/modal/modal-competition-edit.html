@@ -26,27 +26,21 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group" ng-class="{'form-invalid': addCompetition.startdate.$invalid && addCompetition.startdate.$touched}">
-                    <label>Start date:</label>
-                    <input type="date" name="startdate" ng-model="formData.startdate" class="form-control" required>
+                    <label>Start:</label>
+                    <input type="datetime-local" name="startdate" ng-model="formData.startdate" class="form-control" required>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group" ng-class="{'form-invalid': addCompetition.enddate.$invalid && addCompetition.enddate.$touched}">
-                    <label>End date:</label>
-                    <input type="date" name="enddate" ng-model="formData.enddate" class="form-control" required>
+                    <label>End:</label>
+                    <input type="datetime-local" name="enddate" ng-model="formData.enddate" class="form-control" required>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <div class="form-group" ng-class="{'form-invalid': addCompetition.time.$invalid && addCompetition.time.$touched}">
-                    <label>Competition time:</label>
-                    <input type="text" name="time" ng-model="formData.time" class="form-control" required>
-                </div>
-            </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="form-group" ng-class="{'form-invalid': addCompetition.level.$invalid && addCompetition.level.$touched}">
-                    <label>Competition level:</label>
+                    <label>Level:</label>
                     <select name="level" class="form-control" required>
                         <option value="International">International</option>
                         <option value="National">National</option>
@@ -58,7 +52,7 @@
         </div>
     </div>
     <div class="modal-footer">
-        <button class="btn btn-blue btn-round" type="submit" ng-disabled="addCompetition.$invalid">Save</button>
-        <button class="btn btn-red btn-round" type="submit" ng-disabled="addCompetition.$invalid">Cancel</button>
+        <button class="btn btn-blue btn-round" type="submit" ng-disabled="addCompetition.$invalid">save</button>
+        <button class="btn btn-red btn-round" type="submit" ng-disabled="addCompetition.$invalid">cancel</button>
     </div>
 </form>

@@ -32,15 +32,15 @@ var navigationservice = angular.module('navigationservice', [])
         sref: "coach-testing", //Keep sref empty if subnav
         icon: "speed-slow",
         subnav: []
-    }, {
-        name: "Blog",
-        classis: "active",
-        sref: "coach-blog", //Keep sref empty if subnav
-        icon: "archive",
-        subnav: []
     }];
 
-
+    // , {
+    //         name: "Blog",
+    //         classis: "active",
+    //         sref: "coach-blog", //Keep sref empty if subnav
+    //         icon: "archive",
+    //         subnav: []
+    //     }
     return {
         getnav: function () {
             return navigation;
