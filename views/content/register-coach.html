@@ -168,7 +168,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.year.$invalid && registerCoach.year.$touched}">
-                                        <label>Year of Coaching:</label>
+                                        <label>Years of Coaching:</label>
                                         <input type="text" name="year" ng-model="formData.state" class="form-control" required>
                                     </div>
                                 </div>
@@ -176,8 +176,16 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.freeText.$invalid && registerCoach.freeText.$touched}">
-                                        <label>Free Text:</label>
+                                        <label>About:</label>
                                         <textarea name="freeText" ng-model="formData.stAddress" class="form-control" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.freeText.$invalid && registerCoach.freeText.$touched}">
+                                        <label>Upload a CV:</label>
+                                        <upload-image ng-model=formData.photo></upload-image>
                                     </div>
                                 </div>
                             </div>
