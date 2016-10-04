@@ -1582,6 +1582,15 @@ img.uploadingImage {
     }
 }
 
+  .full button span {
+ display: none;
+  }
+  .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
+
 .blog-row {
     p {
         margin-top: 10px;
@@ -1596,7 +1605,29 @@ img.uploadingImage {
 .pad-top {
     margin-top: 25px !important;
 }
-
+.img-hold {
+    position: relative;
+    height: 101px;
+    width: 101px;
+    margin: 0 auto 30px;
+    img {
+    height: 101px;
+    width: 101px;
+     -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+     -ms-border-radius: 100%;
+    border-radius: 100%;
+    cursor: pointer;
+}
+    i {
+    position: absolute;
+    bottom: 0;
+    font-size: 25px;
+    right: 0;
+    color: #797979;
+    cursor: pointer;
+    }
+}
 
 /* Start writing sass here */
 

@@ -39,12 +39,35 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.template.header = 'views/header2.html';
 })
 
-.controller('CoachProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state) {
+.controller('CoachProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state,$uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("coach-profile");
     $scope.menutitle = NavigationService.makeActiveCoach("Profile");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
+        $scope.editProfile = function () {
+        var modalInstance = $uibModal.open({
+            scope: $scope,
+            templateUrl: 'views/modal/modal-coach-profile.html',
+            size: 'lg'
+        });
+    };
+      $scope.clear = function() {
+    $scope.dt = null;
+  };
+  $scope.dateOptions = {
+    // dateDisabled: disabled,
+    formatYear: 'yy',
+    maxDate: new Date(2020, 5, 22),
+    minDate: new Date(),
+    startingDay: 1
+  };
+      $scope.open1 = function() {
+    $scope.popup1.opened = true;
+  };
+   $scope.popup1 = {
+    opened: false
+  };
 })
 
 .controller('CoachAthletesCoachedCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
