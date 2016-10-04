@@ -21,7 +21,7 @@ $brand-info: $yellow;
 $brand-warning: $orange;
 $brand-danger: $red;
 $brand-success: $green;
-$body-color-font: #505050;
+$body-color-font: #ccc;
 $brand-primary: $blue !default;
 $brand-danger: $red !default;
 $brand-success: $green !default;
@@ -917,6 +917,7 @@ img.uploadingImage {
 .form-builder {
     border: 1px solid $body-color-font;
     position: relative;
+    margin-bottom: 20px;
     p {
         color: $body-color-font;
         height: 34px;
@@ -1522,7 +1523,6 @@ img.uploadingImage {
 .sec {
     margin-top: 20px;
     .form-builder {
-        border-color: #cccccc;
         border-radius: 3px;
         .form-builder-item {
             padding-left: 0;
@@ -1530,15 +1530,6 @@ img.uploadingImage {
                 text-align: right;
                 right: 3px;
             }
-        }
-    }
-    .form-builder-head+.form-builder-hr {
-        border-color: #cccccc;
-    }
-    .form-builder-hr {
-        border-color: #cccccc;
-        .row-item .col-item+.col-item {
-            border-color: #cccccc;
         }
     }
     .form-builder-head {
@@ -1596,6 +1587,14 @@ img.uploadingImage {
         margin-top: 10px;
         font-weight: 700;
     }
+}
+
+.some-pad {
+    padding-bottom: 25px !important;
+}
+
+.pad-top {
+    margin-top: 25px !important;
 }
 
 
