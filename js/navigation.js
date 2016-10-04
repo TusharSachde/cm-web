@@ -8,7 +8,39 @@ var uploadurl = imgurl;
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function ($http) {
-    var navigation = [{
+    var navigationCoach = [{
+        name: "Profile",
+        classis: "active",
+        sref: "coach-profile", //Keep sref empty if subnav
+        icon: "user",
+        subnav: []
+    }, {
+        name: "Athletes Coached",
+        classis: "active",
+        sref: "coach-athletes-coached", //Keep sref empty if subnav
+        icon: "timer",
+        subnav: []
+    }, {
+        name: "Competition",
+        classis: "active",
+        sref: "coach-competition", //Keep sref empty if subnav
+        icon: "users",
+        subnav: []
+    }, {
+        name: "Testing",
+        classis: "active",
+        sref: "coach-testing", //Keep sref empty if subnav
+        icon: "speed-slow",
+        subnav: []
+    }, {
+        name: "Blog",
+        classis: "active",
+        sref: "coach-blog", //Keep sref empty if subnav
+        icon: "archive",
+        subnav: []
+    }];
+
+    var navigationAthelete = [{
         name: "Profile",
         classis: "active",
         sref: "coach-profile", //Keep sref empty if subnav
@@ -34,23 +66,30 @@ var navigationservice = angular.module('navigationservice', [])
         subnav: []
     }];
 
-    // , {
-    //         name: "Blog",
-    //         classis: "active",
-    //         sref: "coach-blog", //Keep sref empty if subnav
-    //         icon: "archive",
-    //         subnav: []
-    //     }
+
     return {
-        getnav: function () {
-            return navigation;
+        getNavCoach: function () {
+            return navigationCoach;
         },
-        makeactive: function (menuname) {
-            for (var i = 0; i < navigation.length; i++) {
-                if (navigation[i].name == menuname) {
-                    navigation[i].classis = "active";
+        getNavAthlete: function () {
+            return navigationAthlete;
+        },
+        makeActiveCoach: function (menuname) {
+            for (var i = 0; i < navigationCoach.length; i++) {
+                if (navigationCoach[i].name == menuname) {
+                    navigationCoach[i].classis = "active";
                 } else {
-                    navigation[i].classis = "";
+                    navigationCoach[i].classis = "";
+                }
+            }
+            return menuname;
+        },
+        makeActiveAthlete: function (menuname) {
+            for (var i = 0; i < navigationAthlete.length; i++) {
+                if (navigationAthlete[i].name == menuname) {
+                    navigationAthlete[i].classis = "active";
+                } else {
+                    navigationAthlete[i].classis = "";
                 }
             }
             return menuname;

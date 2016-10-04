@@ -26,10 +26,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('LoginCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
     $scope.template = TemplateService.changecontent("login");
-    $scope.menutitle = NavigationService.makeactive("Login");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-
+    TemplateService.title = "Login";
     $scope.template.header = 'views/header2.html';
 
     $scope.formData = {};
@@ -38,27 +35,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('RegisterCoachCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
     $scope.template = TemplateService.changecontent("register-coach");
-    $scope.menutitle = NavigationService.makeactive("Coach Registeration");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-
+    TemplateService.title = "Coach Registeration";
     $scope.template.header = 'views/header2.html';
 })
 
 .controller('CoachProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("coach-profile");
-    $scope.menutitle = NavigationService.makeactive("Profile");
+    $scope.menutitle = NavigationService.makeActiveCoach("Profile");
     TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    $scope.navigation = NavigationService.getNavCoach();
 })
 
 .controller('CoachAthletesCoachedCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("coach-athletes-coached");
-    $scope.menutitle = NavigationService.makeactive("Athletes Coached");
+    $scope.menutitle = NavigationService.makeActiveCoach("Athletes Coached");
     TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    $scope.navigation = NavigationService.getNavCoach();
 
     $scope.athletesRequest = function () {
         var modalInstance = $uibModal.open({
@@ -72,9 +66,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('CoachCompetitionCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("coach-competition");
-    $scope.menutitle = NavigationService.makeactive("Competition");
+    $scope.menutitle = NavigationService.makeActiveCoach("Competition");
     TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    $scope.navigation = NavigationService.getNavCoach();
 
     $scope.addCompetition = function () {
         var modalInstance = $uibModal.open({
@@ -111,9 +105,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('CoachTestingCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("coach-testing");
-    $scope.menutitle = NavigationService.makeactive("Testing");
+    $scope.menutitle = NavigationService.makeActiveCoach("Testing");
     TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    $scope.navigation = NavigationService.getNavCoach();
     $scope.assignTesting = function () {
         var modalInstance = $uibModal.open({
             scope: $scope,
@@ -133,38 +127,37 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('CoachTestingCreateCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("coach-testing-create");
-    $scope.menutitle = NavigationService.makeactive("Testing Create");
+    $scope.menutitle = NavigationService.makeActiveCoach("Testing Create");
     TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    $scope.navigation = NavigationService.getNavCoach();
 
     $scope.testStep = 'test';
-    console.log($scope.testStep);
 
 })
 
 .controller('CoachBlogCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("coach-blog");
-    $scope.menutitle = NavigationService.makeactive("Blog");
+    $scope.menutitle = NavigationService.makeActiveCoach("Blog");
     TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    $scope.navigation = NavigationService.getNavCoach();
 
 })
 
 .controller('CoachBlogDetailCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("coach-blog-detail");
-    $scope.menutitle = NavigationService.makeactive("Blog Detail");
+    $scope.menutitle = NavigationService.makeActiveCoach("Blog Detail");
     TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    $scope.navigation = NavigationService.getNavCoach();
 
 })
 
 .controller('ForbiddenCtrl', function ($scope, TemplateService, NavigationService, $timeout, $stateParams, $state, toastr) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("forbidden");
-    $scope.menutitle = NavigationService.makeactive("Access Forbidden");
+    $scope.menutitle = NavigationService.makeActiveCoach("Access Forbidden");
     TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    $scope.navigation = NavigationService.getNavCoach();
 
 });
