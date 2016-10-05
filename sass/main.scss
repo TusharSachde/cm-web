@@ -1402,8 +1402,14 @@ img.uploadingImage {
 
 .user-img {
     vertical-align: middle;
+    float: left;
+    .name-cont {
+        vertical-align: middle;
+        float: left;
+    }
     .dp {
         height: 60px;
+        width: 60px;
         -webkit-border-radius: 100%;
         -moz-border-radius: 100%;
         -ms-border-radius: 100%;
@@ -1456,20 +1462,44 @@ img.uploadingImage {
 }
 
 .accept-athletes {
-    border: 1px solid;
-    border-radius: 10px;
-    padding: 8px;
+    border-radius: 4px;
+    padding: 15px 15px 8px;
     margin: 0 0 20px;
+    box-shadow: 0px 0px 2px #ddd;
     span {
         margin: 0 40px 0 20px;
+    }
+    p {
+        line-height: 160%;
+    }
+    .name-cont {
+        padding-left: 75px;
+        h5 {
+            margin: 5px 0;
+        }
+    }
+    .user-dtl {
+        line-height: 180%;
+        margin-bottom: 6px;
+        i {
+            padding-right: 5px;
+        }
     }
 }
 
 .checkin-btn {
-    display: inline-block;
-    margin: 0 0 0 -7px;
+    margin: 0px -8px;
+    padding: 0px;
     .btn {
-        margin: 0 5px;
+        margin: 0 -2px 0px;
+        padding: 0px 8px;
+        font-size: 20px;
+        &.sucess {
+            color: $brand-success;
+        }
+        &.danger {
+            color: $brand-danger;
+        }
     }
 }
 
@@ -1549,13 +1579,33 @@ img.uploadingImage {
     }
 }
 
+textarea {
+    resize: none;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
 .tag-box {
-    padding: 2px 10px;
+    padding: 2px 20px 0 10px;
     background: transparent;
     border-radius: 22px;
     display: inline-block;
     margin-bottom: 5px;
     border: 1px solid #ccc;
+    .fa-times {
+        cursor: pointer;
+        padding: 3px;
+        @include transition (all ease 300ms);
+        position: absolute;
+        @include transform (translateY(-50%));
+        right: 0;
+        top: 50%;
+        &:hover {
+            color: #000;
+        }
+    }
 }
 
 .blog-block {
@@ -1582,14 +1632,15 @@ img.uploadingImage {
     }
 }
 
-  .full button span {
- display: none;
-  }
-  .partially button span {
+.full button span {
+    display: none;
+}
+
+.partially button span {
     background-color: orange;
     border-radius: 32px;
     color: black;
-  }
+}
 
 .blog-row {
     p {
@@ -1605,29 +1656,35 @@ img.uploadingImage {
 .pad-top {
     margin-top: 25px !important;
 }
+
 .img-hold {
     position: relative;
-    height: 101px;
     width: 101px;
     margin: 0 auto 30px;
     img {
-    height: 101px;
-    width: 101px;
-     -webkit-border-radius: 100%;
-     -moz-border-radius: 100%;
-     -ms-border-radius: 100%;
-    border-radius: 100%;
-    cursor: pointer;
-}
-    i {
-    position: absolute;
-    bottom: 0;
-    font-size: 25px;
-    right: 0;
-    color: #797979;
-    cursor: pointer;
+        height: 101px;
+        width: 101px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+    .icon-btn {
+        position: absolute;
+        bottom: 0;
+        font-size: 18px;
+        right: 0;
+        padding: 3px 7px;
+        width: 32px;
+        height: 32px;
+        color: #ffffff;
+        cursor: pointer;
+        background: #004a9b;
+        border-radius: 50%;
     }
 }
+
 
 /* Start writing sass here */
 
