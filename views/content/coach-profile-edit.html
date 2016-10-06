@@ -10,6 +10,12 @@
                     </div>
                     <div class="round-form">
                         <form name="editprofile" ng-submit="editProfile(formData);" class="login-section">
+                            <div class="edit-photo text-center">
+                                <div class="img-hold">
+                                    <span><img src="img/sachin.png" alt="Sachin Tendulkar" class="dp">
+              <div class="icon-btn"><i class="fa fa-camera" aria-hidden="true"></i></div>
+              </div>		              
+              </div>
                             <div class="step1">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -103,20 +109,6 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.credential.$invalid && registerCoach.credential.$touched}">
-                                        <label>Credential/Qualification:</label>
-                                        <select name="credential" ng-model="formData.credential" class="form-control" required>
-                                            <option selected">Level 1</option>
-                                            <option>Level 2</option>
-                                            <optio>Level 3</option>
-                                            <option>Level 4</option>
-                                            <option>Level 5</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.year.$invalid && registerCoach.year.$touched}">
                                         <label>Years of Coaching:</label>
                                         <input type="number" placeholder="Years Coaching" name="yearsCoaching" ng-model="formData.yearsCoaching" min="1" max="99"
@@ -158,14 +150,6 @@
                                     <div class="form-group" ng-class="{'form-invalid': about.freeText.$invalid && about.freeText.$touched}">
                                         <label>About:</label>
                                         <textarea name="freeText" ng-model="formData.about" class="form-control" rows="4" cols="50" required></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.freeText.$invalid && registerCoach.freeText.$touched}">
-                                        <label>Upload a CV:</label>
-                                        <upload-image ng-model=formData.photo></upload-image>
                                     </div>
                                 </div>
                             </div>
