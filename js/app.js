@@ -18,10 +18,15 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
     $stateProvider
 
         .state('login', {
-        url: "/login",
-        templateUrl: "views/template2.html",
-        controller: 'LoginCtrl'
-    })
+            url: "/login",
+            templateUrl: "views/template2.html",
+            controller: 'LoginCtrl'
+        })
+        .state('forgot-password', {
+            url: "/forgot-password",
+            templateUrl: "views/template2.html",
+            controller: 'ForgotPasswordCtrl'
+        })
 
     .state('register-coach', {
         url: "/coach/register",

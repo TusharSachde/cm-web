@@ -25,26 +25,30 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('LoginCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
-    $scope.template = TemplateService.changecontent("login");
-    TemplateService.title = "Login";
-    $scope.template.header = 'views/header2.html';
+        $scope.template = TemplateService.changecontent("login");
+        TemplateService.title = "Login";
+        $scope.template.header = 'views/header2.html';
 
-    $scope.formData = {};
-    $scope.loginType = 'coach';
-})
-
-.controller('RegisterCoachCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
-    $scope.template = TemplateService.changecontent("register-coach");
-    TemplateService.title = "Coach Registeration";
-    $scope.template.header = 'views/header2.html';
-    $scope.formData = {};
-    $scope.coachingFocus = [
-        'Sprinting', 'Middle Distance', 'Endurance', 'Throws', 'Jumps', 'Hurdles', 'Hill/Fell Running', 'Cross Country'
-    ];
-    $scope.specialisations = [
-        'Coaching athletes with a disability', 'Coaching female athletes', 'Eating disorders', 'First aid', 'Long-term athlete development', 'Mentored practice', 'Strength and conditioning', 'Fitness in Running and Walking', 'Children in Athletics'
-    ];
-})
+        $scope.formData = {};
+        $scope.loginType = 'coach';
+    })
+    .controller('ForgotPasswordCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+        $scope.template = TemplateService.changecontent("forgot-password");
+        TemplateService.title = "Login";
+        $scope.template.header = 'views/header2.html';
+    })
+    .controller('RegisterCoachCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+        $scope.template = TemplateService.changecontent("register-coach");
+        TemplateService.title = "Coach Registeration";
+        $scope.template.header = 'views/header2.html';
+        $scope.formData = {};
+        $scope.coachingFocus = [
+            'Sprinting', 'Middle Distance', 'Endurance', 'Throws', 'Jumps', 'Hurdles', 'Hill/Fell Running', 'Cross Country'
+        ];
+        $scope.specialisations = [
+            'Coaching athletes with a disability', 'Coaching female athletes', 'Eating disorders', 'First aid', 'Long-term athlete development', 'Mentored practice', 'Strength and conditioning', 'Fitness in Running and Walking', 'Children in Athletics'
+        ];
+    })
 
 .controller('CoachProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
