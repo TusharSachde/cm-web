@@ -21,13 +21,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': addCompetition.startdate.$invalid && addCompetition.startdate.$touched}">
                                         <label>Start:</label>
-                                        <input type="datetime-local" name="startdate" ng-model="formData.startdate" class="form-control" required>
+                                        <input type="date" name="startdate" ng-model="formData.startdate" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': addCompetition.enddate.$invalid && addCompetition.enddate.$touched}">
                                         <label>End:</label>
-                                        <input type="datetime-local" name="enddate" ng-model="formData.enddate" class="form-control" required>
+                                        <input type="date" name="enddate" ng-model="formData.enddate" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
@@ -55,8 +55,8 @@
                             </div>
                         </div>
                         <div class="made-form text-center">
-                            <button class="btn btn-blue btn-round" type="submit" ng-disabled="addCompetition.$invalid">save</button>
-                            <button class="btn btn-red btn-round" type="submit" ng-disabled="addCompetition.$invalid">cancel</button>
+                            <button class="btn btn-blue btn-round" type="submit" ng-disabled="addCompetition.$invalid">Save</button>
+                            <button class="btn btn-red btn-round" type="submit" ng-disabled="addCompetition.$invalid">Cancel</button>
                         </div>
                     </form>
                 </div>

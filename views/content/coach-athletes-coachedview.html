@@ -12,18 +12,31 @@
                                 <div class="name-cont text-center">
                                     <h5>{{athleteCoaching.name}} {{athleteCoaching.surname}}</h5>
                                     <p>{{athleteCoaching.age}} years, {{athleteCoaching.location}}</p>
-                                    <p class="tag-box-badge success">{{athleteCoaching.subscriptionType}}</p>
+                                    <button class="btn btn-danger btn-round">Unsubscribe</button>
+
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-8">
                             <div class="right-cont">
-                                <div class="<user-dtl></user-dtl>">
+                                <div class="user-dtl">
                                     <div class="user-dtl-cont">
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <div class="text-right">
-                                                    <label for=""> Accepted Since: </label>
+                                                <div>
+                                                    <label>    Subscription Type:</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <span>Monthly</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="user-dtl-cont">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <div>
+                                                    <label> Accepted Since: </label>
                                                 </div>
                                             </div>
                                             <div class="col-sm-9">
@@ -34,8 +47,8 @@
                                     <div class="user-dtl-cont">
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <div class="text-right">
-                                                    <label for="">Next renewal:</label>
+                                                <div>
+                                                    <label>Next renewal:</label>
                                                 </div>
                                             </div>
                                             <div class="col-sm-9">
@@ -46,8 +59,8 @@
                                     <div class="user-dtl-cont">
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <div class="text-right">
-                                                    <label for="">   Sports:</label>
+                                                <div>
+                                                    <label>   Sports:</label>
                                                 </div>
                                             </div>
                                             <div class="col-sm-9">
@@ -58,8 +71,8 @@
                                     <div class="user-dtl-cont">
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <div class="text-right">
-                                                    <label for="">    Events:</label>
+                                                <div>
+                                                    <label>    Events:</label>
                                                 </div>
                                             </div>
                                             <div class="col-sm-9">
@@ -67,21 +80,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="user-dtl-cont">
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <div class="text-right">
-                                                    <label for="">Subscribe</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-9">
-                                                <div class="">
-                                                    <toggle-switch on-label=Yes off-label=No ng-model=required class="switch-mini switch-success ml-25"></toggle-switch>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--<div> <i class="fa fa-trophy" aria-hidden="true"></i> Cricket</div>    -->
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
