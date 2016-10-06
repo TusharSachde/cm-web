@@ -37,6 +37,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.template = TemplateService.changecontent("register-coach");
     TemplateService.title = "Coach Registeration";
     $scope.template.header = 'views/header2.html';
+    $scope.formData = {};
+    $scope.coachingFocus = [
+        'Sprinting', 'Middle Distance', 'Endurance', 'Throws', 'Jumps', 'Hurdles', 'Hill/Fell Running', 'Cross Country'
+    ];
+    $scope.specialisations = [
+        'Coaching athletes with a disability', 'Coaching female athletes', 'Eating disorders', 'First aid', 'Long-term athlete development', 'Mentored practice', 'Strength and conditioning', 'Fitness in Running and Walking', 'Children in Athletics'
+    ];
 })
 
 .controller('CoachProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
@@ -45,22 +52,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeActiveCoach("Profile");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
-    $scope.clear = function () {
-        $scope.dt = null;
-    };
-    $scope.dateOptions = {
-        // dateDisabled: disabled,
-        formatYear: 'yy',
-        maxDate: new Date(2020, 5, 22),
-        minDate: new Date(),
-        startingDay: 1
-    };
-    $scope.open1 = function () {
-        $scope.popup1.opened = true;
-    };
-    $scope.popup1 = {
-        opened: false
-    };
+    $scope.coachingFocus = [
+        'Sprinting', 'Middle Distance', 'Endurance', 'Throws', 'Jumps', 'Hurdles', 'Hill/Fell Running', 'Cross Country'
+    ];
+    $scope.specialisations = [
+        'Coaching athletes with a disability', 'Coaching female athletes', 'Eating disorders', 'First aid', 'Long-term athlete development', 'Mentored practice', 'Strength and conditioning', 'Fitness in Running and Walking', 'Children in Athletics'
+    ];
 })
 
 .controller('CoachProfileEditCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
@@ -69,21 +66,31 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeActiveCoach("Profile");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getNavCoach();
-        $scope.clear = function () {
-            $scope.dt = null;
+        $scope.formData = {
+            name: 'Sachin',
+            surname: 'Tendulkar',
+            image: 'http://2.bp.blogspot.com/-TgdKBlUGk90/T0PhPlFOf8I/AAAAAAAAAVc/jijEQ8u1uUg/s1600/387430_257363124319593_257347670987805_670782_1318978483_n.jpg',
+            yearsCoaching: 2,
+            email: 'sachin@gmail.com',
+            gender: 'Male',
+            contact: '+919098765324',
+            dob: new Date(),
+            country: 'UK',
+            credentials: 'Level 4',
+            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien. Vivamus sodales et libero ac consectetur. Curabitur hendrerit lacus nisi, eget euismod felis gravida vitae. Nullam faucibus maximus eros, non facilisis magna tincidunt quis. Ut suscipit fringilla quam eu scelerisque. Proin orci lacus, condimentum eget urna at, aliquam pellentesque mauris. Aenean rutrum diam tortor, sed finibus nibh condimentum ac. Sed et blandit arcu.',
+            coachingFocus: ['Sprinting', 'Hurdles'],
+            specialisations: ['Children in Athletics', 'First aid']
         };
-        $scope.dateOptions = {
-            // dateDisabled: disabled,
-            formatYear: 'yy',
-            maxDate: new Date(2020, 5, 22),
-            minDate: new Date(),
-            startingDay: 1
-        };
-        $scope.open1 = function () {
-            $scope.popup1.opened = true;
-        };
-        $scope.popup1 = {
-            opened: false
+        $scope.coachingFocus = [
+            'Sprinting', 'Middle Distance', 'Endurance', 'Throws', 'Jumps', 'Hurdles', 'Hill/Fell Running', 'Cross Country'
+        ];
+        $scope.specialisations = [
+            'Coaching athletes with a disability', 'Coaching female athletes', 'Eating disorders', 'First aid', 'Long-term athlete development', 'Mentored practice', 'Strength and conditioning', 'Fitness in Running and Walking', 'Children in Athletics'
+        ];
+
+        $scope.submit = function (data) {
+            console.log(data);
+            $state.go('app.profile');
         };
     })
     .controller('CoachAthletesCoachedCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
@@ -101,6 +108,34 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             });
         };
     })
+
+.controller('CoachAthletesCoachedViewCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("coach-athletes-coachedview");
+    $scope.menutitle = NavigationService.makeActiveCoach("Athletes Coached");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getNavCoach();
+    $scope.athleteCoaching = {
+        name: 'Matt',
+        surname: 'Smith',
+        image: 'img/img-placeholder.png',
+        acceptedDate: '13 May, 2016',
+        renewalDate: '12 June, 2016',
+        subscriptionType: 'Monthly',
+        location: 'UK',
+        age: '22',
+        sports: [
+            'Cycling',
+            'Running'
+        ],
+        events: [
+            'UK Marathon 2016',
+            'Triathlon 2016'
+        ]
+    };
+
+})
+
 
 .controller('CoachCompetitionCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
@@ -140,28 +175,66 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 
-
-.controller('CoachTestingCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
+.controller('CoachCompetitionCreateCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-testing");
-    $scope.menutitle = NavigationService.makeActiveCoach("Testing");
+    $scope.template = TemplateService.changecontent("coach-competition-create");
+    $scope.menutitle = NavigationService.makeActiveCoach("Competition");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
-    $scope.assignTesting = function () {
-        var modalInstance = $uibModal.open({
-            scope: $scope,
-            templateUrl: 'views/modal/modal-testing-assign.html'
-        });
-    };
-
-    $scope.scoreTesting = function () {
-        var modalInstance = $uibModal.open({
-            scope: $scope,
-            templateUrl: 'views/modal/modal-testing-score.html',
-            size: 'lg'
-        });
-    };
+    $scope.title = "Add Competition";
+    $scope.players = [{
+        name: 'Ambrose Dzosa',
+    }, {
+        name: 'Johannah Deakin'
+    }, {
+        name: 'Jack White'
+    }, {
+        name: 'Matt Smith',
+    }, {
+        name: 'May Smith',
+    }]
 })
+
+.controller('CoachCompetitionEditCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("coach-competition-create");
+        $scope.menutitle = NavigationService.makeActiveCoach("Competition");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getNavCoach();
+        $scope.title = "Edit Competition";
+        $scope.players = [{
+            name: 'Ambrose Dzosa',
+        }, {
+            name: 'Johannah Deakin'
+        }, {
+            name: 'Jack White'
+        }, {
+            name: 'Matt Smith',
+        }, {
+            name: 'May Smith',
+        }]
+    })
+    .controller('CoachTestingCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("coach-testing");
+        $scope.menutitle = NavigationService.makeActiveCoach("Testing");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getNavCoach();
+        $scope.assignTesting = function () {
+            var modalInstance = $uibModal.open({
+                scope: $scope,
+                templateUrl: 'views/modal/modal-testing-assign.html'
+            });
+        };
+
+        $scope.scoreTesting = function () {
+            var modalInstance = $uibModal.open({
+                scope: $scope,
+                templateUrl: 'views/modal/modal-testing-score.html',
+                size: 'lg'
+            });
+        };
+    })
 
 .controller('CoachTestingCreateCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file

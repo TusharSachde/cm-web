@@ -1,0 +1,66 @@
+<div class="panel-content ng-scope">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget">
+                <div class="table-area">
+                    <div class="widget-title">
+                        <h3 class="text-uppercase">{{title}}</h3>
+                    </div>
+                    <form name="addCompetition" ng-submit="register(formData);">
+                        <div class="round-form">
+                            <!--<p>All the below fields are mandatory.</p>-->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': addCompetition.name.$invalid && addCompetition.name.$touched}">
+                                        <label>Name:</label>
+                                        <input type="text" name="name" ng-model="formData.name" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': addCompetition.startdate.$invalid && addCompetition.startdate.$touched}">
+                                        <label>Start:</label>
+                                        <input type="datetime-local" name="startdate" ng-model="formData.startdate" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': addCompetition.enddate.$invalid && addCompetition.enddate.$touched}">
+                                        <label>End:</label>
+                                        <input type="datetime-local" name="enddate" ng-model="formData.enddate" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': addCompetition.players.$invalid && addCompetition.players.$touched}">
+                                        <label>Add Players:</label>
+                                        <ui-select multiple tagging tagging-label="(custom 'new' label)" ng-model="formData.player" theme="bootstrap" sortable="true"
+                                            ng-disabled="disabled" title="Add Players">
+                                            <ui-select-match placeholder="Select Players...">{{$item.name}}</ui-select-match>
+                                            <ui-select-choices repeat="player in players | filter:$select.search">
+                                                {{player.name}}
+                                            </ui-select-choices>
+                                        </ui-select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="pt30">
+                                        <div class="form-group" ng-class="{'form-invalid': addCompetition.level.$invalid && addCompetition.level.$touched}">
+                                            <label>Key Competition:</label>
+                                            <toggle-switch on-label=Yes off-label=No ng-model=required class="switch-mini switch-success ml-25"></toggle-switch>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="made-form text-center">
+                            <button class="btn btn-blue btn-round" type="submit" ng-disabled="addCompetition.$invalid">save</button>
+                            <button class="btn btn-red btn-round" type="submit" ng-disabled="addCompetition.$invalid">cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,73 +10,58 @@
                     </div>
                     <div class="round-form">
                         <form name="editprofile" ng-submit="editProfile(formData);" class="login-section">
-                            <div class="edit-photo text-center">
-                                <div class="img-hold">
-                                    <span><img src="img/sachin.png" alt="Sachin Tendulkar" class="dp">
-                <div class="icon-btn"><i class="fa fa-camera" aria-hidden="true"></i></div>
-            </div>
-              <!--<div class="upload-image">
-   <upload-image ng-model=formData.photo></upload-image>
-              </div>            -->
-              </div>
-                        <div class="step1">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.name.$invalid && editprofile.name.$touched}">
-                                        <label>Name:</label>
-                                        <input type="text" name="name" ng-model="formData.name" class="form-control" required>
+                            <div class="step1">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group" ng-class="{'form-invalid': editprofile.name.$invalid && editprofile.name.$touched}">
+                                            <label>Name:</label>
+                                            <input type="text" name="name" ng-model="formData.name" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group" ng-class="{'form-invalid': editprofile.surname.$invalid && editprofile.surname.$touched}">
+                                            <label>Surname:</label>
+                                            <input type="text" name="surname" ng-model="formData.surname" class="form-control" required>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.surname.$invalid && editprofile.surname.$touched}">
-                                        <label>Surname:</label>
-                                        <input type="text" name="surname" ng-model="formData.surname" class="form-control" required>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group" ng-class="{'form-invalid': editprofile.email.$invalid && editprofile.email.$touched}">
+                                            <label>Email:</label>
+                                            <input type="email" name="email" ng-model="formData.email" class="form-control" required>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.email.$invalid && editprofile.email.$touched}">
-                                        <label>Email:</label>
-                                        <input type="email" name="email" ng-model="formData.email" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.number.$invalid && editprofile.number.$touched}">
-                                        <label>Contact Number:</label>
-                                        <div class="flex-row">
-                                            <div class="flex-col flex-col-25">
-                                                <input type="text" name="numberex" ng-model="formData.numberex" class="form-control" required>
-                                            </div>
-                                            <div class="flex-col">
-                                                <input type="text" name="number" ng-model="formData.number" class="form-control" required>
-                                            </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group" ng-class="{'form-invalid': editprofile.contact.$invalid && editprofile.contact.$touched}">
+                                            <label>Contact Number:</label>
+                                            <input type="tel" name="number" ng-model="formData.contact" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!--<div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.password.$invalid && editprofile.password.$touched}">
-                                        <label>Password:</label>
-                                        <input type="password" name="password" ng-model="formData.password" class="form-control" required>
+                                    <div class="col-md-6">
+                                        <div class="form-group" ng-class="{'form-invalid': editprofile.password.$invalid && editprofile.password.$touched}">
+                                            <label>Password:</label>
+                                            <input type="password" name="password" ng-model="formData.password" class="form-control" required>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.password2.$invalid && editprofile.password2.$touched}">
-                                        <label>Re-enter Password:</label>
-                                        <input type="password" name="password2" ng-model="formData.password2" class="form-control" required>
+                                    <div class="col-md-6">
+                                        <div class="form-group" ng-class="{'form-invalid': editprofile.password2.$invalid && editprofile.password2.$touched}">
+                                            <label>Re-enter Password:</label>
+                                            <input type="password" name="password2" ng-model="formData.password2" class="form-control" required>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>-->
+                                </div>-->
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': editprofile.gender.$invalid && editprofile.gender.$touched}">
                                         <label>Gender:</label>
-                                        <select name="gender" ng-model="formData.gender" class="form-control" required>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
+                                        <select name="gender" ng-model="formData.gender" class="form-control">
+                                            <option selected>Male</option>
+                                            <option>Female</option>
+                                            </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -87,125 +72,98 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.stAddress.$invalid && editprofile.stAddress.$touched}">
-                                        <label>Street Address:</label>
-                                        <textarea name="stAddress" ng-model="formData.stAddress" class="form-control" required></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.pobox.$invalid && editprofile.pobox.$touched}">
-                                        <label>P.O. Box:</label>
-                                        <input type="text" name="pobox" ng-model="formData.pobox" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': editprofile.city.$invalid && editprofile.city.$touched}">
                                         <label>City/Town:</label>
                                         <input type="text" name="city" ng-model="formData.city" class="form-control" required>
                                     </div>
                                 </div>
-                     <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.state.$invalid && registerCoach.state.$touched}">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': editprofile.state.$invalid && editprofile.state.$touched}">
                                         <label>State/Province:</label>
                                         <input type="text" name="state" ng-model="formData.state" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.postalCode.$invalid && editprofile.postalCode.$touched}">
+                                    <div class="form-group" ng-class="{'form-invalid': editprofile.postalCode.$invalid && registerCoach.postalCode.$touched}">
                                         <label>Postal Code:</label>
                                         <input type="text" name="postalCode" ng-model="formData.postalCode" class="form-control" required>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.country.$invalid && editprofile.country.$touched}">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.country.$invalid && registerCoach.country.$touched}">
                                         <label>Country:</label>
-                                        <select name="country" ng-model="formData.country" class="form-control" required>
-                                                    <option value="UK">United Kingdom</option>
-                                                    <option value="US">United States</option>
-                                                    <option value="IN">India</option>
-                                                </select>
+                                        <select name="country" ng-model="formData.country" class="form-control">
+                                            <option selected>UK</option>
+                                            <option>USA</option>
+                                            <option>Canada</option>
+                                            <option>Australia</option>
+                                            <option>New Zealand</option>
+                                            </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.coaching.$invalid && editprofile.coaching.$touched}">
-                                        <label>Coaching Focus:</label>
-                                         <input type="text" name="coaching" ng-model="formData.coaching" class="form-control" required>
-                                    <!--<select name="coaching" ng-model="formData.coaching" class="form-control" required>
-                                            <option value="Sprinting">Sprinting</option>
-                                            <option value="Middle Distance"> Middle Distance</option>
-                                            <option value="Endurance">Endurance</option>
-                                            <option value="Throws">Throws</option>
-                                            <option value="Hurdles">Hurdles</option>
-                                            <option value="Race walking">Race walking</option>
-                                            <option value="Hill/Fell Running">Hill/Fell Running</option>
-                                            <option value="Cross Country">Cross Country</option>
-                                        </select>-->
-                                </div>
-                                                                           <p>
-                                <span class="tag-box">Sprinting <i class="fa fa-times" aria-hidden="true"></i></span>
-                                    <span class="tag-box">Throws <i class="fa fa-times" aria-hidden="true"></i></span>
-                                    <span class="tag-box">Hill/Fell Running <i class="fa fa-times" aria-hidden="true"></i></span>
-                                    <span class="tag-box">Cross Country <i class="fa fa-times" aria-hidden="true"></i></span>
-                                    </p>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.credential.$invalid && editprofile.credential.$touched}">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.credential.$invalid && registerCoach.credential.$touched}">
                                         <label>Credential/Qualification:</label>
                                         <select name="credential" ng-model="formData.credential" class="form-control" required>
-                                            <option value="Level 1">Level 1</option>
-                                            <option value="Level 2">Level 2</option>
-                                            <option value="Level 3">Level 3</option>
-                                            <option value="Level 4">Level 4</option>
-                                            <option value="Level 5">Level 5</option>
+                                            <option selected">Level 1</option>
+                                            <option>Level 2</option>
+                                            <optio>Level 3</option>
+                                            <option>Level 4</option>
+                                            <option>Level 5</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.specialization.$invalid && editprofile.specialization.$touched}">
-                                        <label>Specialization:</label>
-                                        <input type="text" name="specialization" ng-model="formData.specialization" class="form-control" required>
-                                        <!--<select name="specialization" ng-model="formData.coaching" class="form-control" required>
-                                            <option value="Coaching female athletes">Coaching female athletes</option>
-                                            <option value="Eating disorders"> Eating disorders</option>
-                                            <option value="First aid">First aid</option>
-                                            <option value="Long-term athlete development">Long-term athlete development</option>
-                                            <option value="Mentored practice">Mentored practice</option>
-                                            <option value="Strength and conditioning">Strength and conditioning</option>
-                                            <option value="Fitness in Running and Walking">Fitness in Running and Walking</option>
-                                            <option value=" Children in Athletics">Children in Athletics</option>
-                                            <option value=" Others">Others</option>
-                                        </select>-->
-                                    </div>
-                                    <p><span class="tag-box">Mentored practice <i class="fa fa-times" aria-hidden="true"></i></span>
-                                        <span class="tag-box">Strength and conditioning <i class="fa fa-times" aria-hidden="true"></i></span>
-                                        <span class="tag-box">Eating disorders <i class="fa fa-times" aria-hidden="true"></i></span>
-                                        <span class="tag-box">Children in Athletics <i class="fa fa-times" aria-hidden="true"></i></span>
-                                        <span class="tag-box">Fitness in Running and Walking <i class="fa fa-times" aria-hidden="true"></i></span>
-                                    </p>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.year.$invalid && editprofile.year.$touched}">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.year.$invalid && registerCoach.year.$touched}">
                                         <label>Years of Coaching:</label>
-                                        <input type="text" name="year" ng-model="formData.state" class="form-control" required>
+                                        <input type="number" placeholder="Years Coaching" name="yearsCoaching" ng-model="formData.yearsCoaching" min="1" max="99"
+                                            class="form-control" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.freeText.$invalid && editprofile.freeText.$touched}">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.coaching.$invalid && registerCoach.coaching.$touched}">
+                                        <label>Coaching Focus:</label> <br>
+                                        <div class="tag-box-label" ng-repeat="c in coachingFocus">
+                                            <input type="checkbox" id="{{c}}" checklist-model="formData.coachingFocus" checklist-value="c" name="coachingFocus">
+                                            <label for="{{c}}">{{c}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.specialization.$invalid && registerCoach.specialization.$touched}">
+                                        <label>Specialization:</label> <br>
+                                        <div class="tag-box-label" ng-repeat="s in specialisations">
+                                            <input type="checkbox" id="{{s}}" checklist-model="formData.specialisations" checklist-value="s" name="specialisations">
+                                            <label for="{{s}}">{{s}}</label>
+                                        </div>
+                                        <div class="tag-box-label">
+                                            <input type="checkbox" id="Others" ng-model="formData.specialisations.otherVal">
+                                            <label for="Others">Others</label>
+                                        </div>
+                                        <div ng-if="formData.specialisations.otherVal">
+                                            <input type="text" placeholder="Please mention others" name="others" ng-model="formData.specialisations.others" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': about.freeText.$invalid && about.freeText.$touched}">
                                         <label>About:</label>
-                                        <textarea name="freeText" ng-model="formData.stAddress" class="form-control" required></textarea>
+                                        <textarea name="freeText" ng-model="formData.about" class="form-control" rows="4" cols="50" required></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="form-group" ng-class="{'form-invalid': editprofile.freeText.$invalid && editprofile.freeText.$touched}">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.freeText.$invalid && registerCoach.freeText.$touched}">
                                         <label>Upload a CV:</label>
                                         <upload-image ng-model=formData.photo></upload-image>
                                     </div>
@@ -213,6 +171,9 @@
                             </div>
                     </div>
 
+                    <div class="step2">
+
+                    </div>
                     <div class="text-center">
                         <a class="btn btn-primary thick-font">Save</a>
                     </div>

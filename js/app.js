@@ -47,10 +47,28 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
         controller: 'CoachAthletesCoachedCtrl'
     })
 
+    .state('coach-athletes-coachedview', {
+        url: "/coach/athletes-coachedview",
+        templateUrl: "views/template.html",
+        controller: 'CoachAthletesCoachedViewCtrl'
+    })
+
     .state('coach-competition', {
         url: "/coach/competition",
         templateUrl: "views/template.html",
         controller: 'CoachCompetitionCtrl'
+    })
+
+    .state('coach-competition-create', {
+        url: "/coach/competition/create",
+        templateUrl: "views/template.html",
+        controller: 'CoachCompetitionCreateCtrl'
+    })
+
+    .state('coach-competition-edit', {
+        url: "/coach/competition/edit",
+        templateUrl: "views/template.html",
+        controller: 'CoachCompetitionEditCtrl'
     })
 
     .state('coach-testing', {
