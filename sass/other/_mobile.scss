@@ -11,6 +11,15 @@
   .info-holder {
     height: auto;
   }
+  .table-area {
+    padding: 20px;
+  }
+  .widget-title .pull-right {
+    float: none !important;
+    .btn {
+      margin: 20px 0;
+    }
+  }
   .first-half {
     width: 100%;
     padding: 0 !important;
