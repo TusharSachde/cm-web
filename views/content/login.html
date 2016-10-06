@@ -7,7 +7,6 @@
                         <ul class="ul-justified ul-nav">
                             <li ng-class="{'active' : loginType == 'athlete'}" ng-click="loginType = 'athlete'">Athlete</li>
                             <li ng-class="{'active' : loginType == 'coach'}" ng-click="loginType = 'coach'">Coach</li>
-                            <li ng-class="{'active' : loginType == 'author'}" ng-click="loginType = 'author'">Author</li>
                         </ul>
                     </div>
                     <form name="login" class="login-section" ng-submit="doLogin(formData);">
