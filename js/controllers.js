@@ -257,6 +257,41 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeActiveCoach("Blog");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
+    $scope.data = [{
+        title: 'The Strongest Woman I’ve Ever Known',
+        img: 'img/ground.png',
+        date: '4th October 2015',
+        rating: '4.5'
+    }, {
+        title: 'What You Dont Know About: Being a GM',
+        img: 'img/ground.png',
+        date: '3rd November 2015',
+        rating: '3.5'
+    }, {
+        title: 'What You Dont Know About: Being a GM',
+        img: 'img/ground.png',
+        date: '3rd November 2015',
+        rating: '3.5'
+    }, {
+        title: 'What You Dont Know About: Being a GM',
+        img: 'img/ground.png',
+        date: '3rd November 2015',
+        rating: '3.5'
+    }, {
+        title: 'What You Dont Know About: Being a GM',
+        img: 'img/ground.png',
+        date: '3rd November 2015',
+        rating: '3.5'
+    }];
+
+})
+
+.controller('CoachBlogCreateCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("coach-blog-create");
+    $scope.menutitle = NavigationService.makeActiveCoach("Blog");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getNavCoach();
 
 })
 

@@ -1,0 +1,44 @@
+<div class="panel-content ng-scope">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget">
+                <div class="table-area">
+                    <div class="widget-title">
+                        <h3 class="text-uppercase">Create Blog</h3>
+                    </div>
+                    <form name="createBlogCoach" ng-submit="blog(formData);" class="login-section">
+                        <div class="step1">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': createBlogCoach.freeText.$invalid && createBlogCoach.freeText.$touched}">
+                                        <label>Upload Image:</label>
+                                        <div class="upload-btn">
+                                            <upload-image ng-model=formData.photo></upload-image>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': createBlogCoach.name.$invalid && createBlogCoach.name.$touched}">
+                                        <label>Title:</label>
+                                        <input type="text" name="name" ng-model="formData.name" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 field">
+                                    <label>Content <span>*</span></label>
+                                    <textarea ui-tinymce="tinymceOptions" ng-model="formData.content"></textarea>
+                                </div>
+                            </div>
+                            <div class="text-center mt20">
+                                <a class="btn btn-primary thick-font">Submit</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1210,6 +1210,10 @@ img.uploadingImage {
     .btn {
         padding: 10px 20px;
     }
+    .upload-btn .btn {
+        padding: 5px 15px;
+        font-size: 12px;
+    }
     p>a {
         text-decoration: underline;
     }
@@ -1771,8 +1775,57 @@ textarea {
     margin-bottom: 15px;
 }
 
+.blog-list {
+    padding: 0 15px 20px;
+    position: relative;
+    @include transition (all ease 300ms);
+    .blog-title {
+        padding: 10px;
+    }
+    .card-title {
+        width: 100%;
+        height: 25px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .blog-delete {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        opacity: 0;
+        @include transition (all ease 300ms);
+    }
+    &:hover {
+        .blog-delete {
+            opacity: 1;
+        }
+    }
+}
 
-/* Start writing sass here */
+.blog-cont {
+    padding: 20px 0;
+}
+
+.rate-card {
+    color: #fff;
+    background: $green;
+    padding: 2px 5px;
+    border-radius: 4px;
+    &.rateup {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        @include transform (translateX(-50%));
+    }
+}
+
+.blog-block {
+    .blog-img {
+        margin-bottom: 20px;
+        position: relative;
+    }
+}
 
 @import "fancybox-override";
 @import "template/responsive";

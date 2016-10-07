@@ -14,10 +14,17 @@
   .table-area {
     padding: 20px;
   }
-  .widget-title .pull-right {
-    float: none !important;
-    .btn {
-      margin: 20px 0;
+  .menu-options {
+    margin-left: 8px;
+  }
+  .widget-title {
+    h3 {
+      margin: 10px 0 0;
+      clear: both;
+    }
+    .pull-right {
+      float: none !important;
+      clear: both;
     }
   }
   .first-half {
@@ -101,6 +108,11 @@
 @media (max-width:480px) {
   .profile-detail {
     padding: 18px 12px 5px;
+  }
+  .widget-title .pull-right {
+    .btn {
+      margin: 20px 0;
+    }
   }
   .profile-detail .profile-option {
     width: 43%;

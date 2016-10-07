@@ -100,6 +100,12 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
         controller: 'CoachBlogDetailCtrl'
     })
 
+    .state('coach-blog-create', {
+        url: "/coach/blog-create",
+        templateUrl: "views/template.html",
+        controller: 'CoachBlogCreateCtrl'
+    })
+
     .state('forbidden', {
         url: "/forbidden",
         templateUrl: "views/template.html",

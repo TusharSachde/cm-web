@@ -26,6 +26,12 @@ var navigationservice = angular.module('navigationservice', [])
         sref: "coach-competition", //Keep sref empty if subnav
         icon: "users",
         subnav: []
+    }, {
+        name: "Blog",
+        classis: "active",
+        sref: "coach-blog", //Keep sref empty if subnav
+        icon: "edit2",
+        subnav: []
     }];
 
     var navigationAthelete = [{
