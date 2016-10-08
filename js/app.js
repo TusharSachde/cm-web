@@ -88,6 +88,12 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
         controller: 'CoachTestingCreateCtrl'
     })
 
+    .state('coach-testing-edit', {
+        url: "/coach/testing-edit",
+        templateUrl: "views/template.html",
+        controller: 'CoachTestingEditCtrl'
+    })
+
     .state('coach-blog', {
         url: "/coach/blog",
         templateUrl: "views/template.html",
@@ -104,6 +110,12 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
         url: "/coach/blog-create",
         templateUrl: "views/template.html",
         controller: 'CoachBlogCreateCtrl'
+    })
+
+    .state('coach-blog-edit', {
+        url: "/coach/blog-edit",
+        templateUrl: "views/template.html",
+        controller: 'CoachBlogEditCtrl'
     })
 
     .state('forbidden', {

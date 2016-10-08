@@ -80,6 +80,20 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': editprofile.limit.$invalid && editprofile.limit.$touched}">
+                                        <label>Coaching Limit:</label>
+                                        <input type="text" name="limit" ng-model="formData.limit" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': editprofile.price.$invalid && editprofile.price.$touched}">
+                                        <label>Asking Price:</label>
+                                        <input type="number" name="price" ng-model="formData.price" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <!-- <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': editprofile.city.$invalid && editprofile.city.$touched}">
                                         <label>City/Town:</label>

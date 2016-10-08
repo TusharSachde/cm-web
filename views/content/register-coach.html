@@ -59,6 +59,7 @@
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.gender.$invalid && registerCoach.gender.$touched}">
                                         <label>Gender:</label>
                                         <select name="gender" ng-model="formData.gender" class="form-control" required>
+                                             <option disabled selected>Select</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
@@ -94,6 +95,7 @@
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.country.$invalid && registerCoach.country.$touched}">
                                         <label>Country:</label>
                                         <select name="country" ng-model="formData.country" class="form-control" required>
+                                            <option disabled selected>Select</option>
                                                     <option value="UK">United Kingdom</option>
                                                     <option value="US">United States</option>
                                                     <option value="IN">India</option>
@@ -104,6 +106,7 @@
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.credential.$invalid && registerCoach.credential.$touched}">
                                         <label>Credential/Qualification:</label>
                                         <select name="credential" ng-model="formData.coaching" class="form-control" required>
+                                            <option disabled selected>Select</option>
                                             <option value="Level 1">Level 1</option>
                                             <option value="Level 2">Level 2</option>
                                             <option value="Level 3">Level 3</option>
@@ -169,6 +172,15 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.freeText.$invalid && registerCoach.freeText.$touched}">
+                                        <div class="upload-btn">
+                                            <input type="checkbox" name="" value=""> I agree to the Coach Mentor <a href="">Terms of Service</a>                                            and <a href="">Privacy Policy</a>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="step2">
@@ -178,6 +190,7 @@
                         <div class="text-center">
                             <a class="btn btn-primary thick-font">Submit</a>
                         </div>
+
                     </form>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600,600italic,700,700italic);
+$output-bourbon-deprecation-warnings: true;
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
@@ -68,6 +69,12 @@ a,
     @include transition(all ease 300ms);
     &:focus {
         outline: none !important;
+    }
+}
+
+a {
+    &:hover {
+        color: lighten(#004a9b, 20%);
     }
 }
 
@@ -319,6 +326,7 @@ $trans-black: rgba( black, .15);
         display: inline-block;
         min-width: 70px;
         overflow: hidden;
+        margin: 0 5px;
         >p {
             line-height: 100%;
             font-weight: 300;
@@ -936,6 +944,7 @@ img.uploadingImage {
     }
     textarea.form-control {
         padding: 5px 7px;
+        border-radius: 5px;
     }
     .form-builder-head {
         font-weight: bold;
@@ -1214,9 +1223,9 @@ img.uploadingImage {
         padding: 5px 15px;
         font-size: 12px;
     }
-    p>a {
-        text-decoration: underline;
-    }
+    // p>a {
+    //     text-decoration: underline;
+    // }
 }
 
 .thick-font {
@@ -1644,6 +1653,7 @@ textarea {
         @extend .tag-box;
         color: #777777;
         font-weight: normal;
+        cursor: pointer;
     }
     input[type=checkbox]:checked+label {
         background-color: $blue;
@@ -1767,7 +1777,32 @@ textarea {
     min-height: 34px;
     .ui-select-match .close {
         font-size: 1.6em;
-        line-height: 0.9;
+        line-height: 1.5;
+        font-weight: normal;
+        color: #000;
+        text-shadow: 0 0px 0 transparent;
+        opacity: 0.8;
+    }
+    .btn-primary {
+        .close {
+            color: #fff;
+        }
+    }
+    .ui-select-match-item {
+        border-radius: 4px !important;
+    }
+    img {
+        border-radius: 50%;
+        margin-right: 3px;
+        padding: 2px;
+    }
+    .img-select {
+        width: 30px;
+        height: 30px;
+    }
+    .img-drop {
+        width: 45px;
+        height: 45px;
     }
 }
 

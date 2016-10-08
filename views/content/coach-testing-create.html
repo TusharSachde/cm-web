@@ -1,168 +1,74 @@
-<div class="panel-content ng-scope create-testing">
+<div class="panel-content ng-scope">
     <div class="row">
         <div class="col-md-12">
-            <div class="contact-sec no-pad-up some-pad">
-                <div class="login-tab text-center">
-                    <ul class="ul-justified ul-nav">
-                        <li ng-class="{'active' : testStep == 'test'}" ng-click="testStep = 'test'">Create Test</li>
-                        <li ng-class="{'active' : testStep == 'activity'}" ng-click="testStep = 'activity'">Select Activity</li>
-                        <li ng-class="{'active' : testStep == 'plan'}" ng-click="testStep = 'plan'">Training Plan</li>
-                    </ul>
-                </div>
-
-                <div class="row" ng-show="testStep == 'test'">
-                    <div class="col-md-12">
-                        <div class="create-test">
-                            <form name="createTest" ng-submit="register(formData);">
-                                <div class="round-form">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group" ng-class="{'form-invalid': createTest.testname.$invalid && createTest.testname.$touched}">
-                                                <label>Test Name:</label>
-                                                <input type="text" name="testname" ng-model="formData.testname" class="form-control" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group" ng-class="{'form-invalid': createTest.testdate.$invalid && createTest.testdate.$touched}">
-                                                <label>Date:</label>
-                                                <input type="date" name="testdate" ng-model="formData.testdate" class="form-control" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group" ng-class="{'form-invalid': createTest.goal.$invalid && createTest.goal.$touched}">
-                                                <label>Goal:</label>
-                                                <textarea name="goal" ng-model="formData.goal" class="form-control text-size" rows="3" required></textarea>
-                                            </div>
-                                        </div>
+            <div class="widget">
+                <div class="table-area">
+                    <div class="widget-title">
+                        <h3 class="text-uppercase">{{title}}</h3>
+                    </div>
+                    <form name="addtesting" ng-submit="testing(formData);">
+                        <div class="round-form">
+                            <!--<p>All the below fields are mandatory.</p>-->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': addtesting.name.$invalid && addtesting.name.$touched}">
+                                        <label>Name:</label>
+                                        <input type="text" name="name" ng-model="formData.name" class="form-control" required>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="text-right">
-                            <button class="btn btn-blue btn-round" type="button" ng-click="testStep = 'activity'"><i class="fa fa-chevron-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row" ng-show="testStep == 'activity'">
-                    <div class="col-md-12">
-                        <div class="create-test">
-                            <div class="round-form">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="input-group">
-                                            <div class="input-group-btn">
-                                                <button class="btn btn-blue btn-round" type="button" ng-click="newActivity = !newActivity">New Activity</button>
-                                                <button class="btn btn-blue btn-round" type="button">Add</button>
-
-                                            </div>
-                                            <input type="text" class="form-control">
+                                <!--<div class="col-md-6">
+                                    <div class="pt30">
+                                        <div class="form-group" ng-class="{'form-invalid': addtesting.level.$invalid && addtesting.level.$touched}">
+                                            <label>Key Competition:</label>
+                                            <toggle-switch on-label=Yes off-label=No ng-model=required class="switch-mini switch-success ml-25"></toggle-switch>
                                         </div>
                                     </div>
-
+                                </div>-->
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': addtesting.startdate.$invalid && addtesting.startdate.$touched}">
+                                        <label>Start:</label>
+                                        <input type="date" name="startdate" ng-model="formData.startdate" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': addtesting.enddate.$invalid && addtesting.enddate.$touched}">
+                                        <label>End:</label>
+                                        <input type="date" name="enddate" ng-model="formData.enddate" class="form-control" required>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="sec" ng-if="newActivity">
-                                <div class="form-builder">
-                                    <div class="form-repeater">
-                                        <div class="form-builder-head">
-                                            <label>Select Activity</label>
-                                        </div>
-                                        <div class="form-builder-hr">
-                                            <div class="form-builder-item row-item">
-                                                <div class="col-item" ng-class="{ 'form-invalid': formName.activityDetail.$invalid
-                                                    && formName.activityDetail.$touched}">
-                                                    <select name="activityDetail" class="form-control" required>
-                                                                <option value="Activity Detail">Activity Detail</option>
-                                                                <option value="No. of Sets">No. of Sets</option>
-                                                                <option value="Iteration">Iteration</option>
-                                                                <option value="Repetition">Repetition</option>
-                                                                <option value="Time Required">Time Required</option>
-                                                            </select>
-                                                </div>
-                                                <div class="col-item" ng-class="{ 'form-invalid': formName.activityValue.$invalid
-                                                    && formName.activityValue.$touched}">
-                                                    <input type="text" name="activityValue" ng-model="formData.activityValue
-                                                   " class="form-control" placeholder="Activity Value" required>
-                                                </div>
-                                                <div class="mark-float">
-                                                    <i class="fa fa-plus-circle success"></i>
-                                                    <i class="fa fa-minus-circle danger"></i>
-                                                </div>
-                                            </div>
-                                            <div class="form-builder-item row-item">
-                                                <div class="col-item" ng-class="{ 'form-invalid': formName.activityDetail.$invalid
-                                                    && formName.activityDetail.$touched}">
-                                                    <select name="activityDetail" class="form-control" required>
-                                                                <option value="Activity Detail">Activity Detail</option>
-                                                                <option value="No. of Sets">No. of Sets</option>
-                                                                <option value="Iteration">Iteration</option>
-                                                                <option value="Repetition">Repetition</option>
-                                                                <option value="Time Required">Time Required</option>
-                                                            </select>
-                                                </div>
-                                                <div class="col-item" ng-class="{ 'form-invalid': formName.activityValue.$invalid
-                                                    && formName.activityValue.$touched}">
-                                                    <input type="text" name="activityValue" ng-model="formData.activityValue
-                                                   " class="form-control" placeholder="Activity Value" required>
-                                                </div>
-                                                <div class="mark-float">
-                                                    <i class="fa fa-plus-circle success"></i>
-                                                    <i class="fa fa-minus-circle danger"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': addtesting.players.$invalid && addtesting.players.$touched}">
+                                        <label>Add Players:</label>
+                                        <ui-select multiple tagging tagging-label="(custom 'new' label)" ng-model="formData.player" theme="bootstrap" sortable="true"
+                                            ng-disabled="disabled" title="Add Players">
+                                            <ui-select-match placeholder="Select Players..."><img ng-src="{{$item.image}} " alt="" class="img-select"> {{$item.name}}</ui-select-match>
+                                            <ui-select-choices repeat="player in players | filter:$select.search">
+                                                <img src="{{player.image}} " alt="" class="img-drop">{{player.name}}
+                                            </ui-select-choices>
+                                        </ui-select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': addtesting.description.$invalid && addtesting.description.$touched}">
+                                        <label>Description:</label>
+                                        <textarea rows="3" cols="5" name="description" ng-model="formData.description" class="form-control" required></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="text-right pad-top">
-                            <button class="btn btn-blue btn-round" type="button" ng-click="testStep='test'"><i class="fa fa-chevron-left"></i></button>
-                            <button class="btn btn-blue btn-round" type="button" ng-click="testStep='plan'"><i class="fa fa-chevron-right"></i></button>
+
+                        <div class="made-form text-center">
+                            <button class="btn btn-blue btn-round" type="submit">Save</button>
+                            <button class="btn btn-red btn-round" type="submit">Cancel</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
-
-                <div class="row" ng-show="testStep=='plan'">
-                    <div class="col-md-12">
-                        <div class="create-test">
-                            <form name="trainingPlan" ng-submit="register(formData);">
-                                <div class="round-form">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group" ng-class="{ 'form-invalid': createTest.trainingPlan.$invalid
-                                                    && createTest.trainingPlan.$touched}">
-
-                                                <label>Select Training Plan</label>
-                                                <!--<ui-select multiple tagging>
-                                                <ui-select-match placeholder="Select Training Plan" ng-model="trainingPlan"></ui-select-match>
-                                                <ui-select-choices></ui-select-choices>
-                                            </ui-select>-->
-                                                <input type="text" class="form-control">
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="text-right">
-                            <button class="btn btn-blue btn-round" type="button" ng-click="testStep='activity'
-                                                   "><i class="fa fa-chevron-left"></i></button>
-                            <button class="btn btn-green btn-round" type="submit"><i class="fa fa-check"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!--<div class="modal-footer">
-                    <button class="btn btn-blue btn-round" type="submit" ng-disabled="createTest.$invalid || formName.$invalid
-                                                    || trainingPlan.$invalid">Previous</button>
-                    <button class="btn btn-blue btn-round" type="submit" ng-disabled="createTest.$invalid || formName.$invalid
-                                                    || trainingPlan.$invalid">Next</button>
-                </div>-->
             </div>
         </div>
     </div>

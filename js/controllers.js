@@ -79,6 +79,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             gender: 'Male',
             contact: '+919098765324',
             dob: new Date(),
+            limit: "50",
+            price: 50,
             country: 'UK',
             credentials: 'Level 4',
             about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien. Vivamus sodales et libero ac consectetur. Curabitur hendrerit lacus nisi, eget euismod felis gravida vitae. Nullam faucibus maximus eros, non facilisis magna tincidunt quis. Ut suscipit fringilla quam eu scelerisque. Proin orci lacus, condimentum eget urna at, aliquam pellentesque mauris. Aenean rutrum diam tortor, sed finibus nibh condimentum ac. Sed et blandit arcu.',
@@ -188,14 +190,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.title = "Add Competition";
     $scope.players = [{
         name: 'Ambrose Dzosa',
+        image: 'img/img-placeholder.png'
     }, {
-        name: 'Johannah Deakin'
+        name: 'Johannah Deakin',
+        image: 'img/img-placeholder.png'
     }, {
-        name: 'Jack White'
+        name: 'Jack White',
+        image: 'img/img-placeholder.png'
     }, {
         name: 'Matt Smith',
+        image: 'img/img-placeholder.png'
     }, {
         name: 'May Smith',
+        image: 'img/img-placeholder.png'
     }]
 })
 
@@ -208,14 +215,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.title = "Edit Competition";
         $scope.players = [{
             name: 'Ambrose Dzosa',
+            image: 'img/img-placeholder.png'
         }, {
-            name: 'Johannah Deakin'
+            name: 'Johannah Deakin',
+            image: 'img/img-placeholder.png'
         }, {
-            name: 'Jack White'
+            name: 'Jack White',
+            image: 'img/img-placeholder.png'
         }, {
             name: 'Matt Smith',
+            image: 'img/img-placeholder.png'
         }, {
             name: 'May Smith',
+            image: 'img/img-placeholder.png'
         }]
     })
     .controller('CoachTestingCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
@@ -224,30 +236,59 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeActiveCoach("Testing");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getNavCoach();
-        $scope.assignTesting = function () {
-            var modalInstance = $uibModal.open({
-                scope: $scope,
-                templateUrl: 'views/modal/modal-testing-assign.html'
-            });
-        };
-
-        $scope.scoreTesting = function () {
-            var modalInstance = $uibModal.open({
-                scope: $scope,
-                templateUrl: 'views/modal/modal-testing-score.html',
-                size: 'lg'
-            });
-        };
     })
 
 .controller('CoachTestingCreateCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("coach-testing-create");
-    $scope.menutitle = NavigationService.makeActiveCoach("Testing Create");
+    $scope.menutitle = NavigationService.makeActiveCoach("Testing");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
 
     $scope.testStep = 'test';
+    $scope.players = [{
+        name: 'Ambrose Dzosa',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Johannah Deakin',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Jack White',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Matt Smith',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'May Smith',
+        image: 'img/img-placeholder.png'
+    }]
+
+})
+
+.controller('CoachTestingEditCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("coach-testing-create");
+    $scope.menutitle = NavigationService.makeActiveCoach("Testing");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getNavCoach();
+
+    $scope.testStep = 'test';
+    $scope.players = [{
+        name: 'Ambrose Dzosa',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Johannah Deakin',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Jack White',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Matt Smith',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'May Smith',
+        image: 'img/img-placeholder.png'
+    }]
 
 })
 
@@ -292,6 +333,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeActiveCoach("Blog");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
+
+})
+
+.controller('CoachBlogEditCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("coach-blog-create");
+    $scope.menutitle = NavigationService.makeActiveCoach("Blog");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getNavCoach();
+    $scope.formData = {
+        name: 'Sachin',
+        content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p><p>See, I come from a long line of warriors, as my mom used to say. When cancer struck my aunties we didn’t have time to grieve because we were too busy fighting the disease.</p><p>Each time the disease struck, we thought, This is gonna be the one that we beat, this is gonna be the one that we beat, this is gonna be the one that we beat. We knew the protocols — doctors, chemo, estrogen shot, whatever was needed to be healthy and fighting. We were always optimistic.</p><p>Each battle lasted a little longer than the one before, but we never won.</p><p>In 2004 it was my mom’s turn to fight. Only she didn’t tell me.</p><p>My mom was diagnosed at the beginning of the year, but she didn’t tell me about it until the summer, after my junior season at Memphis.</p> <p>I was pissed. I felt like she was going through this battle herself and had robbed us of the opportunity to be her support system. When I asked her why she waited to tell us she simply said, “Hey, you were busy. I was busy.”</p><p>That was how strong my mom was. She didn’t want to burden anybody else. But it wasn’t until years later that I understood how truly strong she was.</p>"
+    };
+
+
 
 })
 

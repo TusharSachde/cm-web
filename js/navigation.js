@@ -27,10 +27,16 @@ var navigationservice = angular.module('navigationservice', [])
         icon: "users",
         subnav: []
     }, {
+        name: "Testing",
+        classis: "active",
+        sref: "coach-testing", //Keep sref empty if subnav
+        icon: "speed-fast",
+        subnav: []
+    }, {
         name: "Blog",
         classis: "active",
         sref: "coach-blog", //Keep sref empty if subnav
-        icon: "edit2",
+        icon: "archive",
         subnav: []
     }];
 
