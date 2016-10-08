@@ -42,6 +42,7 @@
                 <div class="form-group" ng-class="{'form-invalid': addCompetition.level.$invalid && addCompetition.level.$touched}">
                     <label>Level:</label>
                     <select name="level" class="form-control" required>
+                        <option value='' disabled selected>Select</option>
                         <option value="International">International</option>
                         <option value="National">National</option>
                         <option value="State level">State level</option>

@@ -39,7 +39,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     })
     .controller('RegisterCoachCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
         $scope.template = TemplateService.changecontent("register-coach");
-        TemplateService.title = "Coach Registeration";
+        TemplateService.title = "Coach Registration";
         $scope.template.header = 'views/header2.html';
         $scope.formData = {};
         $scope.coachingFocus = [

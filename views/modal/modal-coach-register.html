@@ -32,7 +32,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group" ng-class="{'form-invalid': registerCoach.number.$invalid && registerCoach.number.$touched}">
-                    <label>Contact Number:</label>
+                    <label>Phone Number:</label>
                     <div class="flex-row">
                         <div class="flex-col flex-col-25">
                             <input type="text" name="numberex" ng-model="formData.numberex" class="form-control" required>
@@ -53,7 +53,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group" ng-class="{'form-invalid': registerCoach.password2.$invalid && registerCoach.password2.$touched}">
-                    <label>Re-enter Password:</label>
+                    <label>Confirm Password:</label>
                     <input type="password" name="password2" ng-model="formData.password2" class="form-control" required>
                 </div>
             </div>
@@ -63,6 +63,7 @@
                 <div class="form-group" ng-class="{'form-invalid': registerCoach.gender.$invalid && registerCoach.gender.$touched}">
                     <label>Gender:</label>
                     <select name="gender" ng-model="formData.gender" class="form-control" required>
+                        <option value='' disabled selected>Select</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
@@ -80,6 +81,7 @@
                 <div class="form-group" ng-class="{'form-invalid': registerCoach.discipline.$invalid && registerCoach.discipline.$touched}">
                     <label>Discipline:</label>
                     <select name="discipline" ng-model="formData.discipline" class="form-control" required>
+                        <option value='' disabled selected>Select</option>
                         <option value="Track and Field">Track and Field</option>
                         <option value="Road Running">Road Running</option>
                         <option value="Hill/Fell Running">Hill/Fell Running</option>

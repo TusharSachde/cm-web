@@ -166,9 +166,20 @@ a {
     color: #777777;
 }
 
-.admin-details>i {
-    color: #777777;
-    text-transform: capitalize;
+.admin-details {
+    i {
+        color: #777777;
+        text-transform: capitalize;
+    }
+    span>img {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        float: left;
+        width: 59px;
+    }
 }
 
 .post-content p {
@@ -292,8 +303,8 @@ $trans-black: rgba( black, .15);
 
 .info-pic {
     position: absolute;
-    left: 10px;
-    top: -7px;
+    left: 15px;
+    top: 4px;
     >span {
         display: inline-block;
         -webkit-border-radius: 100%;
@@ -302,11 +313,12 @@ $trans-black: rgba( black, .15);
         border-radius: 100%;
     }
     .dp {
-        height: 101px;
-        -webkit-border-radius: 100%;
-        -moz-border-radius: 100%;
-        -ms-border-radius: 100%;
-        border-radius: 100%;
+        height: 80px;
+        border-radius: 5px;
+        // -webkit-border-radius: 100%;
+        // -moz-border-radius: 100%;
+        // -ms-border-radius: 100%;
+        // border-radius: 100%;
     }
 }
 
@@ -1219,10 +1231,10 @@ img.uploadingImage {
     .btn {
         padding: 10px 20px;
     }
-    .upload-btn .btn {
-        padding: 5px 15px;
-        font-size: 12px;
-    }
+    // .upload-btn .btn {
+    //     padding: 5px 15px;
+    //     font-size: 12px;
+    // }
     // p>a {
     //     text-decoration: underline;
     // }
@@ -1718,17 +1730,18 @@ textarea {
     img {
         height: 101px;
         width: 101px;
-        -webkit-border-radius: 100%;
-        -moz-border-radius: 100%;
-        -ms-border-radius: 100%;
-        border-radius: 100%;
         cursor: pointer;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
     }
     .icon-btn {
         position: absolute;
-        bottom: 0;
+        bottom: -10px;
         font-size: 18px;
-        right: 0;
+        right: -10px;
         padding: 3px 7px;
         width: 32px;
         height: 32px;
@@ -1763,7 +1776,6 @@ textarea {
     img {
         width: 100%;
         height: 100%;
-        border-radius: 100%;
     }
 }
 

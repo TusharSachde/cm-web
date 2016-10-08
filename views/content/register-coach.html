@@ -5,7 +5,7 @@
                 <div class="contact-sec no-pad-up some-pad">
                     <div class="login-tab text-center">
                         <ul class="ul-justified ul-nav">
-                            <li class="active">Coach Registeration</li>
+                            <li class="active">Coach Registration</li>
                         </ul>
                     </div>
                     <form name="registerCoach" ng-submit="register(formData);" class="login-section">
@@ -15,7 +15,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.name.$invalid && registerCoach.name.$touched}">
-                                        <label>Name:</label>
+                                        <label>Forename:</label>
                                         <input type="text" name="name" ng-model="formData.name" class="form-control" required>
                                     </div>
                                 </div>
@@ -29,14 +29,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.email.$invalid && registerCoach.email.$touched}">
-                                        <label>Email:</label>
+                                        <label>Email Address:</label>
                                         <input type="email" name="email" ng-model="formData.email" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.contact.$invalid && registerCoach.contact.$touched}">
-                                        <label>Contact Number:</label>
-                                        <input type="tel" name="number" ng-model="formData.contact" class="form-control" required>
+                                        <label>Phone Number:</label>
+                                        <input type="tel" name="contact" ng-model="formData.contact" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.password2.$invalid && registerCoach.password2.$touched}">
-                                        <label>Re-enter Password:</label>
+                                        <label>Confirm Password:</label>
                                         <input type="password" name="password2" ng-model="formData.password2" class="form-control" required>
                                     </div>
                                 </div>
@@ -59,10 +59,10 @@
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.gender.$invalid && registerCoach.gender.$touched}">
                                         <label>Gender:</label>
                                         <select name="gender" ng-model="formData.gender" class="form-control" required>
-                                             <option disabled selected>Select</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
+                                            <option value='' disabled selected>Select</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -95,7 +95,7 @@
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.country.$invalid && registerCoach.country.$touched}">
                                         <label>Country:</label>
                                         <select name="country" ng-model="formData.country" class="form-control" required>
-                                            <option disabled selected>Select</option>
+                                             <option value='' disabled selected>Select</option>
                                                     <option value="UK">United Kingdom</option>
                                                     <option value="US">United States</option>
                                                     <option value="IN">India</option>
@@ -104,9 +104,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.credential.$invalid && registerCoach.credential.$touched}">
-                                        <label>Credential/Qualification:</label>
+                                        <label>Credentials / Qualifications:</label>
                                         <select name="credential" ng-model="formData.coaching" class="form-control" required>
-                                            <option disabled selected>Select</option>
+                                             <option value='' disabled selected>Select</option>
                                             <option value="Level 1">Level 1</option>
                                             <option value="Level 2">Level 2</option>
                                             <option value="Level 3">Level 3</option>
@@ -118,10 +118,9 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.year.$invalid && registerCoach.year.$touched}">
-                                        <label>Years of Coaching:</label>
-                                        <input type="number" placeholder="Years Coaching" name="yearsCoaching" ng-model="formData.yearsCoaching" min="1" max="99"
-                                            class="form-control" required>
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.years.$invalid && registerCoach.years.$touched}">
+                                        <label>Years Coaching:</label>
+                                        <input type="number" name="years" ng-model="formData.years" min="1" max="99" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +138,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.specialization.$invalid && registerCoach.specialization.$touched}">
-                                        <label>Specialization:</label> <br>
+                                        <label>Specialisations:</label> <br>
                                         <div class="tag-box-label" ng-repeat="s in specialisations">
                                             <input type="checkbox" id="{{s}}" checklist-model="formData.specialisations" checklist-value="s" name="specialisations">
                                             <label for="{{s}}">{{s}}</label>
@@ -157,8 +156,15 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group" ng-class="{'form-invalid': about.freeText.$invalid && about.freeText.$touched}">
-                                        <label>About:</label>
+                                        <label>Free Text CV:</label>
                                         <textarea name="freeText" ng-model="formData.about" class="form-control" rows="4" cols="50" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': about.freeText.$invalid && about.freeText.$touched}">
+                                        <div class="text-center bold"><label for="">- or -</label></div>
                                     </div>
                                 </div>
                             </div>

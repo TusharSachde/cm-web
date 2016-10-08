@@ -13,7 +13,7 @@
                 <div class="form-group" ng-class="{'form-invalid': competitionScore.athlete.$invalid && competitionScore.athlete.$touched}">
                     <label>Select Athlete</label>
                     <select name="athlete" class="form-control" required>
-                        <option value="- Select Athlete -">- Select Athlete -</option>
+                      <option value='' disabled selected>Select</option>
                         <option value="Rahul Dravid">Rahul Dravid</option>
                         <option value="Sachin Tendulkar">Sachin Tendulkar</option>
                     </select>
@@ -23,7 +23,7 @@
                 <div class="form-group" ng-class="{'form-invalid': competitionScore.performance.$invalid && competitionScore.performance.$touched}">
                     <label>Performance</label>
                     <select name="performance" class="form-control" required>
-                        <option value="- Select Performance -">- Select Performance -</option>
+                      <option value='' disabled selected>Select</option>
                         <option value="Outstanding">Outstanding</option>
                         <option value="Excellent">Excellent</option>
                         <option value="Good">Good</option>
