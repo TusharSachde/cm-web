@@ -35,6 +35,16 @@ $brand-success: $green !default;
     src: url('../fonts/OpenSans-Regular.eot');
 }
 
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url("../fonts/glyphicons-halflings-regular.eot");
+    @font-face {
+        font-family: 'Glyphicons Halflings';
+        src: url("../fonts/glyphicons-halflings-regular.eot");
+        src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+    }
+}
+
 button,
 div,
 input {
@@ -296,6 +306,7 @@ $trans-black: rgba( black,
         font-size: 14px;
         min-width: auto;
         position: absolute;
+        border-radius: 0;
         top: 0;
         right: 0;
         height: 100%;
@@ -1253,16 +1264,6 @@ img.uploadingImage {
     .form-control {
         border-radius: 5px;
     }
-    .btn {
-        padding: 10px 20px;
-    }
-    // .upload-btn .btn {
-    //     padding: 5px 15px;
-    //     font-size: 12px;
-    // }
-    // p>a {
-    //     text-decoration: underline;
-    // }
 }
 
 .thick-font {
@@ -1892,7 +1893,7 @@ textarea {
         position: absolute;
         bottom: -10px;
         left: 50%;
-        @include transform (translateX(-50%));
+        @include transform(translateX(-50%));
     }
 }
 

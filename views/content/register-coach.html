@@ -68,29 +68,18 @@
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.dob.$invalid && registerCoach.dob.$touched}">
                                         <label>Date of Birth:</label>
-                                        <input type="date" name="dob" ng-model="formData.dob" class="form-control" required>
+                                        <p class="input-group">
+                                            <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup.opened" datepicker-options="dateOptions"
+                                                ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                            <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="popup.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+                                        </p>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <!-- <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.city.$invalid && registerCoach.city.$touched}">
-                                        <label>City/Town:</label>
-                                        <input type="text" name="city" ng-model="formData.city" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.state.$invalid && registerCoach.state.$touched}">
-                                        <label>State/Province:</label>
-                                        <input type="text" name="state" ng-model="formData.state" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.postalCode.$invalid && registerCoach.postalCode.$touched}">
-                                        <label>Postal Code:</label>
-                                        <input type="text" name="postalCode" ng-model="formData.postalCode" class="form-control" required>
-                                    </div>
-                                </div>-->
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.country.$invalid && registerCoach.country.$touched}">
                                         <label>Country:</label>
