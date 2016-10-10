@@ -75,7 +75,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': editprofile.dob.$invalid && editprofile.dob.$touched}">
                                         <label>Date of Birth:</label>
-                                        <input type="date" name="dob" ng-model="formData.dob" class="form-control" required>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" uib-datepicker-popup ng-model="editprofile.dob" is-open="popup.opened" datepicker-options="dateOptions"
+                                                ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                            <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default ht34" ng-click="popup.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +95,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': editprofile.price.$invalid && editprofile.price.$touched}">
                                         <label>Coach Asking Price:</label>
-                                        <input type="number" name="price" ng-model="formData.price" class="form-control" required>
+                                        <input type="number" name="price" ng-model="formData.price" class="form-control" required onlyDigits>
                                     </div>
                                 </div>
                             </div>

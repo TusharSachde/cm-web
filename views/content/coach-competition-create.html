@@ -29,13 +29,23 @@
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': addCompetition.startDate.$invalid && addCompetition.startDate.$touched}">
                                         <label>Start Date:</label>
-                                        <input type="date" name="startDate" ng-model="formData.startDate" class="form-control" required>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" uib-datepicker-popup ng-model="addCompetition.startDate" is-open="popup.opened" datepicker-options="dateOptions"
+                                                ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                            <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default ht34" ng-click="popup.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group" ng-class="{'form-invalid': addCompetition.endDate.$invalid && addCompetition.endDate.$touched}">
-                                        <label>End Date:</label>
-                                        <input type="date" name="endDate" ng-model="formData.endDate" class="form-control" required>
+                                <div class="form-group" ng-class="{'form-invalid': addCompetition.endDate.$invalid && addCompetition.endDate.$touched}">
+                                    <label>End Date:</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" uib-datepicker-popup ng-model="addCompetition.endDate" is-open="popup1.opened" datepicker-options="dateOptions"
+                                            ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default ht34" ng-click="popup1.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>

@@ -69,10 +69,10 @@
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.dob.$invalid && registerCoach.dob.$touched}">
                                         <label>Date of Birth:</label>
                                         <p class="input-group">
-                                            <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup.opened" datepicker-options="dateOptions"
+                                            <input type="text" class="form-control" uib-datepicker-popup ng-model="registerCoach.dob" is-open="popup.opened" datepicker-options="dateOptions"
                                                 ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
                                             <span class="input-group-btn">
-            <button type="button" class="btn btn-default" ng-click="popup.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
+            <button type="button" class="btn btn-default ht34" ng-click="popup.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
           </span>
                                         </p>
 
@@ -182,11 +182,9 @@
                             <div class="step2">
 
                             </div>
-
                             <div class="text-center">
                                 <a class="btn btn-primary thick-font">Submit</a>
                             </div>
-
                     </form>
                     </div>
                 </div>
