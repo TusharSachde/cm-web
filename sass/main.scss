@@ -30,6 +30,11 @@ $brand-success: $green !default;
 @import "template/icons";
 @import "template/main";
 @import "custom-switch";
+@font-face {
+    font-family: Open Sans;
+    src: url('../fonts/OpenSans-Regular.eot');
+}
+
 button,
 div,
 input {
@@ -192,32 +197,47 @@ a {
 }
 
 .btn-red {
-    @include button-variant(white, $red, $red);
+    @include button-variant(white,
+    $red,
+    $red);
 }
 
 .btn-green {
-    @include button-variant(white, $green, $green);
+    @include button-variant(white,
+    $green,
+    $green);
 }
 
 .btn-blue {
-    @include button-variant(white, $blue, $blue);
+    @include button-variant(white,
+    $blue,
+    $blue);
 }
 
 .btn-orange {
-    @include button-variant(white, $orange, $orange);
+    @include button-variant(white,
+    $orange,
+    $orange);
 }
 
 .btn-google {
-    @include button-variant(white, $google, $google);
+    @include button-variant(white,
+    $google,
+    $google);
 }
 
-$trans-black: rgba( black, .15);
+$trans-black: rgba( black,
+.15);
 .btn-darker {
-    @include button-variant(white, $trans-black, transparent);
+    @include button-variant(white,
+    $trans-black,
+    transparent);
 }
 
 .btn-clear {
-    @include button-variant(white, transparent, transparent);
+    @include button-variant(white,
+    transparent,
+    transparent);
     padding: 0;
 }
 
