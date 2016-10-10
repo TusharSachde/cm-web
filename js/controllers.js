@@ -236,61 +236,94 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeActiveCoach("Testing");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getNavCoach();
+        $scope.data = [{
+            name: '800M Running',
+            startDate: '14 January, 2017',
+            endDate: '15 January, 2017',
+            details: '',
+            assignedAthletes: [{
+                name: 'Van Gough',
+                img: 'img/img-placeholder.png'
+            }],
+        }, {
+            name: '5KM Cycling',
+            startDate: '14 January, 2017',
+            endDate: '15 January, 2017',
+            details: '',
+            assignedAthletes: [{
+                name: 'Van Gough',
+                img: 'img/img-placeholder.png'
+            }],
+        }];
+
     })
 
 .controller('CoachTestingCreateCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-testing-create");
-    $scope.menutitle = NavigationService.makeActiveCoach("Testing");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getNavCoach();
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("coach-testing-create");
+        $scope.menutitle = NavigationService.makeActiveCoach("Testing");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getNavCoach();
+        $scope.title = "Create Testing";
+        $scope.testStep = 'test';
+        $scope.players = [{
+            name: 'Ambrose Dzosa',
+            image: 'img/img-placeholder.png'
+        }, {
+            name: 'Johannah Deakin',
+            image: 'img/img-placeholder.png'
+        }, {
+            name: 'Jack White',
+            image: 'img/img-placeholder.png'
+        }, {
+            name: 'Matt Smith',
+            image: 'img/img-placeholder.png'
+        }, {
+            name: 'May Smith',
+            image: 'img/img-placeholder.png'
+        }]
 
-    $scope.testStep = 'test';
-    $scope.players = [{
-        name: 'Ambrose Dzosa',
-        image: 'img/img-placeholder.png'
-    }, {
-        name: 'Johannah Deakin',
-        image: 'img/img-placeholder.png'
-    }, {
-        name: 'Jack White',
-        image: 'img/img-placeholder.png'
-    }, {
-        name: 'Matt Smith',
-        image: 'img/img-placeholder.png'
-    }, {
-        name: 'May Smith',
-        image: 'img/img-placeholder.png'
-    }]
+    })
+    .controller('CoachTestingEditCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("coach-testing-create");
+        $scope.menutitle = NavigationService.makeActiveCoach("Testing");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getNavCoach();
+        $scope.title = "Edit Testing";
+        $scope.formData = {
+            name: '300M Running',
+            startDate: new Date("January 14, 2017 11:13:00"),
+            endDate: new Date("January 15, 2017 11:13:00"),
+            details: '300M Running on Ronal Ground',
+            players: [{
+                name: 'Van Gough',
+                img: 'img/img-placeholder.png'
+            }, {
+                name: 'Samuel Trump',
+                img: 'img/img-placeholder.png'
+            }],
+        };
 
-})
+        $scope.testStep = 'test';
+        $scope.players = [{
+            name: 'Ambrose Dzosa',
+            image: 'img/img-placeholder.png'
+        }, {
+            name: 'Johannah Deakin',
+            image: 'img/img-placeholder.png'
+        }, {
+            name: 'Jack White',
+            image: 'img/img-placeholder.png'
+        }, {
+            name: 'Matt Smith',
+            image: 'img/img-placeholder.png'
+        }, {
+            name: 'May Smith',
+            image: 'img/img-placeholder.png'
+        }]
 
-.controller('CoachTestingEditCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-testing-create");
-    $scope.menutitle = NavigationService.makeActiveCoach("Testing");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getNavCoach();
-
-    $scope.testStep = 'test';
-    $scope.players = [{
-        name: 'Ambrose Dzosa',
-        image: 'img/img-placeholder.png'
-    }, {
-        name: 'Johannah Deakin',
-        image: 'img/img-placeholder.png'
-    }, {
-        name: 'Jack White',
-        image: 'img/img-placeholder.png'
-    }, {
-        name: 'Matt Smith',
-        image: 'img/img-placeholder.png'
-    }, {
-        name: 'May Smith',
-        image: 'img/img-placeholder.png'
-    }]
-
-})
+    })
 
 .controller('CoachBlogCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file

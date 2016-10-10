@@ -24,10 +24,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="ng-scope">
-                                    <td>Rahul Dravid</td>
-                                    <td>1-Jan-2016</td>
-                                    <td>30-Jan-2016</td>
+                                <tr ng-repeat="d in data">
+                                    <td>{{d.name}}</td>
+                                    <td>{{d.startDate}}</td>
+                                    <td>{{d.endDate}}</td>
                                     <td>
 
                                         <a class="btn btn-blue" ui-sref="coach-testing-edit" tooltip-placement="bottom" uib-tooltip="Edit"><i class="ln ln-pencil"></i></a>
