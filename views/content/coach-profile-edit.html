@@ -13,7 +13,7 @@
                         <form name="editprofile" ng-submit="editProfile(formData);" class="login-section">
                             <div class="edit-photo text-center">
                                 <div class="img-hold">
-                                    <span><img src="img/sachin.png" alt="Sachin Tendulkar" class="dp"></span>
+                                    <span><img src="img/img-placeholder.png" alt="Sachin Tendulkar" class="dp"></span>
                                     <div class="icon-btn">
                                         <i class="fa fa-camera" aria-hidden="true"></i></div>
                                 </div>
@@ -88,7 +88,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': editprofile.price.$invalid && editprofile.price.$touched}">
-                                        <label>Asking Price:</label>
+                                        <label>Coach Asking Price:</label>
                                         <input type="number" name="price" ng-model="formData.price" class="form-control" required>
                                     </div>
                                 </div>
@@ -163,14 +163,56 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="form-group" ng-class="{'form-invalid': about.freeText.$invalid && about.freeText.$touched}">
-                                        <label>Free Text CV:</label>
-                                        <textarea name="freeText" ng-model="formData.about" class="form-control" rows="4" cols="50" required></textarea>
+                                    <div class="form-group" ng-class="{'form-invalid': experience.freeText.$invalid && experience.freeText.$touched}">
+                                        <label>Experience :</label>
+                                        <textarea name="freeText" ng-model="formData.experience" class="form-control" rows="2" cols="50" maxlength="100" required></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <div class="text-center">
-                                <a class="btn btn-primary thick-font">Save</a>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': expertise.freeText.$invalid && expertise.freeText.$touched}">
+                                        <label>Expertise:</label>
+                                        <textarea name="freeText" ng-model="formData.expertise" class="form-control" rows="2" cols="50" maxlength="100" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': achievements.freeText.$invalid && achievements.freeText.$touched}">
+                                        <label>Coaching Achievements :</label>
+                                        <textarea name="freeText" ng-model="formData.achievements" class="form-control" rows="2" cols="50" maxlength="100" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 field">
+                                    <label>Free Text CV:</label>
+                                    <div class="form-group" ng-class="{'form-invalid': about.freeText.$invalid && about.freeText.$touched}">
+                                        <textarea ui-tinymce="tinymceOptions" ng-model="formData.about" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="text-center bold"><label for="">- or -</label></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.freeText.$invalid && registerCoach.freeText.$touched}">
+                                        <div class="upload-btn">
+                                            <label>Upload a CV:</label>
+                                            <upload-image ng-model=formData.photo></upload-image>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="made-form text-center">
+                                <button class="btn btn-blue btn-round" type="submit">Save</button>
+                                <a class="btn btn-red btn-round" type="submit">Cancel</a>
                             </div>
                     </div>
                     </form>

@@ -120,86 +120,87 @@
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.years.$invalid && registerCoach.years.$touched}">
                                         <label>Years Coaching:</label>
-                                        <input type="number" name="years" ng-model="formData.years" min="1" max="99" class="form-control" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.coaching.$invalid && registerCoach.coaching.$touched}">
-                                        <label>Coaching Focus:</label> <br>
-                                        <div class="tag-box-label" ng-repeat="c in coachingFocus">
-                                            <input type="checkbox" id="{{c}}" checklist-model="formData.coachingFocus" checklist-value="c" name="coachingFocus">
-                                            <label for="{{c}}">{{c}}</label>
+                                        <div class="form-group">
+                                            <input type="number" name="years" ng-model="formData.years" min="1" max="99" class="form-control" required onlyDigits>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.specialization.$invalid && registerCoach.specialization.$touched}">
-                                        <label>Specialisations:</label> <br>
-                                        <div class="tag-box-label" ng-repeat="s in specialisations">
-                                            <input type="checkbox" id="{{s}}" checklist-model="formData.specialisations" checklist-value="s" name="specialisations">
-                                            <label for="{{s}}">{{s}}</label>
-                                        </div>
-                                        <div class="tag-box-label">
-                                            <input type="checkbox" id="Others" ng-model="formData.specialisations.otherVal">
-                                            <label for="Others">Others</label>
-                                        </div>
-                                        <div ng-if="formData.specialisations.otherVal">
-                                            <input type="text" placeholder="Please mention others" name="others" ng-model="formData.specialisations.others" class="form-control">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group" ng-class="{'form-invalid': registerCoach.coaching.$invalid && registerCoach.coaching.$touched}">
+                                            <label>Coaching Focus:</label> <br>
+                                            <div class="tag-box-label" ng-repeat="c in coachingFocus">
+                                                <input type="checkbox" id="{{c}}" checklist-model="formData.coachingFocus" checklist-value="c" name="coachingFocus">
+                                                <label for="{{c}}">{{c}}</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group" ng-class="{'form-invalid': about.freeText.$invalid && about.freeText.$touched}">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group" ng-class="{'form-invalid': registerCoach.specialization.$invalid && registerCoach.specialization.$touched}">
+                                            <label>Specialisations:</label> <br>
+                                            <div class="tag-box-label" ng-repeat="s in specialisations">
+                                                <input type="checkbox" id="{{s}}" checklist-model="formData.specialisations" checklist-value="s" name="specialisations">
+                                                <label for="{{s}}">{{s}}</label>
+                                            </div>
+                                            <div class="tag-box-label">
+                                                <input type="checkbox" id="Others" ng-model="formData.specialisations.otherVal">
+                                                <label for="Others">Others</label>
+                                            </div>
+                                            <div ng-if="formData.specialisations.otherVal">
+                                                <input type="text" placeholder="Please mention others" name="others" ng-model="formData.specialisations.others" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 field">
                                         <label>Free Text CV:</label>
-                                        <textarea name="freeText" ng-model="formData.about" class="form-control" rows="4" cols="50" required></textarea>
+                                        <div class="form-group" ng-class="{'form-invalid': about.freeText.$invalid && about.freeText.$touched}">
+                                            <textarea ui-tinymce="tinymceOptions" ng-model="formData.about" class="form-control"></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group" ng-class="{'form-invalid': about.freeText.$invalid && about.freeText.$touched}">
-                                        <div class="text-center bold"><label for="">- or -</label></div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="text-center bold"><label for="">- or -</label></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.freeText.$invalid && registerCoach.freeText.$touched}">
-                                        <div class="upload-btn">
-                                            <label>Upload a CV:</label>
-                                            <upload-image ng-model=formData.photo></upload-image>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group" ng-class="{'form-invalid': registerCoach.freeText.$invalid && registerCoach.freeText.$touched}">
+                                            <div class="upload-btn">
+                                                <label>Upload a CV:</label>
+                                                <upload-image ng-model=formData.photo></upload-image>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group" ng-class="{'form-invalid': registerCoach.freeText.$invalid && registerCoach.freeText.$touched}">
+                                            <div class="upload-btn">
+                                                <input type="checkbox" name="" value=""> I agree to the Coach Mentor <a href="">Terms of Service</a>                                                and <a href="">Privacy Policy</a>.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group" ng-class="{'form-invalid': registerCoach.freeText.$invalid && registerCoach.freeText.$touched}">
-                                        <div class="upload-btn">
-                                            <input type="checkbox" name="" value=""> I agree to the Coach Mentor <a href="">Terms of Service</a>                                            and <a href="">Privacy Policy</a>.
-                                        </div>
-                                    </div>
-                                </div>
+
+                            <div class="step2">
+
                             </div>
-                        </div>
 
-                        <div class="step2">
-
-                        </div>
-
-                        <div class="text-center">
-                            <a class="btn btn-primary thick-font">Submit</a>
-                        </div>
+                            <div class="text-center">
+                                <a class="btn btn-primary thick-font">Submit</a>
+                            </div>
 
                     </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
