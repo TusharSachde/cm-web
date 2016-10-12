@@ -18,15 +18,16 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
     $stateProvider
 
         .state('login', {
-            url: "/login",
-            templateUrl: "views/template2.html",
-            controller: 'LoginCtrl'
-        })
-        .state('forgot-password', {
-            url: "/forgot-password",
-            templateUrl: "views/template2.html",
-            controller: 'ForgotPasswordCtrl'
-        })
+        url: "/login",
+        templateUrl: "views/template2.html",
+        controller: 'LoginCtrl'
+    })
+
+    .state('forgot-password', {
+        url: "/forgot-password",
+        templateUrl: "views/template2.html",
+        controller: 'ForgotPasswordCtrl'
+    })
 
     .state('register-coach', {
         url: "/coach/register",
@@ -34,11 +35,34 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
         controller: 'RegisterCoachCtrl'
     })
 
-    .state('coach-profile', {
-        url: "/coach/profile",
-        templateUrl: "views/template.html",
-        controller: 'CoachProfileCtrl'
+    .state('faq', {
+        url: "/faq",
+        templateUrl: "views/template2.html",
+        controller: 'FAQCtrl'
     })
+
+    .state('contact-us', {
+        url: "/contact-us",
+        templateUrl: "views/template2.html",
+        controller: 'ContactUsCtrl'
+    })
+
+    .state('terms-services', {
+        url: "/terms-services",
+        templateUrl: "views/template2.html",
+        controller: 'TermsServicesCtrl'
+    })
+
+    .state('privacy-policy', {
+            url: "/privacy-policy",
+            templateUrl: "views/template2.html",
+            controller: 'PrivacyPolicyCtrl'
+        })
+        .state('coach-profile', {
+            url: "/coach/profile",
+            templateUrl: "views/template.html",
+            controller: 'CoachProfileCtrl'
+        })
 
     .state('coach-profile-edit', {
         url: "/coach/profile/edit",

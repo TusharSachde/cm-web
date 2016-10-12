@@ -454,13 +454,11 @@ header.side-header.light-skin {
     transition: all 0.4s ease 0s;
 }
 
-
-/*.admin-details:before{
-    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(38,50,56,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(38,50,56,1) 100%);
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(38,50,56,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#263238',GradientType=0 );
-
+.admin-details:before {
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(38, 50, 56, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(38, 50, 56, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(38, 50, 56, 1) 100%);
+    /*filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#263238', GradientType=0);*/
     content: "";
     height: 100%;
     left: 0;
@@ -468,15 +466,14 @@ header.side-header.light-skin {
     top: 0;
     width: 100%;
     z-index: -1;
-}*/
+}
 
-
-/*.side-header.light-skin .admin-details::before{
-    background: -moz-linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,1) 100%);
-    background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
-}*/
+.side-header.light-skin .admin-details::before {
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 1) 100%);
+    /*filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);*/
+}
 
 .side-header.light-skin .admin-details h3 {
     color: #333333;
