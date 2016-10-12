@@ -1930,10 +1930,11 @@
                 height: 34px;
             }
             
+            .acount-sec {
+                min-height: calc(100vh - 170px);
+            }
+            
             .footer {
-                position: fixed;
-                width: 100%;
-                bottom: 0;
                 &.footer-fix {
                     footer {
                         padding: 10px 45px 10px 45px;
