@@ -4,7 +4,7 @@
             <div class="col-md-6 col-md-offset-3">
                 <div class="contact-sec no-pad-up some-pad">
                     <div class="login-tab text-center">
-                        <ul class="ul-justified ul-nav">
+                        <ul class="ul-justified ul-nav registration-nav">
                             <li class="active">Coach Registration</li>
                         </ul>
                     </div>
@@ -59,7 +59,7 @@
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.gender.$invalid && registerCoach.gender.$touched}">
                                         <label>Gender:</label>
                                         <select name="gender" ng-model="formData.gender" class="form-control" required>
-                                            <option value='' disabled selected>Select</option>
+                                            <option  disabled selected>Select</option>
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
                                         </select>
@@ -84,7 +84,7 @@
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.country.$invalid && registerCoach.country.$touched}">
                                         <label>Country:</label>
                                         <select name="country" ng-model="formData.country" class="form-control" required>
-                                             <option value='' disabled selected>Select</option>
+                                             <option disabled selected>Select</option>
                                                     <option value="UK">United Kingdom</option>
                                                     <option value="US">United States</option>
                                                     <option value="IN">India</option>
@@ -95,7 +95,7 @@
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.credential.$invalid && registerCoach.credential.$touched}">
                                         <label>Credentials / Qualifications:</label>
                                         <select name="credential" ng-model="formData.coaching" class="form-control" required>
-                                             <option value='' disabled selected>Select</option>
+                                             <option disabled selected>Select</option>
                                             <option value="Level 1">Level 1</option>
                                             <option value="Level 2">Level 2</option>
                                             <option value="Level 3">Level 3</option>
@@ -170,17 +170,14 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group" ng-class="{'form-invalid': registerCoach.freeText.$invalid && registerCoach.freeText.$touched}">
-                                            <div class="upload-btn">
-                                                <input type="checkbox" name="" value=""> I agree to the Coach Mentor <a href="">Terms of Service</a>                                                and <a href="">Privacy Policy</a>.
+                                        <div class="form-group" ng-class="{'form-invalid': registerCoach.checkit.$invalid && registerCoach.checkit.$touched}">
+                                            <div class="upload-btn check-cust">
+                                                <input type="checkbox" id="checkits" ng-model=formData.checkit/>
+                                                <label for="checkits">I agree to the Coach Mentor <a href="">Terms of Service</a> and <a href=""> Privacy Policy</a>.</label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="step2">
-
                             </div>
                             <div class="text-center">
                                 <a class="btn btn-primary thick-font">Submit</a>
@@ -191,3 +188,4 @@
             </div>
         </div>
     </div>
+</div>

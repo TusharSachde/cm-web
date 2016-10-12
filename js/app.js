@@ -35,6 +35,19 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
         controller: 'RegisterCoachCtrl'
     })
 
+    .state('register-athletes', {
+        url: "/athletes/register",
+        templateUrl: "views/template2.html",
+        controller: 'RegisterAthletesCtrl'
+    })
+
+    .state('athletes-profile', {
+        url: "/athletes/profile",
+        templateUrl: "views/template.html",
+        controller: 'AthletesProfileCtrl'
+    })
+
+
     .state('faq', {
         url: "/faq",
         templateUrl: "views/template2.html",
@@ -54,15 +67,16 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
     })
 
     .state('privacy-policy', {
-            url: "/privacy-policy",
-            templateUrl: "views/template2.html",
-            controller: 'PrivacyPolicyCtrl'
-        })
-        .state('coach-profile', {
-            url: "/coach/profile",
-            templateUrl: "views/template.html",
-            controller: 'CoachProfileCtrl'
-        })
+        url: "/privacy-policy",
+        templateUrl: "views/template2.html",
+        controller: 'PrivacyPolicyCtrl'
+    })
+
+    .state('coach-profile', {
+        url: "/coach/profile",
+        templateUrl: "views/template.html",
+        controller: 'CoachProfileCtrl'
+    })
 
     .state('coach-profile-edit', {
         url: "/coach/profile/edit",
@@ -119,7 +133,7 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
     })
 
     .state('coach-blog', {
-        url: "/coach/blog",
+        url: "/coach/blogs",
         templateUrl: "views/template.html",
         controller: 'CoachBlogCtrl'
     })

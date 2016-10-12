@@ -34,22 +34,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('ForgotPasswordCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
-        $scope.template = TemplateService.changecontent("forgot-password");
-        TemplateService.title = "Login";
-        $scope.template.header = 'views/header2.html';
-    })
-    .controller('RegisterCoachCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
-        $scope.template = TemplateService.changecontent("register-coach");
-        TemplateService.title = "Coach Registration";
-        $scope.template.header = 'views/header2.html';
-        $scope.formData = {};
-        $scope.coachingFocus = [
-            'Sprinting', 'Middle Distance', 'Endurance', 'Throws', 'Jumps', 'Hurdles', 'Hill/Fell Running', 'Cross Country'
-        ];
-        $scope.specialisations = [
-            'Coaching athletes with a disability', 'Coaching female athletes', 'Eating disorders', 'First aid', 'Long-term athlete development', 'Mentored practice', 'Strength and conditioning', 'Fitness in Running and Walking', 'Children in Athletics'
-        ];
-    })
+    $scope.template = TemplateService.changecontent("forgot-password");
+    TemplateService.title = "Login";
+    $scope.template.header = 'views/header2.html';
+})
+
+.controller('RegisterCoachCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+    $scope.template = TemplateService.changecontent("register-coach");
+    TemplateService.title = "Coach Registration";
+    $scope.template.header = 'views/header2.html';
+    $scope.formData = {};
+    $scope.coachingFocus = [
+        'Sprinting', 'Middle Distance', 'Endurance', 'Throws', 'Jumps', 'Hurdles', 'Hill/Fell Running', 'Cross Country'
+    ];
+    $scope.specialisations = [
+        'Coaching athletes with a disability', 'Coaching female athletes', 'Eating disorders', 'First aid', 'Long-term athlete development', 'Mentored practice', 'Strength and conditioning', 'Fitness in Running and Walking', 'Children in Athletics'
+    ];
+})
 
 .controller('CoachProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
@@ -267,7 +268,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeActiveCoach("Testing");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
-    $scope.title = "Create Testing";
+    $scope.title = "Create Test";
     $scope.testStep = 'test';
     $scope.players = [{
         name: 'Ambrose Dzosa',
@@ -293,7 +294,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeActiveCoach("Testing");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
-    $scope.title = "Edit Testing";
+    $scope.title = "Edit Test";
     $scope.formData = {
         name: '300M Running',
         startDate: new Date("January 14, 2017 11:13:00"),
@@ -335,7 +336,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
     $scope.data = [{
-        title: 'The Strongest Woman I’ve Ever Known',
+        title: 'The Strongest Woman I’ve Ever Known Ever Known',
         img: 'img/ground.png',
         date: '4th October 2015',
         rating: '4.5'
@@ -369,6 +370,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeActiveCoach("Blog");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
+    $scope.players = [{
+        name: 'Ambrose Dzosa',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Johannah Deakin',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Jack White',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Matt Smith',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'May Smith',
+        image: 'img/img-placeholder.png'
+    }]
 
 })
 
@@ -380,8 +397,32 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getNavCoach();
     $scope.formData = {
         name: 'Sachin',
-        content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p><p>See, I come from a long line of warriors, as my mom used to say. When cancer struck my aunties we didn’t have time to grieve because we were too busy fighting the disease.</p><p>Each time the disease struck, we thought, This is gonna be the one that we beat, this is gonna be the one that we beat, this is gonna be the one that we beat. We knew the protocols — doctors, chemo, estrogen shot, whatever was needed to be healthy and fighting. We were always optimistic.</p><p>Each battle lasted a little longer than the one before, but we never won.</p><p>In 2004 it was my mom’s turn to fight. Only she didn’t tell me.</p><p>My mom was diagnosed at the beginning of the year, but she didn’t tell me about it until the summer, after my junior season at Memphis.</p> <p>I was pissed. I felt like she was going through this battle herself and had robbed us of the opportunity to be her support system. When I asked her why she waited to tell us she simply said, “Hey, you were busy. I was busy.”</p><p>That was how strong my mom was. She didn’t want to burden anybody else. But it wasn’t until years later that I understood how truly strong she was.</p>"
+        content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p><p>See, I come from a long line of warriors, as my mom used to say. When cancer struck my aunties we didn’t have time to grieve because we were too busy fighting the disease.</p><p>Each time the disease struck, we thought, This is gonna be the one that we beat, this is gonna be the one that we beat, this is gonna be the one that we beat. We knew the protocols — doctors, chemo, estrogen shot, whatever was needed to be healthy and fighting. We were always optimistic.</p><p>Each battle lasted a little longer than the one before, but we never won.</p><p>In 2004 it was my mom’s turn to fight. Only she didn’t tell me.</p><p>My mom was diagnosed at the beginning of the year, but she didn’t tell me about it until the summer, after my junior season at Memphis.</p> <p>I was pissed. I felt like she was going through this battle herself and had robbed us of the opportunity to be her support system. When I asked her why she waited to tell us she simply said, “Hey, you were busy. I was busy.”</p><p>That was how strong my mom was. She didn’t want to burden anybody else. But it wasn’t until years later that I understood how truly strong she was.</p>",
+        item: [{
+            name: 'Ambrose Dzosa',
+            image: 'img/img-placeholder.png'
+        }, {
+            name: 'Johannah Deakin',
+            image: 'img/img-placeholder.png'
+        }]
     };
+
+    $scope.players = [{
+        name: 'Ambrose Dzosa',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Johannah Deakin',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Jack White',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Matt Smith',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'May Smith',
+        image: 'img/img-placeholder.png'
+    }]
 })
 
 .controller('CoachBlogDetailCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
@@ -428,6 +469,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
     $scope.template.header = 'views/header2.html';
+})
+
+.controller('RegisterAthletesCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+    $scope.template = TemplateService.changecontent("register-athletes");
+    TemplateService.title = "Athletes Registration";
+    $scope.template.header = 'views/header2.html';
+    $scope.formData = {};
+})
+
+.controller('AthletesProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("athletes-profile");
+    $scope.menutitle = NavigationService.makeActiveCoach("Profile");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getNavAthlete();
 })
 
 .controller('ForbiddenCtrl', function ($scope, TemplateService, NavigationService, $timeout, $stateParams, $state, toastr) {

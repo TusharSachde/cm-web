@@ -170,7 +170,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group" ng-class="{'form-invalid': experience.freeText.$invalid && experience.freeText.$touched}">
-                                        <label>Experience :</label>
+                                        <label>Experience / Coaching Credentials :</label>
                                         <textarea name="freeText" ng-model="formData.experience" class="form-control" rows="2" cols="50" maxlength="100" required></textarea>
                                     </div>
                                 </div>
@@ -218,7 +218,7 @@
                             </div>
                             <div class="made-form text-center">
                                 <button class="btn btn-blue btn-round" type="submit">Save</button>
-                                <a class="btn btn-red btn-round" type="submit">Cancel</a>
+                                <a class="btn btn-red btn-round" type="submit" ui-sref="coach-profile">Cancel</a>
                             </div>
                     </div>
                     </form>
