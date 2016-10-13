@@ -1,0 +1,25 @@
+<form name="" ng-submit="register(formData);">
+    <div class="modal-header blue-bg">
+        <div class="pull-right">
+            <button class="btn btn-clear" ng-click="$dismiss()">
+      <i class="ln-cross"></i>
+    </button>
+        </div>
+        <h5 class="modal-title">Unsubscribe</h5>
+    </div>
+    <div class="modal-body round-form">
+        <!--<p>All the below fields are mandatory.</p>-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Reason:</label>
+                    <textarea name="reason" ng-model="formData.reason" cols="30" rows="5s" class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-blue btn-round" type="submit">Submit</button>
+        <button class="btn btn-red btn-round" type="submit" ng-click="$dismiss()">cancel</button>
+    </div>
+</form>

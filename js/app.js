@@ -47,6 +47,11 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
         controller: 'AthletesProfileCtrl'
     })
 
+    .state('athletes-profile-edit', {
+        url: "/athletes/profile/edit",
+        templateUrl: "views/template.html",
+        controller: 'AthletesProfileEditCtrl'
+    })
 
     .state('faq', {
         url: "/faq",
@@ -70,6 +75,12 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
         url: "/privacy-policy",
         templateUrl: "views/template2.html",
         controller: 'PrivacyPolicyCtrl'
+    })
+
+    .state('notification', {
+        url: "/notification",
+        templateUrl: "views/template.html",
+        controller: 'NotificationCtrl'
     })
 
     .state('coach-profile', {

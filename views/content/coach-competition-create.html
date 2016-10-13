@@ -51,6 +51,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': addCompetition.description.$invalid && addCompetition.description.$touched}">
+                                        <label>Description :</label>
+                                        <textarea name="freeText" ng-model="addCompetition.description" class="form-control" rows="2" cols="50" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
                                     <div class="form-group" ng-class="{'form-invalid': addCompetition.players.$invalid && addCompetition.players.$touched}">
                                         <label>Add Players:</label>
                                         <ui-select multiple tagging tagging-label="(custom 'new' label)" ng-model="formData.player" theme="bootstrap" sortable="true"
