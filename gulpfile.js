@@ -6,7 +6,7 @@ var jsArray = [
     './bower_components/fancyBox/source/jquery.fancybox.js',
     './bower_components/peity/jquery.peity.min.js',
     './bower_components/jquery-slimscroll/jquery.slimscroll.min.js',
-    './bower_components/tinymce-dist/tinymce.js',
+    './bower_components/tinymce/tinymce.js',
 
     './bower_components/angular/angular.min.js',
     './bower_components/angular-animate/angular-animate.min.js',
