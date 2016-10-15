@@ -43,7 +43,8 @@
     "moment": "^2.14.1",
     "angular-ui-sortable": "^0.14.3",
     "jquery-ui": "^1.12.1",
-    "jquery": "^3.1.0"
+    "jquery": "^3.1.1",
+    "tinymce": "tinymce-dist#4.3.12"
   },
   "devDependencies": {
     "angular-translate": "^2.11.0"

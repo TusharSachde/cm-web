@@ -39,7 +39,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('RegisterCoachCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
-    $scope.template = TemplateService.changecontent("register-coach");
+    $scope.template = TemplateService.changecontent("coach/register-coach");
     TemplateService.title = "Coach Registration";
     $scope.template.header = 'views/header2.html';
     $scope.formData = {};
@@ -53,7 +53,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-profile");
+    $scope.template = TemplateService.changecontent("coach/coach-profile");
     $scope.menutitle = NavigationService.makeActiveCoach("Profile");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -67,7 +67,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachProfileEditCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-profile-edit");
+    $scope.template = TemplateService.changecontent("coach/coach-profile-edit");
     $scope.menutitle = NavigationService.makeActiveCoach("Profile");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -103,7 +103,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachAthletesCoachedCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-athletes-coached");
+    $scope.template = TemplateService.changecontent("coach/coach-athletes-coached");
     $scope.menutitle = NavigationService.makeActiveCoach("Athletes Coached");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -119,7 +119,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachAthletesCoachedViewCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-athletes-coachedview");
+    $scope.template = TemplateService.changecontent("coach/coach-athletes-coachedview");
     $scope.menutitle = NavigationService.makeActiveCoach("Athletes Coached");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -153,7 +153,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachCompetitionCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-competition");
+    $scope.template = TemplateService.changecontent("coach/coach-competition");
     $scope.menutitle = NavigationService.makeActiveCoach("Competition");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -191,7 +191,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachCompetitionCreateCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-competition-create");
+    $scope.template = TemplateService.changecontent("coach/coach-competition-create");
     $scope.menutitle = NavigationService.makeActiveCoach("Competition");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -216,7 +216,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachCompetitionEditCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-competition-create");
+    $scope.template = TemplateService.changecontent("coach/coach-competition-create");
     $scope.menutitle = NavigationService.makeActiveCoach("Competition");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -241,7 +241,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachTestingCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-testing");
+    $scope.template = TemplateService.changecontent("coach/coach-testing");
     $scope.menutitle = NavigationService.makeActiveCoach("Testing");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -269,7 +269,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachTestingCreateCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-testing-create");
+    $scope.template = TemplateService.changecontent("coach/coach-testing-create");
     $scope.menutitle = NavigationService.makeActiveCoach("Testing");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -295,7 +295,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachTestingEditCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-testing-create");
+    $scope.template = TemplateService.changecontent("coach/coach-testing-create");
     $scope.menutitle = NavigationService.makeActiveCoach("Testing");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -336,7 +336,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachBlogCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-blog");
+    $scope.template = TemplateService.changecontent("coach/coach-blog");
     $scope.menutitle = NavigationService.makeActiveCoach("Blog");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -371,7 +371,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachBlogCreateCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-blog-create");
+    $scope.template = TemplateService.changecontent("coach/coach-blog-create");
     $scope.menutitle = NavigationService.makeActiveCoach("Blog");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -396,7 +396,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachBlogEditCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-blog-create");
+    $scope.template = TemplateService.changecontent("coach/coach-blog-create");
     $scope.menutitle = NavigationService.makeActiveCoach("Blog");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -432,7 +432,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('CoachBlogDetailCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("coach-blog-detail");
+    $scope.template = TemplateService.changecontent("coach/coach-blog-detail");
     $scope.menutitle = NavigationService.makeActiveCoach("Blog Detail");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
@@ -485,7 +485,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('RegisterAthletesCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
-    $scope.template = TemplateService.changecontent("register-athletes");
+    $scope.template = TemplateService.changecontent("athletes/register-athletes");
     TemplateService.title = "Athletes Registration";
     $scope.template.header = 'views/header2.html';
     $scope.formData = {};
@@ -493,14 +493,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('AthletesProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
         //Used to name the .html file
-        $scope.template = TemplateService.changecontent("athletes-profile");
+        $scope.template = TemplateService.changecontent("athletes/athletes-profile");
         $scope.menutitle = NavigationService.makeActiveCoach("Profile");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getNavAthlete();
     })
+
     .controller('AthletesProfileEditCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
         //Used to name the .html file
-        $scope.template = TemplateService.changecontent("athletes-profile-edit");
+        $scope.template = TemplateService.changecontent("athletes/athletes-profile-edit");
         $scope.menutitle = NavigationService.makeActiveCoach("Profile");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getNavAthlete();
@@ -524,6 +525,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $state.go('app.profile');
         };
     })
+    .controller('AthletesCompetitionCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+            //Used to name the .html file
+            $scope.template = TemplateService.changecontent("athletes/athletes-competition");
+            $scope.menutitle = NavigationService.makeActiveCoach("Competition");
+            TemplateService.title = $scope.menutitle;
+            $scope.navigation = NavigationService.getNavAthlete();
+        })
+
     .controller('ForbiddenCtrl', function ($scope, TemplateService, NavigationService, $timeout, $stateParams, $state, toastr) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("forbidden");
