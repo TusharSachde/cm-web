@@ -1,0 +1,113 @@
+<div class="panel-content ng-scope">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget">
+                <div class="table-area">
+                    <div class="widget-title">
+                        <h3 class="text-uppercase">Competitions</h3>
+                    </div>
+                    <div class="table-responsive" style="">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Key Competition</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ng-scope">
+                                    <td>Mumbai Half Marathon</td>
+                                    <td>30-Jan-2016</td>
+                                    <td>30-Jan-2016</td>
+                                    <td>Yes</td>
+                                    <td>
+                                        <div class="accept-reject">
+                                            <a class="btn btn-blue" tooltip-placement="bottom" uib-tooltip="Accept"><span class="fa fa-check"></span></a>
+                                            <a class="btn btn-red" tooltip-placement="bottom" uib-tooltip="Reject" ng-click="openReject();"><span class="fa fa-times"></span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="ng-scope">
+                                    <td>Delhi Marathon</td>
+                                    <td>30-June-2016</td>
+                                    <td>4-July-2016</td>
+                                    <td>No</td>
+                                    <td>
+                                        <div class="accept-reject">
+                                            <a class="btn btn-blue" tooltip-placement="bottom" uib-tooltip="Accept"><span class="fa fa-check"></span></a>
+                                            <a class="btn btn-red" tooltip-placement="bottom" uib-tooltip="Reject" ng-click="openReject();"><span class="fa fa-times"></span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="ng-scope">
+                                    <td>Chennai Half Marathon</td>
+                                    <td>6-Sept-2016</td>
+                                    <td>30-Sept-2016</td>
+                                    <td>Yes</td>
+                                    <td>
+                                        <div class="accept-reject">
+                                            <a class="btn btn-blue" tooltip-placement="bottom" uib-tooltip="Accept"><span class="fa fa-check"></span></a>
+                                            <a class="btn btn-red" tooltip-placement="bottom" uib-tooltip="Reject" ng-click="openReject();"><span class="fa fa-times"></span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="ng-scope">
+                                    <td>Banglore Marathon</td>
+                                    <td>12-Dec-2016</td>
+                                    <td>24-Dec-2016</td>
+                                    <td>Yes</td>
+                                    <td>
+                                        <div class="accept-reject">
+                                            <a class="btn btn-blue" tooltip-placement="bottom" uib-tooltip="Accept"><span class="fa fa-check"></span></a>
+                                            <a class="btn btn-red" tooltip-placement="bottom" uib-tooltip="Reject" ng-click="openReject();"><span class="fa fa-times"></span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="ng-scope">
+                                    <td>Mumbai Marathon</td>
+                                    <td>30-Jan-2016</td>
+                                    <td>30-Jan-2016</td>
+                                    <td>Yes</td>
+                                    <td>
+                                        <div class="accept-reject">
+                                            <a class="btn btn-blue btn-outline">Accepted</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tableData ng-hide" ng-show="totalItems == 0">
+                        <h5>No data found</h5>
+                    </div>
+                    <div class="tableData ng-hide" ng-show="totalItems == 0" style="">
+                        <h5>Loading Data</h5>
+                    </div>
+                    <!-- ngIf: totalItems -->
+                    <ul ng-if="totalItems" ng-change="changePage(currentPage);" uib-pagination="" total-items="totalItems" items-per-page="maxRow" ng-model="currentPage" max-size="template.pageMax" class="pagination-sm ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope pagination ng-not-empty"
+                        boundary-links="true" force-ellipses="true" style="">
+                        <!-- ngIf: ::boundaryLinks -->
+                        <li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope disabled" style=""><a href="" ng-click="selectPage(1, $event)" ng-disabled="noPrevious()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">First</a></li>
+                        <!-- end ngIf: ::boundaryLinks -->
+                        <!-- ngIf: ::directionLinks -->
+                        <li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled" style=""><a href="" ng-click="selectPage(page - 1, $event)" ng-disabled="noPrevious()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">Previous</a></li>
+                        <!-- end ngIf: ::directionLinks -->
+                        <!-- ngRepeat: page in pages track by $index -->
+                        <li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active" style=""><a href="" ng-click="selectPage(page.number, $event)" ng-disabled="ngDisabled&amp;&amp;!page.active" uib-tabindex-toggle="" class="ng-binding">1</a></li>
+                        <!-- end ngRepeat: page in pages track by $index -->
+                        <!-- ngIf: ::directionLinks -->
+                        <li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled" style=""><a href="" ng-click="selectPage(page + 1, $event)" ng-disabled="noNext()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">Next</a></li>
+                        <!-- end ngIf: ::directionLinks -->
+                        <!-- ngIf: ::boundaryLinks -->
+                        <li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope disabled" style=""><a href="" ng-click="selectPage(totalPages, $event)" ng-disabled="noNext()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">Last</a></li>
+                        <!-- end ngIf: ::boundaryLinks -->
+                    </ul>
+                    <!-- end ngIf: totalItems -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

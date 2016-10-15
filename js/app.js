@@ -54,7 +54,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     })
 
     .state('athletes-competition', {
-        url: "/athletes/profile/edit",
+        url: "/athletes/competition",
         templateUrl: "views/template.html",
         controller: 'AthletesCompetitionCtrl'
     })

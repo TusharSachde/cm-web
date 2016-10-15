@@ -344,27 +344,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         title: 'The Strongest Woman I’ve Ever Known Ever Known',
         img: 'img/ground.png',
         date: '4th October 2015',
-        rating: '4.5'
+        ratingup: '4.5',
+        ratingdown:'1.5',
+    }, {
+        title: 'Dhoni and Kohli Together',
+        img: 'img/kohlidhoni.jpg',
+        date: '3rd November 2015',
+        ratingup: '3.5',
+        ratingdown:'2.5',
     }, {
         title: 'What You Dont Know About: Being a GM',
-        img: 'img/ground.png',
-        date: '3rd November 2015',
-        rating: '3.5'
-    }, {
-        title: 'What You Dont Know About: Being a GM',
-        img: 'img/ground.png',
-        date: '3rd November 2015',
-        rating: '3.5'
-    }, {
-        title: 'What You Dont Know About: Being a GM',
-        img: 'img/ground.png',
-        date: '3rd November 2015',
-        rating: '3.5'
-    }, {
-        title: 'What You Dont Know About: Being a GM',
-        img: 'img/ground.png',
-        date: '3rd November 2015',
-        rating: '3.5'
+        img: 'img/i.jpeg',
+        date: '3rd December 2015',
+        ratingup: '2.5',
+        ratingdown:'2.5',
     }];
 
 })
@@ -390,7 +383,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
         name: 'May Smith',
         image: 'img/img-placeholder.png'
-    }]
+    }];
 
 })
 
@@ -427,7 +420,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
         name: 'May Smith',
         image: 'img/img-placeholder.png'
-    }]
+    }];
 })
 
 .controller('CoachBlogDetailCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
@@ -436,6 +429,42 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeActiveCoach("Blog Detail");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
+    $scope.data = [{
+        title: 'The Strongest Woman I’ve Ever Known Ever Known',
+        img: 'img/ground.png',
+        date: '4th October 2015',
+        ratingup: '4.5',
+        ratingdown:'1.5',
+    }, {
+        title: 'Dhoni and Kohli playing together',
+        img: 'img/kohlidhoni.jpg',
+        date: '3rd November 2015',
+        ratingup: '3.5',
+        ratingdown:'2.5',
+    }, {
+        title: 'What You Dont Know About: Being a GM',
+        img: 'img/i.jpeg',
+        date: '3rd December 2015',
+        ratingup: '2.5',
+        ratingdown:'2.5',
+    }];
+
+    $scope.players = [{
+        name: 'Ambrose Dzosa',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Johannah Deakin',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Jack White',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'Matt Smith',
+        image: 'img/img-placeholder.png'
+    }, {
+        name: 'May Smith',
+        image: 'img/img-placeholder.png'
+    }];
 
 })
 
@@ -531,6 +560,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.menutitle = NavigationService.makeActiveCoach("Competition");
             TemplateService.title = $scope.menutitle;
             $scope.navigation = NavigationService.getNavAthlete();
+
+            $scope.openReject = function () {
+                var modalInstance = $uibModal.open({
+                    scope: $scope,
+                    templateUrl: 'views/modal/modal-reject.html'
+                });
+            };
         })
 
     .controller('ForbiddenCtrl', function ($scope, TemplateService, NavigationService, $timeout, $stateParams, $state, toastr) {

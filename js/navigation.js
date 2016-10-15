@@ -21,7 +21,7 @@ var navigationservice = angular.module('navigationservice', [])
         icon: "timer",
         subnav: []
     }, {
-        name: "Competition",
+        name: "Competitions",
         classis: "active",
         sref: "coach-competition", //Keep sref empty if subnav
         icon: "trophy",
@@ -47,7 +47,7 @@ var navigationservice = angular.module('navigationservice', [])
         icon: "user",
         subnav: []
     }, {
-        name: "Competition",
+        name: "Competitions",
         classis: "active",
         sref: "athletes-competition", //Keep sref empty if subnav
         icon: "trophy",
