@@ -1,150 +1,186 @@
 @media (max-width:$screen-sm-max) {
-  .profile-detail .profile-option {
-    width: 23%;
-  }
-  .profile-detail .option-detail {
-    width: 77%;
-  }
-  .logo img {
-    margin-right: 10px;
-  }
-}
+    .profile-detail .profile-option {
+        width: 23%;
+    }
 
-@media (max-width:$screen-xs-max) {
-  .info-holder {
-    height: auto;
-  }
-  .footer {
-    &.footer-fix {
-      footer {
-        padding: 8px 0px 8px 0px;
-      }
-      footer {
-        li a {
-          font-size: 10px;
-          padding: 0 0px;
+    .profile-detail .option-detail {
+        width: 77%;
+    }
+
+    .logo img {
+        margin-right: 10px;
+    }
+
+    .footer footer {
+        padding: 8px 0;
+
+        .footer-menu {
+            ul li a {
+                padding: 0 5px;
+            }
         }
-      }
     }
-  }
-  .table-area {
-    padding: 20px;
-  }
-  .menu-options {
-    margin-left: 8px;
-  }
-  .widget-title {
-    h3 {
-      margin: 10px 0 0;
-      clear: both;
-    }
-    .pull-right {
-      float: none !important;
-      clear: both;
-    }
-  }
-  .first-half {
-    width: 100%;
-    padding: 0 !important;
-    text-align: center;
-    &.pull-right,
-    .pull-right {
-      float: none !important;
-    }
-    .mt-18 {
-      float: none !important;
-      margin: 0;
-    }
-  }
-  .compny {
-    text-align: center !important;
-    padding-left: 0;
-    display: block;
-  }
-  .basic-info {
-    margin-top: 30px;
-    position: static;
-    @include transform(translateY(0%));
-  }
-  .info-pic {
-    position: static;
-    text-align: center;
-    margin-top: 5px;
-  }
-  .who-post-detail>h3 {
-    font-size: 16px;
-    line-height: 120%;
-  }
-  .who-post-this>span {
-    display: none;
-  }
-  .info-house {
-    right: 28%;
-  }
-  .quick-links {
-    padding-top: 25px;
-  }
-  .profile-detail {
-    padding: 18px 12px 5px;
-  }
-  .profile-detail .profile-option,
-  .profile-detail .option-detail {
-    p {
-      line-height: 14px;
-      font-size: 12px;
-    }
-  }
-  .profile-detail .profile-option {
-    width: 32%;
-  }
-  .profile-detail .option-detail {
-    width: 68%;
-  }
-  .athletes-requestview {
-    .accept-detail-head {
-      border-right: 0 solid;
-      border-bottom: 1px solid #e6e6e6;
-      padding-bottom: 15px;
-    }
-    .user-dtl-cont {
-      text-align: left;
-      .text-right {
-        text-align: left;
-      }
-    }
-    .ml-25 {
-      margin-left: 0;
-    }
-  }
-  .pt30 {
-    padding-top: 0px;
-  }
 }
+@media (max-width:$screen-xs-max) {
+    .info-holder {
+        height: auto;
+    }
 
+    .footer-menu {
+        .text-right,
+        p {
+            float: none;
+            text-align: center;
+        }
+
+        ul li a {
+            padding: 0 5px;
+        }
+    }
+
+    .table-area {
+        padding: 20px;
+    }
+
+    .menu-options {
+        margin-left: 8px;
+    }
+
+    .widget-title {
+        h3 {
+            margin: 10px 0 0;
+            clear: both;
+        }
+
+        .pull-right {
+            float: none !important;
+            clear: both;
+        }
+    }
+
+    .first-half {
+        width: 100%;
+        padding: 0 !important;
+        text-align: center;
+
+        &.pull-right,
+        .pull-right {
+            float: none !important;
+        }
+
+        .mt-18 {
+            float: none !important;
+            margin: 0;
+        }
+    }
+
+    .compny {
+        text-align: center !important;
+        padding-left: 0;
+        display: block;
+    }
+
+    .basic-info {
+        margin-top: 30px;
+        position: static;
+        @include transform(translateY(0%));
+    }
+
+    .info-pic {
+        position: static;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .who-post-detail > h3 {
+        font-size: 16px;
+        line-height: 120%;
+    }
+
+    .who-post-this > span {
+        display: none;
+    }
+
+    .info-house {
+        right: 28%;
+    }
+
+    .quick-links {
+        padding-top: 25px;
+    }
+
+    .profile-detail {
+        padding: 18px 12px 5px;
+    }
+
+    .profile-detail .option-detail,
+    .profile-detail .profile-option {
+        p {
+            line-height: 14px;
+            font-size: 12px;
+        }
+    }
+
+    .profile-detail .profile-option {
+        width: 32%;
+    }
+
+    .profile-detail .option-detail {
+        width: 68%;
+    }
+
+    .athletes-requestview {
+        .accept-detail-head {
+            border-right: 0 solid;
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 15px;
+        }
+
+        .user-dtl-cont {
+            text-align: left;
+
+            .text-right {
+                text-align: left;
+            }
+        }
+
+        .ml-25 {
+            margin-left: 0;
+        }
+    }
+
+    .pt30 {
+        padding-top: 0;
+    }
+}
 @media (max-width:480px) {
-  .profile-detail {
-    padding: 18px 12px 5px;
-  }
-  .widget-title .pull-right {
-    .btn {
-      margin: 20px 0;
+    .profile-detail {
+        padding: 18px 12px 5px;
     }
-  }
-  .profile-detail .profile-option {
-    width: 43%;
-    // width: 41%;
-  }
-  .profile-detail .option-detail {
-    width: 57%;
-    // width: 59%;
-  }
-  .profile-detail .profile-option,
-  .profile-detail .option-detail {
-    p {
-      line-height: 12px;
-      // margin-bottom: 6px;
-      font-size: 10px;
-      height: 30px;
+
+    .widget-title .pull-right {
+        .btn {
+            margin: 20px 0;
+        }
     }
-  }
+
+    .profile-detail .profile-option {
+        width: 43%;
+        // width: 41%;
+    }
+
+    .profile-detail .option-detail {
+        width: 57%;
+        // width: 59%;
+    }
+
+    .profile-detail .option-detail,
+    .profile-detail .profile-option {
+        p {
+            line-height: 12px;
+            // margin-bottom: 6px;
+            font-size: 10px;
+            height: 30px;
+        }
+    }
 }

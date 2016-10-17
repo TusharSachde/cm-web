@@ -31,13 +31,23 @@ $brand-success: $green !default;
 @import "template/main";
 @import "custom-switch";
 @font-face {
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     src: url('../fonts/OpenSans-Regular.eot');
 }
 @font-face {
     font-family: 'Glyphicons Halflings';
     src: url("../fonts/glyphicons-halflings-regular.eot");
     src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
 }
 
 button,
@@ -84,8 +94,10 @@ a {
 }
 
 a {
+    @include transition (all ease 300ms);
+
     &:hover {
-        color: lighten(#004a9b, 20%);
+        color: lighten(#004a9b, 10%);
     }
 }
 //bootstrap forms
@@ -97,13 +109,19 @@ a {
 .input-group-lg > .input-group-btn > .btn,
 .input-lg {
     // border-radius: 0;
-    @include box-shadow(none);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    -o-transition: none;
 }
 
 .form-control:focus {
     border-color: $brand-primary;
     outline: 0;
-    @include box-shadow(none);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    -o-transition: none;
 }
 
 .mt20 {
@@ -138,7 +156,7 @@ a {
     border-radius: 25px;
     color: #ffffff;
     float: left;
-    font-family: Montserrat;
+    font-family: 'Open Sans';
     font-size: 12px;
     margin-top: 20px;
     padding: 14px 30px;
@@ -187,19 +205,30 @@ a {
 }
 
 .admin-details {
+    h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 3px 0 0;
+    }
+
     i {
         color: #777777;
         text-transform: capitalize;
     }
 
-    span > img {
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-        border-radius: 5px;
-        float: left;
-        width: 59px;
+    span {
+        margin-right: 12px;
+
+        img {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            border-radius: 5px;
+            float: left;
+            width: 59px;
+        }
     }
 }
 // .overlay-menu {
@@ -588,9 +617,9 @@ $trans-black: rgba( black, .15);
     border: 0;
 
     > li.active {
-         > a,
+         > a:focus,
          > a:hover,
-        > a:focus {
+        > a {
             color: $red;
             border: 0;
             border-bottom: 5px solid $red;
@@ -1265,8 +1294,8 @@ img.uploadingImage {
 .inbox-action > ul {
     padding: 14px 15px;
 
-     > li > label,
-    > li > a {
+     > li > a,
+    > li > label {
         padding-top: 7px;
     }
 
@@ -1376,6 +1405,12 @@ img.uploadingImage {
     float: none;
     position: static;
     background-attachment: fixed;
+    background-image: none;
+}
+
+.bg-runners {
+    background-image: url("../img/login-bg.jpg");
+    background-size: cover;
 }
 
 .round-form {
@@ -1913,34 +1948,47 @@ textarea {
     margin-top: 25px !important;
 }
 
-.img-hold {
-    position: relative;
-    width: 101px;
-    margin: 0 auto 30px;
-
-    img {
-        height: 101px;
-        width: 101px;
+.edit-photo {
+    .btn-upload input[type="file"] {
+        top: 65%;
+        left: 50%;
+        height: 120px;
+        width: 150px;
+        @include transform(translate(-50%,-50%));
+        z-index: 1;
         cursor: pointer;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-        border-radius: 5px;
     }
 
-    .icon-btn {
-        position: absolute;
-        bottom: -10px;
-        font-size: 18px;
-        right: -10px;
-        padding: 3px 7px;
-        width: 32px;
-        height: 32px;
-        color: #ffffff;
-        cursor: pointer;
-        background: #004a9b;
-        border-radius: 50%;
+    .img-hold {
+        position: relative;
+        width: 101px;
+        margin: 0 auto 30px;
+        z-index: 0;
+
+        img {
+            height: 101px;
+            width: 101px;
+            cursor: pointer;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        .icon-btn {
+            position: absolute;
+            bottom: -10px;
+            font-size: 18px;
+            right: -10px;
+            padding: 3px 7px;
+            width: 32px;
+            height: 32px;
+            color: #ffffff;
+            cursor: pointer;
+            background: #004a9b;
+            border-radius: 50%;
+        }
     }
 }
 
@@ -2091,6 +2139,12 @@ textarea {
             opacity: 1;
         }
     }
+
+    &.blog-inside-list {
+        .card-title {
+            height: auto;
+        }
+    }
 }
 
 .posi-center {
@@ -2156,8 +2210,9 @@ textarea {
     height: 34px;
 }
 
-.acount-sec {
-    min-height: calc(100vh - 170px);
+.acount-sec,
+.min-hgt {
+    min-height: calc(100vh - 150px);
 }
 
 .check-cust {
@@ -2182,8 +2237,8 @@ textarea {
         position: absolute;
         left: 0;
         top: 2px;
-        width: 17px;
-        height: 17px;
+        width: 15px;
+        height: 15px;
         border: 1px solid #aaa;
         border-radius: 3px;
     }
@@ -2194,8 +2249,8 @@ textarea {
         position: absolute;
         left: 0;
         top: 2px;
-        width: 17px;
-        height: 17px;
+        width: 15px;
+        height: 15px;
         border: 1px solid $blue;
         border-radius: 3px;
         line-height: 0.8;
@@ -2227,11 +2282,13 @@ textarea {
     }
 }
 
+.account-sec footer {
+    margin-top: 30px;
+    text-align: initial;
+}
+
 .footer {
     footer {
-        p {
-            text-align: left;
-        }
         padding: 8px 20px;
 
         .footer-menu {
@@ -2338,6 +2395,84 @@ textarea {
 
     &:hover {
         color: darken(#505050, 30%);
+    }
+}
+
+.content-view {
+    margin-top: 40px;
+    padding: 0 20px;
+
+    .title {
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin: 0 0 10px;
+        color: #555;
+        text-align: justify;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 15px 0 3px;
+        color: $blue;
+    }
+
+    ol,
+    ul {
+        margin: 0;
+        color: #555;
+        padding: 0 0 0 20px;
+        text-align: justify;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    .accordion-all {
+        .panel-group {
+            .panel + .panel {
+                margin-top: 0;
+            }
+
+            .panel {
+                .panel-heading {
+                    background: #fff;
+                    padding: 0;
+
+                    h4 {
+                        margin: 0;
+
+                        a {
+                            color: #333333;
+                            font-size: 14px;
+                            padding: 12px 20px;
+                            display: block !important;
+                        }
+                    }
+                }
+            }
+
+            .panel-collapse .panel-body {
+                padding: 15px 30px;
+            }
+        }
+    }
+}
+
+.registration-nav {
+    .ul-justified {
+        li {
+            display: table-cell;
+            cursor: initial;
+        }
     }
 }
 @import "fancybox-override";

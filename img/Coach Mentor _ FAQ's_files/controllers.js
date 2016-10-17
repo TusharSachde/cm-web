@@ -45,7 +45,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = "Coach Registration";
     $scope.template.header = 'views/header2.html';
     $scope.formData = {};
-    $scope.changeBG = true;
     $scope.coachingFocus = [
         'Sprinting', 'Middle Distance', 'Endurance', 'Throws', 'Jumps', 'Hurdles', 'Hill/Fell Running', 'Cross Country'
     ];
@@ -74,8 +73,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeActiveCoach("Profile");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
-    $scope.isCustom = true;
-
     $scope.formData = {
         name: 'Sachin',
         surname: 'Tendulkar',
@@ -216,7 +213,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
         name: 'May Smith',
         image: 'img/img-placeholder.png'
-    }];
+    }]
 })
 
 .controller('CoachCompetitionEditCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
@@ -483,11 +480,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getNavCoach();
     $scope.template.header = 'views/header2.html';
     $scope.oneAtATime = true;
-    $scope.status = {
-  isCustomHeaderOpen: false,
-  isFirstOpen: true,
-  isFirstDisabled: false
-};
 })
 
 .controller('ContactUsCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
@@ -530,7 +522,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = "Athletes Registration";
     $scope.template.header = 'views/header2.html';
     $scope.formData = {};
-    $scope.changeBG = true;
 })
 
 .controller('AthletesProfileCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
