@@ -11,7 +11,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group" ng-class="{'form-invalid': createBlogCoach.freeText.$invalid && createBlogCoach.freeText.$touched}">
-                                        <label>Upload Image:</label>
+                                        <label>Upload Image: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="You can select an image to upload applicable to your blog subject" popover-trigger="'mouseenter'"></i></label>
                                         <div class="upload-btn">
                                             <upload-image ng-model=formData.photo></upload-image>
                                         </div>
@@ -29,7 +29,7 @@
                             <div class="row">
                                 <div class="col-md-12 field">
                                     <div class="form-group">
-                                        <label>Content <span>*</span></label>
+                                        <label>Content: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Free text, You can cut/copy/paste text from external documents" popover-trigger="'mouseenter'"></i></label>
                                         <textarea ui-tinymce="tinymceOptions" ng-model="formData.content"></textarea>
                                     </div>
                                 </div>
@@ -37,7 +37,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group" ng-class="{'form-invalid': createBlogCoach.players.$invalid && createBlogCoach.players.$touched}">
-                                        <label>Add Players:</label>
+                                        <label>Add Players: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Select the athletes from your coaching list that you would like to send the Blog too" popover-trigger="'mouseenter'"></i></label>
                                         <ui-select multiple tagging tagging-label="(custom 'new' label)" ng-model="formData.player" theme="bootstrap" sortable="true"
                                             ng-disabled="disabled" title="Add Players">
                                             <ui-select-match placeholder="Select Players..."><img ng-src="{{$item.image}} " alt="" class="img-select"> {{$item.name}}</ui-select-match>

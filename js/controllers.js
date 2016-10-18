@@ -122,6 +122,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 })
 
+.controller('CoachAthletesListCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("coach/coach-athletes-list");
+    $scope.menutitle = NavigationService.makeActiveCoach("Athletes Coached");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getNavCoach();
+})
+
+.controller('CoachAthletesProfileCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("coach/coach-athletes-profile");
+    $scope.menutitle = NavigationService.makeActiveCoach("Athletes Coached");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getNavCoach();
+})
+
 .controller('CoachAthletesCoachedViewCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("coach/coach-athletes-coachedview");
@@ -241,7 +257,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
         name: 'May Smith',
         image: 'img/img-placeholder.png'
-    }]
+    }];
 })
 
 .controller('CoachTestingCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
@@ -254,7 +270,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         name: '800M Running',
         startDate: '14 January, 2017',
         endDate: '15 January, 2017',
-        details: '',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
         assignedAthletes: [{
             name: 'Van Gough',
             img: 'img/img-placeholder.png'
@@ -263,7 +279,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         name: '5KM Cycling',
         startDate: '14 January, 2017',
         endDate: '15 January, 2017',
-        details: '',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
         assignedAthletes: [{
             name: 'Van Gough',
             img: 'img/img-placeholder.png'
@@ -348,19 +364,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.data = [{
         title: 'The Strongest Woman I’ve Ever Known Ever Known',
         img: 'img/ground.png',
+        content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
         date: '4th October 2015',
         ratingup: '4.5',
         ratingdown: '1.5',
     }, {
         title: 'Dhoni and Kohli Together',
         img: 'img/kohlidhoni.jpg',
-        date: '3rd November 2015',
+        content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
+        date: '6th June 2015',
         ratingup: '3.5',
         ratingdown: '2.5',
     }, {
         title: 'What You Dont Know About: Being a GM',
         img: 'img/i.jpeg',
-        date: '3rd December 2015',
+        content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
+        date: '10th May 2015',
         ratingup: '2.5',
         ratingdown: '2.5',
     }];
@@ -484,10 +503,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.template.header = 'views/header2.html';
     $scope.oneAtATime = true;
     $scope.status = {
-  isCustomHeaderOpen: false,
-  isFirstOpen: true,
-  isFirstDisabled: false
-};
+        isCustomHeaderOpen: false,
+        isFirstOpen: true,
+        isFirstDisabled: false
+    };
 })
 
 .controller('ContactUsCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
@@ -542,45 +561,46 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('AthletesProfileEditCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("athletes/athletes-profile-edit");
-        $scope.menutitle = NavigationService.makeActiveCoach("Profile");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getNavAthlete();
-        $scope.formData = {
-            name: 'Virat',
-            surname: 'Kohli',
-            image: 'http://2.bp.blogspot.com/-TgdKBlUGk90/T0PhPlFOf8I/AAAAAAAAAVc/jijEQ8u1uUg/s1600/387430_257363124319593_257347670987805_670782_1318978483_n.jpg',
-            yearsCoaching: 2,
-            email: 'sachin@gmail.com',
-            gender: 'Male',
-            contact: '+919098765324',
-            dob: new Date(),
-            country: 'ind',
-            details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien. Vivamus sodales et libero ac consectetur. Curabitur hendrerit lacus nisi, eget euismod felis gravida vitae. Nullam faucibus maximus eros, non facilisis magna tincidunt quis. Ut suscipit fringilla quam eu scelerisque. Proin orci lacus, condimentum eget urna at, aliquam pellentesque mauris. Aenean rutrum diam tortor, sed finibus nibh condimentum ac. Sed et blandit arcu.',
-            achivements: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien. Vivamus sodales et libero ac consectetur. Curabitur hendrerit lacus nisi, eget euismod felis gravida vitae. Nullam faucibus maximus eros, non facilisis magna tincidunt quis. Ut suscipit fringilla quam eu scelerisque. Proin orci lacus, condimentum eget urna at, aliquam pellentesque mauris. Aenean rutrum diam tortor, sed finibus nibh condimentum ac. Sed et blandit arcu.',
-            review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien. Vivamus sodales et libero ac consectetur. Curabitur hendrerit lacus nisi, eget euismod felis gravida vitae. Nullam faucibus maximus eros, non facilisis magna tincidunt quis. Ut suscipit fringilla quam eu scelerisque. Proin orci lacus, condimentum eget urna at, aliquam pellentesque mauris. Aenean rutrum diam tortor, sed finibus nibh condimentum ac. Sed et blandit arcu.',
-        };
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("athletes/athletes-profile-edit");
+    $scope.menutitle = NavigationService.makeActiveCoach("Profile");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getNavAthlete();
+    $scope.formData = {
+        name: 'Virat',
+        surname: 'Kohli',
+        image: 'http://2.bp.blogspot.com/-TgdKBlUGk90/T0PhPlFOf8I/AAAAAAAAAVc/jijEQ8u1uUg/s1600/387430_257363124319593_257347670987805_670782_1318978483_n.jpg',
+        yearsCoaching: 2,
+        email: 'sachin@gmail.com',
+        gender: 'Male',
+        contact: '+919098765324',
+        dob: new Date(),
+        country: 'ind',
+        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien. Vivamus sodales et libero ac consectetur. Curabitur hendrerit lacus nisi, eget euismod felis gravida vitae. Nullam faucibus maximus eros, non facilisis magna tincidunt quis. Ut suscipit fringilla quam eu scelerisque. Proin orci lacus, condimentum eget urna at, aliquam pellentesque mauris. Aenean rutrum diam tortor, sed finibus nibh condimentum ac. Sed et blandit arcu.',
+        achivements: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien. Vivamus sodales et libero ac consectetur. Curabitur hendrerit lacus nisi, eget euismod felis gravida vitae. Nullam faucibus maximus eros, non facilisis magna tincidunt quis. Ut suscipit fringilla quam eu scelerisque. Proin orci lacus, condimentum eget urna at, aliquam pellentesque mauris. Aenean rutrum diam tortor, sed finibus nibh condimentum ac. Sed et blandit arcu.',
+        review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien. Vivamus sodales et libero ac consectetur. Curabitur hendrerit lacus nisi, eget euismod felis gravida vitae. Nullam faucibus maximus eros, non facilisis magna tincidunt quis. Ut suscipit fringilla quam eu scelerisque. Proin orci lacus, condimentum eget urna at, aliquam pellentesque mauris. Aenean rutrum diam tortor, sed finibus nibh condimentum ac. Sed et blandit arcu.',
+    };
 
-        $scope.submit = function(data) {
-            console.log(data);
-            $state.go('app.profile');
-        };
-    })
-    .controller('AthletesCompetitionCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("athletes/athletes-competition");
-        $scope.menutitle = NavigationService.makeActiveCoach("Competition");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getNavAthlete();
+    $scope.submit = function(data) {
+        console.log(data);
+        $state.go('app.profile');
+    };
+})
 
-        $scope.openReject = function() {
-            var modalInstance = $uibModal.open({
-                scope: $scope,
-                templateUrl: 'views/modal/modal-reject.html'
-            });
-        };
-    })
+.controller('AthletesCompetitionCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("athletes/athletes-competition");
+    $scope.menutitle = NavigationService.makeActiveCoach("Competition");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getNavAthlete();
+
+    $scope.openReject = function() {
+        var modalInstance = $uibModal.open({
+            scope: $scope,
+            templateUrl: 'views/modal/modal-reject.html'
+        });
+    };
+})
 
 .controller('ForbiddenCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state, toastr) {
     //Used to name the .html file

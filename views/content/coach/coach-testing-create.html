@@ -12,7 +12,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group" ng-class="{'form-invalid': addtesting.name.$invalid && addtesting.name.$touched}">
-                                        <label>Name:</label>
+                                        <label>Name: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Enter the name of the test" popover-trigger="'mouseenter'"></i></label>
                                         <input type="text" name="name" ng-model="formData.name" class="form-control" required>
                                     </div>
                                 </div>
@@ -28,7 +28,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': addtesting.startDate.$invalid && addtesting.startDate.$touched}">
-                                        <label>Start Date:</label>
+                                        <label>Start Date: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Enter the date that the test starts on" popover-trigger="'mouseenter'"></i></label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" uib-datepicker-popup ng-model="addtesting.startDate" is-open="popup.opened" datepicker-options="dateOptions"
                                                 ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group" ng-class="{'form-invalid': addtesting.endDate.$invalid && addtesting.endDate.$touched}">
-                                    <label>End Date:</label>
+                                    <label>End Date: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Enter the date that the test ends on (this maybe the same as the start date for single day tests)" popover-trigger="'mouseenter'"></i></label>
                                     <div class="input-group">
                                         <input type="text" class="form-control" uib-datepicker-popup ng-model="addtesting.endDate" is-open="popup1.opened" datepicker-options="dateOptions"
                                             ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
@@ -53,9 +53,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group" ng-class="{'form-invalid': addtesting.players.$invalid && addtesting.players.$touched}">
-                                    <label>Add Players:</label>
+                                    <label>Add Athletes: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Select the athletes from your coaching list that you would like to assign the test too" popover-trigger="'mouseenter'"></i></label>
                                     <ui-select multiple tagging tagging-label="(custom 'new' label)" ng-model="formData.player" theme="bootstrap" sortable="true"
-                                        ng-disabled="disabled" title="Add Players">
+                                        ng-disabled="disabled" title="Select Athletes">
                                         <ui-select-match placeholder="Select Players..."><img ng-src="{{$item.image}} " alt="" class="img-select"> {{$item.name}}</ui-select-match>
                                         <ui-select-choices repeat="player in players | filter:$select.search">
                                             <img src="{{player.image}} " alt="" class="img-drop">{{player.name}}
@@ -67,7 +67,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group" ng-class="{'form-invalid': addtesting.details.$invalid && addtesting.details.$touched}">
-                                    <label>Description:</label>
+                                    <label>Description: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Free text, add details about the test" popover-trigger="'mouseenter'"></i></label>
                                     <textarea rows="3" cols="5" name="details" ng-model="formData.details" class="form-control" required></textarea>
                                 </div>
                             </div>

@@ -107,6 +107,18 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
         controller: 'CoachAthletesCoachedCtrl'
     })
 
+    .state('coach-athletes-list', {
+        url: "/coach/athletes-list",
+        templateUrl: "views/template.html",
+        controller: 'CoachAthletesListCtrl'
+    })
+
+    .state('coach-athletes-profile', {
+        url: "/coach/athletes-profile",
+        templateUrl: "views/template.html",
+        controller: 'CoachAthletesProfileCtrl'
+    })
+
     .state('coach-athletes-coachedview', {
         url: "/coach/athletes-coachedview",
         templateUrl: "views/template.html",

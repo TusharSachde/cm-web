@@ -106,7 +106,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': registerCoach.years.$invalid && registerCoach.years.$touched}">
-                                        <label>Years Coaching:</label>
+                                        <label>Years Coaching: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="The total number of years you have been coaching" popover-trigger="'mouseenter'"></i></label>
                                         <div class="form-group">
                                             <input type="number" name="years" ng-model="formData.years" min="1" max="99" class="form-control" required onlyDigits>
                                         </div>
@@ -115,7 +115,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group" ng-class="{'form-invalid': registerCoach.coaching.$invalid && registerCoach.coaching.$touched}">
-                                            <label>Coaching Focus:</label> <br>
+                                            <label>Coaching Focus: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Your main area of coaching focus – you can select more than one of these options" popover-trigger="'mouseenter'"></i></label> </label> <br>
                                             <div class="tag-box-label" ng-repeat="c in coachingFocus">
                                                 <input type="checkbox" id="{{c}}" checklist-model="formData.coachingFocus" checklist-value="c" name="coachingFocus">
                                                 <label for="{{c}}">{{c}}</label>
@@ -126,7 +126,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group" ng-class="{'form-invalid': registerCoach.specialization.$invalid && registerCoach.specialization.$touched}">
-                                            <label>Specialisations:</label> <br>
+                                              <label>Specialisations: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Any specialisations that you have – leave blank if none apply" popover-trigger="'mouseenter'"></i></label> <br>
                                             <div class="tag-box-label" ng-repeat="s in specialisations">
                                                 <input type="checkbox" id="{{s}}" checklist-model="formData.specialisations" checklist-value="s" name="specialisations">
                                                 <label for="{{s}}">{{s}}</label>
@@ -143,7 +143,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 field">
-                                        <label>Free Text CV:</label>
+                                        <label>Free Text CV: <i class="fa fa-info-circle" aria-hidden="true" uib-popover=" Either write a more detailed summary of you and your coaching achievements OR upload from a file that you can select Standard Information icon pop up defining what the field content needs to include- required on all above fields (if you click the icon a pop up comes up with description)
+                " popover-trigger="'mouseenter'"></i></label>
                                         <div class="form-group" ng-class="{'form-invalid': about.freeText.$invalid && about.freeText.$touched}">
                                             <textarea ui-tinymce="tinymceOptions" ng-model="formData.about" class="form-control"></textarea>
                                         </div>
@@ -168,7 +169,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group" ng-class="{'form-invalid': registerCoach.checkit.$invalid && registerCoach.checkit.$touched}">
                                             <div class="upload-btn check-cust">
-                                                <input type="checkbox" id="checkits" ng-model="formData.checkit"/>
+                                                <input type="checkbox" id="checkits" ng-model="formData.checkit" />
                                                 <label for="checkits">I agree to the Coach Mentor<a ui-sref="terms-services">Terms of Service</a> and <a ui-sref="privacy-policy"> Privacy Policy</a>.</label>
                                             </div>
                                         </div>

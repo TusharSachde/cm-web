@@ -18,18 +18,21 @@
                                         <img src="{{d.img}}" class="img-responsive" alt="">
                                     </div>
                                     <div class="blog-title">
-                                        <h4 class="card-title" ui-sref="coach-blog-detail" ui-sref="coach-blog-detail">
+                                        <h4 class="card-title" ui-sref="coach-blog-detail">
                                             {{d.title}}
                                         </h4>
-                                          <div class="rating-date">
-                                        <span class="small-text">{{d.date}}</span>
-                                      </div>
-                                            <div class="rating-blog">
-                                                <span class="rate-card rateup"><i class="ln ln-thumbs-up"></i>{{d.ratingup}}</span>
-                                                <span class="rate-card ratedown"><i class="ln ln-thumbs-down"></i>{{d.ratingdown}}</span>
-                                            </div>
-                                            <div class="clearfix"></div>
+                                        <div class="rating-date" ui-sref="coach-blog-detail">
+                                            <span class="small-text">{{d.date}}</span>
                                         </div>
+                                        <p class="card-cont" ui-sref="coach-blog-detail" ng-bind-html="d.content">
+                                            <!-- {{}} -->
+                                        </p>
+                                        <div class="rating-blog">
+                                            <span class="rate-card rateup"><i class="ln ln-thumbs-up"></i>{{d.ratingup}}</span>
+                                            <span class="rate-card ratedown"><i class="ln ln-thumbs-down"></i>{{d.ratingdown}}</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
                                 </div>
                                 <div class="blog-delete">
                                     <a class="btn btn-blue" tooltip-placement="bottom" uib-tooltip="Edit" ui-sref="coach-blog-edit"><span class="ln ln-pencil" ></span></a>

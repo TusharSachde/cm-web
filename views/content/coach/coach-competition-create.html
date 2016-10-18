@@ -12,14 +12,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': addCompetition.name.$invalid && addCompetition.name.$touched}">
-                                        <label>Name:</label>
+                                        <label>Name: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Enter the name of the competition" popover-trigger="'mouseenter'"></i></label>
                                         <input type="text" name="name" ng-model="formData.name" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="pt30">
                                         <div class="form-group" ng-class="{'form-invalid': addCompetition.level.$invalid && addCompetition.level.$touched}">
-                                            <label>Key Competition:</label>
+                                            <label>Key Competition: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Select YES if this is a competition you feel is vital for the athletes to attend to achieve the overall goal and objectives. Selecting NO implies that it is more optional if the athlete is available" popover-trigger="'mouseenter'"></i></label>
                                             <toggle-switch on-label=Yes off-label=No ng-model=required class="switch-mini switch-success ml-25"></toggle-switch>
                                         </div>
                                     </div>
@@ -28,31 +28,32 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group" ng-class="{'form-invalid': addCompetition.startDate.$invalid && addCompetition.startDate.$touched}">
-                                        <label>Start Date:</label>
+                                        <label>Start Date: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Enter the date that the competitions starts on" popover-trigger="'mouseenter'"></i></label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" uib-datepicker-popup ng-model="addCompetition.startDate" is-open="popup.opened" datepicker-options="dateOptions"
-                                                ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                            <input type="text" class="form-control" uib-datepicker-popup ng-model="addCompetition.startDate" is-open="popup.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
                                             <span class="input-group-btn">
                                             <button type="button" class="btn btn-default ht34" ng-click="popup.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
                                         </span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group" ng-class="{'form-invalid': addCompetition.endDate.$invalid && addCompetition.endDate.$touched}">
-                                    <label>End Date:</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" uib-datepicker-popup ng-model="addCompetition.endDate" is-open="popup1.opened" datepicker-options="dateOptions"
-                                            ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
-                                        <span class="input-group-btn">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': addCompetition.endDate.$invalid && addCompetition.endDate.$touched}">
+                                        <label>End Date: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Enter the date that the competition ends on (this maybe the same as the start date for single day competitions)
+" popover-trigger="'mouseenter'"></i></label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" uib-datepicker-popup ng-model="addCompetition.endDate" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                            <span class="input-group-btn">
                                             <button type="button" class="btn btn-default ht34" ng-click="popup1.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
                                         </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group" ng-class="{'form-invalid': addCompetition.description.$invalid && addCompetition.description.$touched}">
-                                        <label>Description :</label>
+                                        <label>Competition Details: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="EFree text, include any information you want your athletes to see prior to the competition. This could include Key information, goals and objectives, target performances etc." popover-trigger="'mouseenter'"></i></label>
                                         <textarea name="freeText" ng-model="addCompetition.description" class="form-control" rows="2" cols="50" required></textarea>
                                     </div>
                                 </div>
@@ -60,10 +61,10 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group" ng-class="{'form-invalid': addCompetition.players.$invalid && addCompetition.players.$touched}">
-                                        <label>Add Players:</label>
-                                        <ui-select multiple tagging tagging-label="(custom 'new' label)" ng-model="formData.player" theme="bootstrap" sortable="true"
-                                            ng-disabled="disabled" title="Add Players">
-                                            <ui-select-match placeholder="Select Players..."><img ng-src="{{$item.image}} " alt="" class="img-select"> {{$item.name}}</ui-select-match>
+                                        <label>Add Athletes: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Select the athletes from your coaching list that you would like to assign the competition too, they will be able to accept or reject your request.
+" popover-trigger="'mouseenter'"></i></label>
+                                        <ui-select multiple tagging tagging-label="(custom 'new' label)" ng-model="formData.player" theme="bootstrap" sortable="true" ng-disabled="disabled" title="Add Players">
+                                            <ui-select-match placeholder="Select Athletes..."><img ng-src="{{$item.image}} " alt="" class="img-select"> {{$item.name}}</ui-select-match>
                                             <ui-select-choices repeat="player in players | filter:$select.search">
                                                 <img src="{{player.image}} " alt="" class="img-drop">{{player.name}}
                                             </ui-select-choices>

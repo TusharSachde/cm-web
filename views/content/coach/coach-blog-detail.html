@@ -12,7 +12,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="pull-right">
-                                <a class="btn btn-blue" tooltip-placement="bottom" uib-tooltip="Edit" ui-sref="coach-blog-edit"><span class="ln ln-pencil" ></span></a>
+                                <a class="btn btn-blue" tooltip-placement="top" uib-tooltip="Edit" ui-sref="coach-blog-edit"><span class="ln ln-pencil" ></span></a>
                                 <a class="btn btn-danger btn-relative" tooltip-placement="top" uib-tooltip="Delete"><i class="ln ln-trash2"></i>
                           </a>
                             </div>
@@ -22,7 +22,7 @@
                         <div class="col-md-9">
                             <div class="blog-block">
                                 <div class="blog-img">
-                                    <img src="img/ground.png" class="img-responsive" alt="">
+                                    <img src="img/ground.jpg" class="img-responsive" alt="">
                                 </div>
                                 <div class="blog-title">
                                     <div class="min-hgt35">
@@ -51,9 +51,9 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group" ng-class="{'form-invalid': createBlogCoach.players.$invalid && createBlogCoach.players.$touched}">
-                                        <label>Add Players to Share:</label>
+                                        <label>Add Athletes to Share:</label>
                                         <ui-select multiple tagging tagging-label="(custom 'new' label)" ng-model="formData.player" theme="bootstrap" sortable="true" ng-disabled="disabled" title="Add Players">
-                                            <ui-select-match placeholder="Select Players..."><img ng-src="{{$item.image}} " alt="" class="img-select"> {{$item.name}}</ui-select-match>
+                                            <ui-select-match placeholder="Select Athletes..."><img ng-src="{{$item.image}} " alt="" class="img-select"> {{$item.name}}</ui-select-match>
                                             <ui-select-choices repeat="player in players | filter:$select.search">
                                                 <img src="{{player.image}} " alt="" class="img-drop">{{player.name}}
                                             </ui-select-choices>
