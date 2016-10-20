@@ -10,13 +10,11 @@
                         <div class="row">
                             <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="data in athlethes">
                                 <div class="accept-athletes">
-                                  <div class="checkin-btn text-right">
-                                      <a class="btn btn-success" tooltip-placement="bottom" uib-tooltip="Accept"> <i class="fa fa-check"></i></a>
-                                      <a class="btn btn-danger" tooltip-placement="bottom" uib-tooltip="Reject"><i class="fa fa-times"></i></a>
-                                  </div>
+                                    <a href="" ui-sref="coach-athletes-profile">
                                     <div class="user-athletes-img text-center">
                                         <img ng-src="{{data.image}}" class="dp" alt="Rahul Dravid">
                                     </div>
+                                  </a>
                                     <div class="name-cont text-center">
                                         <h5>{{data.name}}</h5>
                                         <p>{{data.sports}}</p>
@@ -28,6 +26,10 @@
                                     </div>
                                     <div class="viewprofile-btn text-center">
                                         <a href="" class="read-more" ui-sref="coach-athletes-profile">View Profile</a>
+                                    </div>
+                                    <div class="checkin-btn text-center">
+                                        <a class="btn btn-success" tooltip-placement="bottom" uib-tooltip="Accept"> <i class="fa fa-check"></i></a>
+                                        <a class="btn btn-danger" tooltip-placement="bottom" uib-tooltip="Reject"><i class="fa fa-times"></i></a>
                                     </div>
                                 </div>
                             </div>

@@ -12,7 +12,12 @@
             margin-top: 30px;
             position: static;
             @include transform(translateY(0%));
+
+            .info-item {
+                margin: 0 5px 20px;
+            }
         }
+
         .info-pic {
             position: static;
             text-align: center;
@@ -44,6 +49,55 @@
     }
 }
 @media (max-width:$screen-xs-max) {
+    .menu-mobile {
+        .nav-submenu {
+            margin: 0;
+
+            li {
+                padding: 12px 20px;
+                border-bottom: 1px solid #ddd;
+                line-height: 1;
+            }
+        }
+
+        .panel-group {
+            .panel + .panel {
+                margin-top: 0;
+            }
+
+            .panel {
+                border: none;
+
+                .panel-heading {
+                    background: #fff;
+                    padding: 0;
+                    border: 0;
+                    border-bottom: 1px solid #ddd;
+
+                    h4 {
+                        margin: 0;
+
+                        a {
+                            color: #333333;
+                            font-size: 14px;
+                            padding: 12px 20px;
+                            display: block !important;
+
+                            & .menu-nav-mobile {
+                                padding: 0!important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .panel-collapse .panel-body {
+                padding: 0;
+                border: none;
+            }
+        }
+    }
+
     .footer-menu {
         .text-right,
         p {

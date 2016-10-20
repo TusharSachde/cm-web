@@ -110,11 +110,7 @@
                             <div class="form-group" ng-class="{'form-invalid': editprofilepassword.country.$invalid && editprofilepassword.country.$touched}">
                                 <label>Country:</label>
                                 <select name="country" ng-model="formData.country" class="form-control">
-                                            <option selected value="uk">UK</option>
-                                            <option value="usa">USA</option>
-                                            <option value="canada">Canada</option>
-                                            <option value="aus">Australia</option>
-                                            <option value="nz">New Zealand</option>
+                                    <option value="{{c.name}}" ng-repeat="c in countries">{{c.name}}</option>
                                             </select>
                             </div>
                         </div>
@@ -210,7 +206,7 @@
                 </div>
                 </form>
                 <div class="change-pwsd">
-                    <form name="editprofilepassword ng-submit=" editprofilepassword(formData); "">
+                    <form name="editprofilepassword" ng-submit="editprofilepassword(formData); "">
                         <label>Change Password:</label>
                         <div class="row">
                             <div class="col-md-6">

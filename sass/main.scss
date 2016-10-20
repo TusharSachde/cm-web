@@ -110,8 +110,9 @@ a {
 a {
     @include transition (all ease 300ms);
 
+    &:focus,
     &:hover {
-        color: lighten(#004a9b, 10%);
+        color: initial;
     }
 }
 //bootstrap forms
@@ -443,7 +444,7 @@ $trans-black: rgba( black, .15);
         > p {
             line-height: 100%;
             font-weight: 300;
-            font-size: 16px;
+            font-size: 12px;
         }
 
         > h1 {
@@ -1677,8 +1678,6 @@ img.uploadingImage {
 }
 
 .user-athletes-img {
-    padding-top: 15px;
-
     .dp {
         height: 100px;
         width: 100px;
@@ -1735,7 +1734,7 @@ img.uploadingImage {
 }
 
 .accept-athletes {
-    padding: 15px 20px 8px;
+    padding: 15px;
     margin: 0 0 20px;
     border-radius: 4px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.30);
@@ -1756,7 +1755,7 @@ img.uploadingImage {
     }
 
     .description-athlets {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .user-dtl {
@@ -1769,11 +1768,11 @@ img.uploadingImage {
     }
 
     .viewprofile-btn {
-        padding: 20px 0 15px;
+        padding: 10px 0 5px;
 
         .read-more {
             border-top: 1px solid #ddd;
-            padding: 20px 0 0;
+            padding: 12px 0 0;
             color: #202020;
             font-weight: 600;
 
@@ -1783,6 +1782,7 @@ img.uploadingImage {
         }
     }
 }
+
 .btn.active,
 .btn:active {
     outline: 0;
@@ -1790,6 +1790,7 @@ img.uploadingImage {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+
 .checkin-btn {
     .btn {
         border-radius: 100%;
@@ -2282,6 +2283,15 @@ textarea {
 
 .check-cust {
     position: relative;
+
+    a {
+        color: $blue;
+
+        &:focus,
+        &:hover {
+            color: darken($blue, 10%);
+        }
+    }
     /* Base for label styling */
     [type="checkbox"]:checked,
     [type="checkbox"]:not(:checked) {
@@ -2524,7 +2534,6 @@ textarea {
 
                     h4 {
                         margin: 0;
-
                         a {
                             color: #333333;
                             font-size: 14px;

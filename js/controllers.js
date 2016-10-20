@@ -21,6 +21,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             modalInstance.close("cancel");
         };
     };
+    $scope.oneAtATime = true;
+    $scope.status = {
+        isCustomHeaderOpen: false,
+        isFirstOpen: true,
+        isFirstDisabled: false
+    };
 })
 
 .controller('LoginCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
@@ -52,6 +58,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.specialisations = [
         'Coaching athletes with a disability', 'Coaching female athletes', 'Eating disorders', 'First aid', 'Long-term athlete development', 'Mentored practice', 'Strength and conditioning', 'Fitness in Running and Walking', 'Children in Athletics'
     ];
+    $scope.countries = NavigationService.getCountries();
 })
 
 .controller('CoachProfileCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
@@ -82,13 +89,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         image: 'http://2.bp.blogspot.com/-TgdKBlUGk90/T0PhPlFOf8I/AAAAAAAAAVc/jijEQ8u1uUg/s1600/387430_257363124319593_257347670987805_670782_1318978483_n.jpg',
         yearsCoaching: 2,
         email: 'sachin@gmail.com',
-        gender: 'Male',
-        contact: '+919098765324',
+        gender: 'male',
+        contact: '+91 9098765324',
         dob: new Date(),
         limit: "50",
         price: 50,
         country: 'UK',
         credentials: 'Level 4',
+        experience: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien",
+        expertise: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien",
+        achievements: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien",
         about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien. Vivamus sodales et libero ac consectetur. Curabitur hendrerit lacus nisi, eget euismod felis gravida vitae. Nullam faucibus maximus eros, non facilisis magna tincidunt quis. Ut suscipit fringilla quam eu scelerisque. Proin orci lacus, condimentum eget urna at, aliquam pellentesque mauris. Aenean rutrum diam tortor, sed finibus nibh condimentum ac. Sed et blandit arcu.',
         coachingFocus: ['Sprinting', 'Hurdles'],
         specialisations: ['Children in Athletics', 'First aid']
@@ -99,7 +109,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.specialisations = [
         'Coaching athletes with a disability', 'Coaching female athletes', 'Eating disorders', 'First aid', 'Long-term athlete development', 'Mentored practice', 'Strength and conditioning', 'Fitness in Running and Walking', 'Children in Athletics'
     ];
-
+    $scope.countries = NavigationService.getCountries();
     $scope.submit = function(data) {
         console.log(data);
         $state.go('app.profile');
@@ -128,34 +138,34 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeActiveCoach("Athletes Coached");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
-    $scope.athlethes=[{
-      name:"Virat Kholi",
-      image:"img/img-placeholder.png",
-      sports:"Cricket",
-      dob:"26 July,1988",
-      gender:"Male",
-      description:"Knowledge is power, and we were arming ourselves for the toughest fight of our lives."
-    },{
-      name:"Rahul Dravid",
-      image:"img/img-placeholder.png",
-      sports:"Cricket",
-      dob:"2 June,1985",
-      gender:"Male",
-      description:"Knowledge is power, and we were arming ourselves for the toughest fight of our lives."
-    },{
-      name:"Ricky Pointing",
-      image:"img/img-placeholder.png",
-      sports:"Cricket",
-      dob:"30 May,1978",
-      gender:"Male",
-      description:"Knowledge is power, and we were arming ourselves for the toughest fight of our lives."
-    },{
-      name:"Umesh Yadav",
-      image:"img/img-placeholder.png",
-      sports:"Cricket",
-      dob:"26 July,1985",
-      gender:"Male",
-      description:"Knowledge is power, and we were arming ourselves for the toughest fight of our lives."
+    $scope.athlethes = [{
+        name: "Virat Kholi",
+        image: "img/img-placeholder.png",
+        sports: "Cricket",
+        dob: "26 July,1988",
+        gender: "Male",
+        description: "Knowledge is power, and we were arming ourselves for the toughest fight of our lives."
+    }, {
+        name: "Rahul Dravid",
+        image: "img/img-placeholder.png",
+        sports: "Cricket",
+        dob: "2 June,1985",
+        gender: "Male",
+        description: "Knowledge is power, and we were arming ourselves for the toughest fight of our lives."
+    }, {
+        name: "Ricky Pointing",
+        image: "img/img-placeholder.png",
+        sports: "Cricket",
+        dob: "30 May,1978",
+        gender: "Male",
+        description: "Knowledge is power, and we were arming ourselves for the toughest fight of our lives."
+    }, {
+        name: "Umesh Yadav",
+        image: "img/img-placeholder.png",
+        sports: "Cricket",
+        dob: "26 July,1985",
+        gender: "Male",
+        description: "Knowledge is power, and we were arming ourselves for the toughest fight of our lives."
     }];
 })
 

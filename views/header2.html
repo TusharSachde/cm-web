@@ -16,7 +16,7 @@
         <li>
             <a><span>Register <span class="caret"></span></span></a>
             <ul class="dropdown-menu">
-                <li><a ui-sref="register-athletes">Athlete</a></li>
+                <li><a ui-sref="register-athletes" ui-sref-active="active">Athlete</a></li>
                 <li><a ui-sref="register-coach" ui-sref-active="active">Coach</a></li>
             </ul>
         </li>
@@ -28,23 +28,41 @@
         <i class="bars two"></i>
         <i class="bars three"></i>
     </div>
-    <ul class="menu-login menu-mobile list-inline visible-xs">
-        <li><a ui-sref="home" ui-sref-active="active"><span>Home</span></a></li>
-        <li>
-            <a><span>About Us<span class="caret"></span></span></a>
-            <ul class="dropdown-menu">
-                <li><a>About Us</a></li>
-                <li><a>Product Tour</a></li>
-                <li><a>Coach Mentor Video</a></li>
-            </ul>
-        </li>
-        <li>
-            <a><span>Register <span class="caret"></span></span></a>
-            <ul class="dropdown-menu">
-                <li><a ui-sref="register-athletes">Athlete</a></li>
-                <li><a ui-sref="register-coach" ui-sref-active="active">Coach</a></li>
-            </ul>
-        </li>
-        <li><a ui-sref="login" ui-sref-active="active"><span>Login</span></a></li>
-    </ul>
+
+    <div class="menu-mobile visible-xs" ng-controller="headerctrl" ng-class="{'ac': toggleMenu == true}">
+        <uib-accordion close-others="oneAtATime">
+            <div uib-accordion-group class="panel-default">
+                <uib-accordion-heading>
+                    <a class="menu-nav-mobile" ui-sref="home" ui-sref-active="active">Home</a>
+                </uib-accordion-heading>
+            </div>
+            <div uib-accordion-group class="panel-default" is-open="status.open1">
+                <uib-accordion-heading>
+                    About Us
+                    <i class="pull-right fa icon color-white" ng-class="{'fa-caret-up':( status.open1), 'fa-caret-down': (!status.open1)}"></i>
+                </uib-accordion-heading>
+                <ul class="nav-submenu list-unstyled">
+                    <li><a>About Us</a></li>
+                    <li><a>Product Tour</a></li>
+                    <li><a>Coach Mentor Video</a></li>
+                </ul>
+            </div>
+            <div uib-accordion-group class="panel-default" is-open="status.open2">
+                <uib-accordion-heading>
+                    Register
+                    <i class="pull-right fa icon color-white" ng-class="{'fa-caret-up':( status.open2), 'fa-caret-down': (!status.open2)}"></i>
+                    </a>
+                </uib-accordion-heading>
+                <ul class="nav-submenu list-unstyled">
+                    <li><a ui-sref="register-athletes">Athlete</a></li>
+                    <li><a ui-sref="register-coach" ui-sref-active="active">Coach</a></li>
+                </ul>
+            </div>
+            <div uib-accordion-group class="panel-default">
+                <uib-accordion-heading>
+                      <a class="menu-nav-mobile" ui-sref="login" ui-sref-active="active">Login</a>
+                </uib-accordion-heading>
+            </div>
+        </uib-accordion>
+    </div>
 </div>
