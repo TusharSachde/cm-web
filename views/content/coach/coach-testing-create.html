@@ -30,8 +30,7 @@
                                     <div class="form-group" ng-class="{'form-invalid': addtesting.startDate.$invalid && addtesting.startDate.$touched}">
                                         <label>Start Date: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Enter the date that the test starts on" popover-trigger="'mouseenter'"></i></label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" uib-datepicker-popup ng-model="addtesting.startDate" is-open="popup.opened" datepicker-options="dateOptions"
-                                                ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                            <input type="text" class="form-control" uib-datepicker-popup ng-model="addtesting.startDate" is-open="popup.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
                                             <span class="input-group-btn">
                                             <button type="button" class="btn btn-default ht34" ng-click="popup.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
                                         </span>
@@ -41,46 +40,42 @@
                                 <div class="form-group" ng-class="{'form-invalid': addtesting.endDate.$invalid && addtesting.endDate.$touched}">
                                     <label>End Date: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Enter the date that the test ends on (this maybe the same as the start date for single day tests)" popover-trigger="'mouseenter'"></i></label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" uib-datepicker-popup ng-model="addtesting.endDate" is-open="popup1.opened" datepicker-options="dateOptions"
-                                            ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                        <input type="text" class="form-control" uib-datepicker-popup ng-model="addtesting.endDate" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-default ht34" ng-click="popup1.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
                                         </span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group" ng-class="{'form-invalid': addtesting.players.$invalid && addtesting.players.$touched}">
-                                    <label>Add Athletes: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Select the athletes from your coaching list that you would like to assign the test too" popover-trigger="'mouseenter'"></i></label>
-                                    <ui-select multiple tagging tagging-label="(custom 'new' label)" ng-model="formData.player" theme="bootstrap" sortable="true"
-                                        ng-disabled="disabled" title="Select Athletes">
-                                        <ui-select-match placeholder="Select Players..."><img ng-src="{{$item.image}} " alt="" class="img-select"> {{$item.name}}</ui-select-match>
-                                        <ui-select-choices repeat="player in players | filter:$select.search">
-                                            <img src="{{player.image}} " alt="" class="img-drop">{{player.name}}
-                                        </ui-select-choices>
-                                    </ui-select>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': addtesting.details.$invalid && addtesting.details.$touched}">
+                                        <label>Description: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Free text, add details about the test" popover-trigger="'mouseenter'"></i></label>
+                                        <textarea rows="3" cols="5" name="details" ng-model="formData.details" class="form-control" required></textarea>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group" ng-class="{'form-invalid': addtesting.details.$invalid && addtesting.details.$touched}">
-                                    <label>Description: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Free text, add details about the test" popover-trigger="'mouseenter'"></i></label>
-                                    <textarea rows="3" cols="5" name="details" ng-model="formData.details" class="form-control" required></textarea>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': addtesting.players.$invalid && addtesting.players.$touched}">
+                                        <label>Add Athletes: <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Select the athletes from your coaching list that you would like to assign the test too" popover-trigger="'mouseenter'"></i></label>
+                                        <ui-select multiple tagging tagging-label="(custom 'new' label)" ng-model="formData.player" theme="bootstrap" sortable="true" ng-disabled="disabled" title="Select Athletes">
+                                            <ui-select-match placeholder="Select Players..."><img ng-src="{{$item.image}} " alt="" class="img-select"> {{$item.name}}</ui-select-match>
+                                            <ui-select-choices repeat="player in players | filter:$select.search">
+                                                <img src="{{player.image}} " alt="" class="img-drop">{{player.name}}
+                                            </ui-select-choices>
+                                        </ui-select>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="made-form text-center login-section">
+                                <button class="btn btn-blue btn-round" type="submit">Save</button>
+                                <a class="btn btn-red btn-round" type="submit" ui-sref="coach-testing">Cancel</a>
+                            </div>
+                        </div>  
+                    </form>
                 </div>
-
-                <div class="made-form text-center login-section">
-                    <button class="btn btn-blue btn-round" type="submit">Save</button>
-                    <a class="btn btn-red btn-round" type="submit" ui-sref="coach-testing">Cancel</a>
-                </div>
-                </form>
             </div>
         </div>
     </div>
-</div>
 </div>

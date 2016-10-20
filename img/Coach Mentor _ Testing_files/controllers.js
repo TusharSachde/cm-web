@@ -128,35 +128,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeActiveCoach("Athletes Coached");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavCoach();
-    $scope.athlethes=[{
-      name:"Virat Kholi",
-      image:"img/img-placeholder.png",
-      sports:"Cricket",
-      dob:"26 July,1988",
-      gender:"Male",
-      description:"Knowledge is power, and we were arming ourselves for the toughest fight of our lives."
-    },{
-      name:"Rahul Dravid",
-      image:"img/img-placeholder.png",
-      sports:"Cricket",
-      dob:"2 June,1985",
-      gender:"Male",
-      description:"Knowledge is power, and we were arming ourselves for the toughest fight of our lives."
-    },{
-      name:"Ricky Pointing",
-      image:"img/img-placeholder.png",
-      sports:"Cricket",
-      dob:"30 May,1978",
-      gender:"Male",
-      description:"Knowledge is power, and we were arming ourselves for the toughest fight of our lives."
-    },{
-      name:"Umesh Yadav",
-      image:"img/img-placeholder.png",
-      sports:"Cricket",
-      dob:"26 July,1985",
-      gender:"Male",
-      description:"Knowledge is power, and we were arming ourselves for the toughest fight of our lives."
-    }];
 })
 
 .controller('CoachAthletesProfileCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
@@ -395,22 +366,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         img: 'img/ground.png',
         content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
         date: '4th October 2015',
-        ratingup: '4',
-        ratingdown: '1',
+        ratingup: '4.5',
+        ratingdown: '1.5',
     }, {
         title: 'Dhoni and Kohli Together',
         img: 'img/kohlidhoni.jpg',
         content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
         date: '6th June 2015',
-        ratingup: '3',
-        ratingdown: '2',
+        ratingup: '3.5',
+        ratingdown: '2.5',
     }, {
         title: 'What You Dont Know About: Being a GM',
         img: 'img/i.jpeg',
         content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
         date: '10th May 2015',
-        ratingup: '2',
-        ratingdown: '2',
+        ratingup: '2.5',
+        ratingdown: '2.5',
     }];
 
 })
@@ -488,20 +459,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         title: 'The Strongest Woman I’ve Ever Known Ever Known',
         img: 'img/ground.png',
         date: '4th October 2015',
-        ratingup: '4',
-        ratingdown: '1',
+        ratingup: '4.5',
+        ratingdown: '1.5',
     }, {
         title: 'Dhoni and Kohli playing together',
         img: 'img/kohlidhoni.jpg',
         date: '3rd November 2015',
-        ratingup: '3',
-        ratingdown: '2',
+        ratingup: '3.5',
+        ratingdown: '2.5',
     }, {
         title: 'What You Dont Know About: Being a GM',
         img: 'img/i.jpeg',
         date: '3rd December 2015',
-        ratingup: '2',
-        ratingdown: '2',
+        ratingup: '2.5',
+        ratingdown: '2.5',
     }];
 
     $scope.players = [{
