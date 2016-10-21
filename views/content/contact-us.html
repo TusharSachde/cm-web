@@ -1,0 +1,53 @@
+<div class="contact">
+    <div class="contact-content">
+        <div class="bg-all-head">
+                      <div class="overlay"></div>
+            <h4 class="title">Contact Us</h4>
+        </div>
+        <div class="content-view">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="contact-content">
+                            <p class="text-center">
+                                Here At Coach Mentor we pride ourselves on providing unrivalled support, if you do have any questions do not hesitate to contact us on <a href="mailto:enquiries@CoachMentor.com">enquiries@coachmentor.com</a> where we will
+                                do our best to help you.
+                            </p>
+                            <p class="text-center">(Please check your junk/spam folder if you have not received a response within 24-48 hours), We have the answers to the most frequently asked questions <a ui-sref="faq">here</a>.</p>
+                        </div>
+                        <div class="contact-form">
+                            <form name="contact" ng-submit="contact(formData);">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group" ng-class="{'form-invalid': contact.name.$invalid && contact.name.$touched}">
+                                            <label for="">Name</label>
+                                            <input type="text" name="name" ng-model="formData.name" class="form-control thick-font" required>
+                                        </div>
+                                        <div class="form-group" ng-class="{'form-invalid': contact.email.$invalid && contact.email.$touched}">
+                                            <label for="">Email Id</label>
+                                            <input type="email" name="email" ng-model="formData.email" class="form-control thick-font" required>
+                                        </div>
+                                        <div class="form-group" ng-class="{'form-invalid': contact.subject.$invalid && contact.subject.$touched}">
+                                            <label for="">Subject</label>
+                                            <input type="text" name="subject" ng-model="formData.subject" class="form-control thick-font" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group" ng-class="{'form-invalid': contact.message.$invalid && contact.message.$touched}">
+                                            <label for="">Message</label>
+                                            <textarea name="message" ng-model="formData.message"  rows="9" cols="40" class="form-control" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-blue btn-round" type="submit">Submit</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

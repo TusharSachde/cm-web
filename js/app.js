@@ -35,28 +35,40 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
         controller: 'RegisterCoachCtrl'
     })
 
-    .state('register-athletes', {
-        url: "/athletes/register",
+    .state('register-athlete', {
+        url: "/athlete/register",
         templateUrl: "views/template2.html",
-        controller: 'RegisterAthletesCtrl'
+        controller: 'RegisterAthleteCtrl'
     })
 
-    .state('athletes-profile', {
-        url: "/athletes/profile",
+    .state('athlete-profile', {
+        url: "/athlete/profile",
         templateUrl: "views/template.html",
-        controller: 'AthletesProfileCtrl'
+        controller: 'AthleteProfileCtrl'
     })
 
-    .state('athletes-profile-edit', {
-        url: "/athletes/profile/edit",
+    .state('athlete-profile-edit', {
+        url: "/athlete/profile/edit",
         templateUrl: "views/template.html",
-        controller: 'AthletesProfileEditCtrl'
+        controller: 'AthleteProfileEditCtrl'
     })
 
-    .state('athletes-competition', {
-        url: "/athletes/competition",
+    .state('athlete-competition', {
+        url: "/athlete/competition",
         templateUrl: "views/template.html",
-        controller: 'AthletesCompetitionCtrl'
+        controller: 'AthleteCompetitionCtrl'
+    })
+
+    .state('athlete-blog', {
+        url: "/athlete/blog",
+        templateUrl: "views/template.html",
+        controller: 'AthleteBlogCtrl'
+    })
+
+    .state('athlete-blog-detail', {
+        url: "/athlete/blog-detail",
+        templateUrl: "views/template.html",
+        controller: 'AthleteBlogDetailCtrl'
     })
 
     .state('faq', {

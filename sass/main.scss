@@ -50,7 +50,11 @@ $brand-success: $green !default;
 }
 
 body,
-p {
+ol li,
+ol li a,
+p,
+ul li,
+ul li a {
     font-family: 'Oxygen', serif;
 }
 
@@ -1251,10 +1255,24 @@ img.uploadingImage {
     }
 }
 
-.widget-title > h3 {
-    float: none;
-    padding-right: 0;
-    padding-top: 7px;
+.widget-title {
+    h3 {
+        float: none;
+        padding-right: 0;
+        padding-top: 7px;
+    }
+
+    h5 {
+        margin: 0;
+        color: #969696;
+        font-weight: 400;
+    }
+}
+
+.athlete-blog-detail {
+    h3 {
+        padding-top: 0;
+    }
 }
 
 .inbox-navigation > ul > li {
@@ -1594,6 +1612,7 @@ img.uploadingImage {
     display: table;
     float: left;
     width: 100%;
+    min-height: 70vh;
 
     p {
         font-weight: 400;
@@ -2145,7 +2164,7 @@ textarea {
     @include transition (all ease 300ms);
 
     .blog-img {
-        height: 125px;
+        height: 115px;
         margin-bottom: 5px;
         overflow: hidden;
     }
@@ -2225,6 +2244,7 @@ textarea {
     padding: 2px 5px;
     border-radius: 4px;
     margin-right: 10px;
+    cursor: pointer;
 
     i {
         margin: 0 3px;
@@ -2518,7 +2538,7 @@ textarea {
     }
 
     h4 {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .accordion-all {
@@ -2534,6 +2554,7 @@ textarea {
 
                     h4 {
                         margin: 0;
+
                         a {
                             color: #333333;
                             font-size: 14px;
@@ -2568,6 +2589,50 @@ textarea {
             display: table-cell;
             cursor: initial;
         }
+    }
+}
+
+.accept-reject {
+    .btn-outline {
+        cursor: auto;
+
+        &:active,
+        &:active:focus,
+        &:active:hover,
+        &:focus,
+        &:hover {
+            background: #fff;
+        }
+    }
+}
+
+.contact-form {
+    padding: 30px 0;
+}
+
+.bg-all-head {
+    height: 300px;
+    position: relative;
+    background: url('../img/bg-all.jpg') no-repeat;
+    background-size: cover;
+
+    .title {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: 0;
+        color: #FFF;
+        font-size: 40px;
+        @include transform(translate(-50%, -50%));
+    }
+
+    .overlay {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.25);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 }
 @import "fancybox-override";

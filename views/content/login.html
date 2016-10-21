@@ -26,7 +26,7 @@
                         </div>
                     </form>
                     <form name="login" class="login-section" ng-submit="doLogin(formData);" ng-if="loginType == 'athlete'">
-                        <p class="text-center">Fill in your details to login or <a ui-sref="register-athletes">Register Now</a></p>
+                        <p class="text-center">Fill in your details to login or <a ui-sref="register-athlete">Register Now</a></p>
                         <div class="form-group" ng-class="{'form-invalid': login.email.$invalid && login.email.$touched}">
                             <input type="email" name="email" ng-model="formData.email" class="form-control thick-font" placeholder="Email Address" required>
                         </div>
@@ -38,7 +38,7 @@
                             <a ui-sref="forgot-password" ui-sref="forgot-password">Forgot Password ?</a>
                         </div>
                         <div class="text-center">
-                            <a class="btn btn-primary thick-font" ui-sref="athletes-profile">Log In</a>
+                            <a class="btn btn-primary thick-font" ui-sref="athlete-profile">Log In</a>
                         </div>
                     </form>
                 </div>
