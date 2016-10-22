@@ -1,0 +1,90 @@
+<div class="panel-content ng-scope">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget">
+                <div class="table-area">
+                    <div class="widget-title">
+                        <div class="pull-right">
+                            <form class="search-form mr-form ng-pristine ng-valid"><input type="text" ng-change="showAllCountries(true)" placeholder="Coach Name or Country..." ng-model="search.keyword" class="form-control"> <button type="submit"><i class="fa fa-search"></i></button></form>
+                        </div>
+                        <div class="pull-right filter-label" ng-click="athletesFilter()">
+                            <i class="fa fa-filter"></i> Filter
+                            <!-- by Age / Coaching Focus / Gender / Credentials / Coaching Experience  -->
+                        </div>
+                        <h3 class="text-uppercase">Coaches</h3>
+                    </div>
+                    <div class="table-responsive" style="">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Name</th>
+                                    <th>Qualification &amp; Credentials</th>
+                                    <th>YEARS COACHING</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td>
+                                        <div class="user-img">
+                                            <img src="img/img-placeholder.png" class="dp" alt="Rahul Dravid">
+                                        </div>
+                                    </td>
+                                    <td>John Damon</td>
+                                    <td>Level 5</td>
+                                    <td>2 yrs</td>
+                                    <td><span class="primary">Subscribe</span></td>
+                                    <td>
+                                        <a class="btn btn-primary" tooltip-placement="top" uib-tooltip="View" ui-sref="athlete-coach-profile"><i class="ln ln-eye"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="ng-scope">
+                                    <td>
+                                        <div class="user-img">
+                                            <img src="img/img-placeholder.png" class="dp" alt="Rahul Dravid">
+                                        </div>
+                                    </td>
+                                    <td>Matt Smith</td>
+                                    <td>Level 3</td>
+                                    <td>4 yrs</td>
+                                    <td> <span class="danger">Fully Subscribed</span></td>
+                                    <td>
+                                        <a class="btn btn-primary" tooltip-placement="top" uib-tooltip="View" ui-sref="athlete-coach-profile"><i class="ln ln-eye"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tableData ng-hide" ng-show="totalItems == 0">
+                        <h5>No data found</h5>
+                    </div>
+                    <div class="tableData ng-hide" ng-show="totalItems == 0" style="">
+                        <h5>Loading Data</h5>
+                    </div>
+                    <!-- ngIf: totalItems -->
+                    <ul ng-if="totalItems" ng-change="changePage(currentPage);" uib-pagination="" total-items="totalItems" items-per-page="maxRow" ng-model="currentPage" max-size="template.pageMax" class="pagination-sm ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope pagination ng-not-empty"
+                        boundary-links="true" force-ellipses="true" style="">
+                        <!-- ngIf: ::boundaryLinks -->
+                        <li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope disabled" style=""><a href="" ng-click="selectPage(1, $event)" ng-disabled="noPrevious()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">First</a></li>
+                        <!-- end ngIf: ::boundaryLinks -->
+                        <!-- ngIf: ::directionLinks -->
+                        <li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled" style=""><a href="" ng-click="selectPage(page - 1, $event)" ng-disabled="noPrevious()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">Previous</a></li>
+                        <!-- end ngIf: ::directionLinks -->
+                        <!-- ngRepeat: page in pages track by $index -->
+                        <li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active" style=""><a href="" ng-click="selectPage(page.number, $event)" ng-disabled="ngDisabled&amp;&amp;!page.active" uib-tabindex-toggle="" class="ng-binding">1</a></li>
+                        <!-- end ngRepeat: page in pages track by $index -->
+                        <!-- ngIf: ::directionLinks -->
+                        <li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled" style=""><a href="" ng-click="selectPage(page + 1, $event)" ng-disabled="noNext()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">Next</a></li>
+                        <!-- end ngIf: ::directionLinks -->
+                        <!-- ngIf: ::boundaryLinks -->
+                        <li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope disabled" style=""><a href="" ng-click="selectPage(totalPages, $event)" ng-disabled="noNext()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">Last</a></li>
+                        <!-- end ngIf: ::boundaryLinks -->
+                    </ul>
+                    <!-- end ngIf: totalItems -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -53,6 +53,18 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
         controller: 'AthleteProfileEditCtrl'
     })
 
+    .state('athlete-search-coach', {
+        url: "/athlete/search",
+        templateUrl: "views/template.html",
+        controller: 'AthleteSearchCtrl'
+    })
+
+    .state('athlete-coach-profile', {
+        url: "/athlete/coach-profile",
+        templateUrl: "views/template.html",
+        controller: 'AthleteCoachProfileCtrl'
+    })
+
     .state('athlete-competition', {
         url: "/athlete/competition",
         templateUrl: "views/template.html",
@@ -69,6 +81,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
         url: "/athlete/blog-detail",
         templateUrl: "views/template.html",
         controller: 'AthleteBlogDetailCtrl'
+    })
+
+    .state('athlete-mycoach', {
+        url: "/athlete/athlete-mycoach",
+        templateUrl: "views/template.html",
+        controller: 'AthleteMyCoachCtrl'
     })
 
     .state('faq', {

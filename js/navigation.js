@@ -58,6 +58,18 @@ var navigationservice = angular.module('navigationservice', [])
         sref: "athlete-blog", //Keep sref empty if subnav
         icon: "archive",
         subnav: []
+    },{
+        name: "My Coach",
+        classis: "active",
+        sref: "athlete-mycoach", //Keep sref empty if subnav
+        icon: "archive",
+        subnav: []
+    },{
+        name: "Search Coaches",
+        classis: "active",
+        sref: "athlete-search-coach", //Keep sref empty if subnav
+        icon: "archive",
+        subnav: []
     }];
 
     var countries = [{

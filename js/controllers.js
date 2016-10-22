@@ -547,92 +547,70 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         isFirstDisabled: false
     };
 
-    $scope.faqs=[
-      {
-      heading:"Q1. What is Coach Mentor?",
-      content:"<p>Coach Mentor has been designed by Coaches and Athletes … for Coaches and Athletes.</p><p>Coach mentor is a Total Support System for Coaches, Athletes and Sportspeople. It is designed to make your possibilities a reality weather your goals are to just get a little fitter, finish a race or competition, run a personal best, to become a top ten finisher in your age group or to become a national or international athlete.</p><p>Coach mentor has been designed by a GB coach who has trained national and international champions, and one of his national athletes. Most importantly it has been designedby those who have gone through the system! We know exactly what you want and need from this application to reach the next level in your performance.</p>",
-    },
-      {
-      heading:"Q2. What is the objective of Coach Mentor?",
-      content:"<p>Our objective is to help every athlete, sportsperson and coach to reach his or her full potential, regardless of age, gender, location, limitation, sport or natural ability.</p>",
-    },
-      {
-      heading:"Q3. Who should use Coach Mentor?",
-      content:"<p>Coach Mentor is designed for Track & Field Athletes, Road Runners, Hill & Fell Runners, Cross Country Runners, Racewalkers and Triathletes on a worldwide basis and at all levels of ability.</p><p>You can either work with your current coach or chose which coach you would like to mentor you from our extensive bank of specialist national and international coaches, all of whom are endorsed and licensed to coach. You are getting access to your very own personalised coaching service from the very best and much more. </p>",
-    },
-      {
-      heading:"Q4. Is Coach Mentor just aimed at elite Athletes and Sportspeople?",
-      content:"<p>No, Coach Mentor has been designed to help athletes and sportspeople of all levels. For example, your goal may just want to improve your 5k and 10k personal bests, you might want to complete your first triathlon or improve your marathon times, you might be trying to break into national or international events – whatever your personal goals and objectives, Coach Mentor can help you.</p>",
-    },
-      {
-      heading:"Q5. What is the Training Plan?",
-      content:"<p>This is the most important feature provided by the Coach and is the heart of Coach Mentor. A Coach can create, edit, delete, assign and share a training plan with an athlete/sportsperson or group of athletes/sportspeople. These athletes can be track and field, road runners, triathletes, cross country runners, hill/fell runners or racewalkers. If you are a coach you can share, if you wish your training plans with other coaches and you can also make your training plans available to purchase by other athletes and sportspeople. If you subscribe to Coach Mentor you will have access to the very best training plans that are available.</p>",
-    },
-      {
-      heading:"Q6. What is the Training Diary?",
-      content:"<p>The Training Diary is the heart of the application for the coach, athlete and sportsperson. This is depicted in the form of a traditional calendar containing all your details – training schedule/plan, injury management, competition management, etc.</p><p>An athlete/sportsperson can view all the details of their trainings, competitions, injury details by navigating to a single view called the Training Diary. This basically has details of the activities carried out by the athlete/sportsperson each day and is produced by your Coach Mentor coach. The Athlete/Sportsperson completes the activities assigned by the Coach in the Training diary.</p>",
-    },
-      {
-      heading:"Q7. Does Coach Mentor manage my injuries?",
-      content:"<p>Yes, interacting with your coach is vital and injury management is a key element of Coach Mentor. An athlete/sportsperson can enter injury details which go into their Training Diary and their coach is notified so that they are aware and able to adjust the Training Plan as necessary. The injury details are updated by the athlete.</p>",
-    },
-      {
-      heading:"Q8. Does Coach Mentor manage my competitions and race schedule?",
-      content:"<p>Yes, interacting with your coach is vital and competition management is a key element of Coach Mentor. Your coach will suggest competitions and a race schedule for you to enter in the training plan and as an athlete/sportsperson you can accept or reject these suggestions. Your training plan will be geared around your competition and race schedule, and your overall goals and objectives.</p>",
-    },
-      {
-      heading:"Q9. Are all of the coaches qualified?",
-      content:"<p>Yes, all of the coaches hold appropriate coaching qualifications applicable to the national standards of their country. The qualifications coaches hold and their associated level will vary, coaches will also tend to specialise in particular disciples or distance. The level of coaches on Coach Mentor will vary from the best in the business right through to country and first class club level coaches. There will also be specialist coaches who specialise in particular disciples or training. You are able to search for a coach with particular credentials such as qualifications, level, discipline, specialty, country, etc.</p>",
-    },
-      {
-      heading:"Q10. How does Coach Mentor work?",
-      content:"<p>For the first time coaches and athletes/sportspeople of all abilities can work in collaboration using a single application. Coach mentor gives coaches, athletes and sportspeople the ability to digitalise and professionalise their programmes, one-to-one feedback and personal advice from experts in their field.</p><p>Coach Mentor is designed for Track & Field Athletes, Road Runners, Hill & Fell Runners, Cross Country Runners, Racewalkers and Triathletes on a worldwide basis.  </p><p>You can either work with your current coach or you can chose which coach you would like to mentor you from our extensive bank of specialist national and international coaches, all of whom are endorsed and licensed to coach. You are getting access to your very own personalised coaching service from the very best and much more. </p>",
-    },
-      {
-      heading:"Q11. What are the benefits of Coach Mentor?",
-      content:"<p>Coach Mentor has many benefits for Coaches, Athletes and Sportspeople. You have the ability to work with top level specialist coach that is not available anywhere else. Many of these coaches have coached the best athletes and sportspeople across the world. All your training plans, training diary, injury management and competition management are held in one application with full integration and interaction between you and your coach. </p>",
-    },
-      {
-      heading:"Q12. What if I am a coach and an athlete?",
-      content:"<p>You can be a Coach and an Athlete/Sportsperson on Coach Mentor. You just need to register twice, once as a coach and once as an Athlete/Sportsperson. Remember coach registration is free.</p>",
-    },
-      {
-      heading:"Q13. Do you accept athletes, sportspeople and coaches from outside of the UK?",
-      content:"<p>Yes, Coach Mentor is a global system and there is no reason that a foreign coach cannot mentor an athlete/sportsperson from another country and vice versa. In fact, there are benefits in this as certain countries tend to have coaching expertise that may be at a high standard than the country that the athlete/sportsperson resides. For road runners, triathletes, fell/hill runners, cross country and racewalkers all interaction with your coach is managed virtually and online, so you do not necessarily need to be located in the same country. Track and field athletes will tend to have local coaches so it is more likely they will be located close to each other.</p>",
-    },
-      {
-      heading:"Q14. I am a qualified professional can I offer my services to Coach Mentor?",
-      content:"<p>Yes, we have a Marketplace page where individuals or companies can offer their services and products to all our registered members. Coach Mentor will check the credentials and qualifications of the services and products to the best of our ability to provide all our members with a secure, reliable system.  </p>",
-    },
-      {
-      heading:"Q15. Is there an age limit for joining Coach Mentor as an athlete, sportsperson or coach?",
-      content:"<p>FNo, coaches, athletes and sportspeople can join Coach Mentor at any age. If an athlete/sportsperson is under the age of 16, then you will need to tick the box at registration to indicate your parents/guardians approval, together with supplying their name and contact details. Anyone 16 or younger must get permission of your parents/guardians before subscribing to coach mentor.</p>",
-    },
-      {
-      heading:"Q16. Do you offer discounts for groups or clubs?",
-      content:"<p>We don’t have a standard discount for groups or clubs, but we are able to offer volume discounts based on the number of people in the group or club. Please contact us using the “Contact Us” form through the Coach Mentor product with full details and we will reply to your request as soon as possible. We will do this by supplying you with a volume discount code to enter during the subscription payment process.</p>",
-    },
-      {
-      heading:"Q17. What are the benefits to coaches?",
-      content:"<p>For the first time coaches of all abilities can work with their athletes and sportspeople in collaboration using a single application. Coach mentor gives coaches the ability to digitalise and professionalise their training plans and programmes. Coaches can also receive payment by selling their training plans in our marketplace and by coaching a group of individuals remotely through the Coach Mentor product. Coaches can also be personally mentored by other coaches who are at a higher level or specialists in a particular area. Our aim is to keep as many coaches in sport as possible by providing a mechanism to allow coaches to coach groups remotely and to receive payment for all the time and effort they have put into their sport over the years.</p>",
-    },
-      {
-      heading:"Q18. What are the benefits to athletes/sportspeople?",
-      content:"<p>Coach Mentor offers a number of beneficial services to athletes and sportspeople. It has been designed by a GB coach who has trained national and international champions, and one of his national athletes. Coach Mentor has been designed by those who have gone through the system! We know exactly what you want and need from this application to reach the next level in your performance. Weather your goals are to just get a little fitter, finish a race or competition, run a personal best, to become a top ten finisher in your age group or to become a national or international athlete – coach mentor can help you. As part of your membership you will have access to a marketplace where you can purchase specialist services and products, and additional training plans. We also offer specialist blogs from experts in their field like sports nutrition, sports psychology, strength and conditioning, tips and techniques, etc. These will be available as free and paid blogs, and will be very useful and fully complementary to your personalised coaching. These will be optional and you can also purchase the paid blogs even if you are not subscribed to coach mentor. You will also have access to our global forum, chat with others, share video footage, etc.  </p>",
-    },
-      {
-      heading:"Q19. What is the price for joining Coach Mentor?",
-      content:"<p>Coach Mentor is free to coaches. Athletes and sportspeople can also register for free. If athletes and sportspeople want to use the full Coach Mentor services then there is a subscription charge which varies depending on the level of the coach you select to personally coach you. For example, a top level national or international coach will charge more than a county or club level coach. You can also use the other benefits of Coach Mentor (marketplace, forum, free blogs, paid blogs, etc.) by just registering (without subscribing), but to get the full benefits you must subscribe. You can choose to pay monthly or annually. If you pay annually you get two months free.</p>",
-    },
-      {
-      heading:"Q20. What do your blogs contain?",
-      content:"<p>Coach Mentor works with some of the best coaches, specialists and academics in the business and together with Coach Mentor they offer articles, tips and techniques, papers, advice, nutrition advice, new techniques, new approaches, latest research, etc. to all those who are registered with Coach Mentor. Collectively called blogs, some of these blogs will be available free and some will be available to purchase. </p>",
-    },
-      {
-      heading:"Q21. Can I try Coach Mentor before I subscribe?  ",
-      content:"<p>Yes, if you are not ready to subscribe yet, you can just register free of charge and you will have limited access to Coach Mentor. You will also have free access to the forum, free blogs, marketplace and you will be able to navigate around the application. If you decide to fully utilise Coach Mentor and work with a coach of your choice, you simply chose a coach and subscribe accordingly.</p>",
-    },
-  ];
+    $scope.faqs = [{
+        heading: "Q1. What is Coach Mentor?",
+        content: "<p>Coach Mentor has been designed by Coaches and Athletes … for Coaches and Athletes.</p><p>Coach mentor is a Total Support System for Coaches, Athletes and Sportspeople. It is designed to make your possibilities a reality weather your goals are to just get a little fitter, finish a race or competition, run a personal best, to become a top ten finisher in your age group or to become a national or international athlete.</p><p>Coach mentor has been designed by a GB coach who has trained national and international champions, and one of his national athletes. Most importantly it has been designedby those who have gone through the system! We know exactly what you want and need from this application to reach the next level in your performance.</p>",
+    }, {
+        heading: "Q2. What is the objective of Coach Mentor?",
+        content: "<p>Our objective is to help every athlete, sportsperson and coach to reach his or her full potential, regardless of age, gender, location, limitation, sport or natural ability.</p>",
+    }, {
+        heading: "Q3. Who should use Coach Mentor?",
+        content: "<p>Coach Mentor is designed for Track & Field Athletes, Road Runners, Hill & Fell Runners, Cross Country Runners, Racewalkers and Triathletes on a worldwide basis and at all levels of ability.</p><p>You can either work with your current coach or chose which coach you would like to mentor you from our extensive bank of specialist national and international coaches, all of whom are endorsed and licensed to coach. You are getting access to your very own personalised coaching service from the very best and much more. </p>",
+    }, {
+        heading: "Q4. Is Coach Mentor just aimed at elite Athletes and Sportspeople?",
+        content: "<p>No, Coach Mentor has been designed to help athletes and sportspeople of all levels. For example, your goal may just want to improve your 5k and 10k personal bests, you might want to complete your first triathlon or improve your marathon times, you might be trying to break into national or international events – whatever your personal goals and objectives, Coach Mentor can help you.</p>",
+    }, {
+        heading: "Q5. What is the Training Plan?",
+        content: "<p>This is the most important feature provided by the Coach and is the heart of Coach Mentor. A Coach can create, edit, delete, assign and share a training plan with an athlete/sportsperson or group of athletes/sportspeople. These athletes can be track and field, road runners, triathletes, cross country runners, hill/fell runners or racewalkers. If you are a coach you can share, if you wish your training plans with other coaches and you can also make your training plans available to purchase by other athletes and sportspeople. If you subscribe to Coach Mentor you will have access to the very best training plans that are available.</p>",
+    }, {
+        heading: "Q6. What is the Training Diary?",
+        content: "<p>The Training Diary is the heart of the application for the coach, athlete and sportsperson. This is depicted in the form of a traditional calendar containing all your details – training schedule/plan, injury management, competition management, etc.</p><p>An athlete/sportsperson can view all the details of their trainings, competitions, injury details by navigating to a single view called the Training Diary. This basically has details of the activities carried out by the athlete/sportsperson each day and is produced by your Coach Mentor coach. The Athlete/Sportsperson completes the activities assigned by the Coach in the Training diary.</p>",
+    }, {
+        heading: "Q7. Does Coach Mentor manage my injuries?",
+        content: "<p>Yes, interacting with your coach is vital and injury management is a key element of Coach Mentor. An athlete/sportsperson can enter injury details which go into their Training Diary and their coach is notified so that they are aware and able to adjust the Training Plan as necessary. The injury details are updated by the athlete.</p>",
+    }, {
+        heading: "Q8. Does Coach Mentor manage my competitions and race schedule?",
+        content: "<p>Yes, interacting with your coach is vital and competition management is a key element of Coach Mentor. Your coach will suggest competitions and a race schedule for you to enter in the training plan and as an athlete/sportsperson you can accept or reject these suggestions. Your training plan will be geared around your competition and race schedule, and your overall goals and objectives.</p>",
+    }, {
+        heading: "Q9. Are all of the coaches qualified?",
+        content: "<p>Yes, all of the coaches hold appropriate coaching qualifications applicable to the national standards of their country. The qualifications coaches hold and their associated level will vary, coaches will also tend to specialise in particular disciples or distance. The level of coaches on Coach Mentor will vary from the best in the business right through to country and first class club level coaches. There will also be specialist coaches who specialise in particular disciples or training. You are able to search for a coach with particular credentials such as qualifications, level, discipline, specialty, country, etc.</p>",
+    }, {
+        heading: "Q10. How does Coach Mentor work?",
+        content: "<p>For the first time coaches and athletes/sportspeople of all abilities can work in collaboration using a single application. Coach mentor gives coaches, athletes and sportspeople the ability to digitalise and professionalise their programmes, one-to-one feedback and personal advice from experts in their field.</p><p>Coach Mentor is designed for Track & Field Athletes, Road Runners, Hill & Fell Runners, Cross Country Runners, Racewalkers and Triathletes on a worldwide basis.  </p><p>You can either work with your current coach or you can chose which coach you would like to mentor you from our extensive bank of specialist national and international coaches, all of whom are endorsed and licensed to coach. You are getting access to your very own personalised coaching service from the very best and much more. </p>",
+    }, {
+        heading: "Q11. What are the benefits of Coach Mentor?",
+        content: "<p>Coach Mentor has many benefits for Coaches, Athletes and Sportspeople. You have the ability to work with top level specialist coach that is not available anywhere else. Many of these coaches have coached the best athletes and sportspeople across the world. All your training plans, training diary, injury management and competition management are held in one application with full integration and interaction between you and your coach. </p>",
+    }, {
+        heading: "Q12. What if I am a coach and an athlete?",
+        content: "<p>You can be a Coach and an Athlete/Sportsperson on Coach Mentor. You just need to register twice, once as a coach and once as an Athlete/Sportsperson. Remember coach registration is free.</p>",
+    }, {
+        heading: "Q13. Do you accept athletes, sportspeople and coaches from outside of the UK?",
+        content: "<p>Yes, Coach Mentor is a global system and there is no reason that a foreign coach cannot mentor an athlete/sportsperson from another country and vice versa. In fact, there are benefits in this as certain countries tend to have coaching expertise that may be at a high standard than the country that the athlete/sportsperson resides. For road runners, triathletes, fell/hill runners, cross country and racewalkers all interaction with your coach is managed virtually and online, so you do not necessarily need to be located in the same country. Track and field athletes will tend to have local coaches so it is more likely they will be located close to each other.</p>",
+    }, {
+        heading: "Q14. I am a qualified professional can I offer my services to Coach Mentor?",
+        content: "<p>Yes, we have a Marketplace page where individuals or companies can offer their services and products to all our registered members. Coach Mentor will check the credentials and qualifications of the services and products to the best of our ability to provide all our members with a secure, reliable system.  </p>",
+    }, {
+        heading: "Q15. Is there an age limit for joining Coach Mentor as an athlete, sportsperson or coach?",
+        content: "<p>FNo, coaches, athletes and sportspeople can join Coach Mentor at any age. If an athlete/sportsperson is under the age of 16, then you will need to tick the box at registration to indicate your parents/guardians approval, together with supplying their name and contact details. Anyone 16 or younger must get permission of your parents/guardians before subscribing to coach mentor.</p>",
+    }, {
+        heading: "Q16. Do you offer discounts for groups or clubs?",
+        content: "<p>We don’t have a standard discount for groups or clubs, but we are able to offer volume discounts based on the number of people in the group or club. Please contact us using the “Contact Us” form through the Coach Mentor product with full details and we will reply to your request as soon as possible. We will do this by supplying you with a volume discount code to enter during the subscription payment process.</p>",
+    }, {
+        heading: "Q17. What are the benefits to coaches?",
+        content: "<p>For the first time coaches of all abilities can work with their athletes and sportspeople in collaboration using a single application. Coach mentor gives coaches the ability to digitalise and professionalise their training plans and programmes. Coaches can also receive payment by selling their training plans in our marketplace and by coaching a group of individuals remotely through the Coach Mentor product. Coaches can also be personally mentored by other coaches who are at a higher level or specialists in a particular area. Our aim is to keep as many coaches in sport as possible by providing a mechanism to allow coaches to coach groups remotely and to receive payment for all the time and effort they have put into their sport over the years.</p>",
+    }, {
+        heading: "Q18. What are the benefits to athletes/sportspeople?",
+        content: "<p>Coach Mentor offers a number of beneficial services to athletes and sportspeople. It has been designed by a GB coach who has trained national and international champions, and one of his national athletes. Coach Mentor has been designed by those who have gone through the system! We know exactly what you want and need from this application to reach the next level in your performance. Weather your goals are to just get a little fitter, finish a race or competition, run a personal best, to become a top ten finisher in your age group or to become a national or international athlete – coach mentor can help you. As part of your membership you will have access to a marketplace where you can purchase specialist services and products, and additional training plans. We also offer specialist blogs from experts in their field like sports nutrition, sports psychology, strength and conditioning, tips and techniques, etc. These will be available as free and paid blogs, and will be very useful and fully complementary to your personalised coaching. These will be optional and you can also purchase the paid blogs even if you are not subscribed to coach mentor. You will also have access to our global forum, chat with others, share video footage, etc.  </p>",
+    }, {
+        heading: "Q19. What is the price for joining Coach Mentor?",
+        content: "<p>Coach Mentor is free to coaches. Athletes and sportspeople can also register for free. If athletes and sportspeople want to use the full Coach Mentor services then there is a subscription charge which varies depending on the level of the coach you select to personally coach you. For example, a top level national or international coach will charge more than a county or club level coach. You can also use the other benefits of Coach Mentor (marketplace, forum, free blogs, paid blogs, etc.) by just registering (without subscribing), but to get the full benefits you must subscribe. You can choose to pay monthly or annually. If you pay annually you get two months free.</p>",
+    }, {
+        heading: "Q20. What do your blogs contain?",
+        content: "<p>Coach Mentor works with some of the best coaches, specialists and academics in the business and together with Coach Mentor they offer articles, tips and techniques, papers, advice, nutrition advice, new techniques, new approaches, latest research, etc. to all those who are registered with Coach Mentor. Collectively called blogs, some of these blogs will be available free and some will be available to purchase. </p>",
+    }, {
+        heading: "Q21. Can I try Coach Mentor before I subscribe?  ",
+        content: "<p>Yes, if you are not ready to subscribe yet, you can just register free of charge and you will have limited access to Coach Mentor. You will also have free access to the forum, free blogs, marketplace and you will be able to navigate around the application. If you decide to fully utilise Coach Mentor and work with a coach of your choice, you simply chose a coach and subscribe accordingly.</p>",
+    }, ];
 })
 
 .controller('ContactUsCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal, $stateParams, toastr, $filter) {
@@ -698,7 +676,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         image: 'http://2.bp.blogspot.com/-TgdKBlUGk90/T0PhPlFOf8I/AAAAAAAAAVc/jijEQ8u1uUg/s1600/387430_257363124319593_257347670987805_670782_1318978483_n.jpg',
         yearsCoaching: 2,
         email: 'sachin@gmail.com',
-        gender: 'Male',
+        gender: 'male',
         contact: '+919098765324',
         dob: new Date(),
         country: 'ind',
@@ -717,6 +695,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("athletes/athlete-competition");
     $scope.menutitle = NavigationService.makeActiveCoach("Competition");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getNavAthlete();
+
+    $scope.openReject = function() {
+        var modalInstance = $uibModal.open({
+            scope: $scope,
+            templateUrl: 'views/modal/modal-reject.html'
+        });
+    };
+})
+
+.controller('AthleteMyCoachCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("athletes/athlete-mycoach");
+    $scope.menutitle = NavigationService.makeActiveCoach("My Coach");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavAthlete();
 
@@ -757,6 +750,69 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         ratingdown: '2',
     }];
 })
+
+.controller('AthleteSearchCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("athletes/athlete-search-coach");
+    $scope.menutitle = NavigationService.makeActiveCoach("Search");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getNavAthlete();
+
+    $scope.openReject = function() {
+        var modalInstance = $uibModal.open({
+            scope: $scope,
+            templateUrl: 'views/modal/modal-reject.html'
+        });
+    };
+
+
+    $scope.athletesFilter = function() {
+        var modalInstance = $uibModal.open({
+            scope: $scope,
+            templateUrl: 'views/modal/modal-filter.html',
+        });
+    };
+
+    $scope.filterData = [{
+        name: 'Age',
+        value: ['Less than 20 years', '21 - 25 years', '26 - 30 years', '31 - 35 years', '36 - 40 years', 'More than 40 years']
+    }, {
+        name: 'Coaching Focus',
+        value: ['Sprinting', 'Middle Distance', 'Endurance', 'Throws', 'Jumps', 'Hurdles', 'Hill/Fell Running', 'Cross Country']
+    }, {
+        name: 'Gender',
+        value: ['Male', 'Female']
+    }, {
+        name: 'Credentials',
+        value: ['Level 1', 'Level 2', 'Level 3', 'Level 4']
+    }, {
+        name: 'Coaching Experience ',
+        value: ['0 - 5 years', '6 - 10 years', '11 - 15 years', '16 - 20 years', 'More than 20 years']
+    }];
+
+    $scope.filterActive = 0;
+    $scope.selectedFilters = {};
+
+    $scope.changeFilter = function(data) {
+        $scope.filterActive = data;
+    };
+})
+
+.controller('AthleteCoachProfileCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("athletes/athlete-coach-profile");
+    $scope.menutitle = NavigationService.makeActiveCoach("Search Coaches");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getNavAthlete();
+
+    $scope.openReject = function() {
+        var modalInstance = $uibModal.open({
+            scope: $scope,
+            templateUrl: 'views/modal/modal-reject.html'
+        });
+    };
+})
+
 .controller('AthleteBlogDetailCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("athletes/athlete-blog-detail");
