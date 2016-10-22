@@ -53,12 +53,6 @@ var navigationservice = angular.module('navigationservice', [])
         icon: "trophy",
         subnav: []
     },{
-        name: "Blogs",
-        classis: "active",
-        sref: "athlete-blog", //Keep sref empty if subnav
-        icon: "archive",
-        subnav: []
-    },{
         name: "My Coach",
         classis: "active",
         sref: "athlete-mycoach", //Keep sref empty if subnav
@@ -69,6 +63,12 @@ var navigationservice = angular.module('navigationservice', [])
         classis: "active",
         sref: "athlete-search-coach", //Keep sref empty if subnav
         icon: "magnifier",
+        subnav: []
+    },{
+        name: "Blogs",
+        classis: "active",
+        sref: "athlete-blog", //Keep sref empty if subnav
+        icon: "archive",
         subnav: []
     }];
 
