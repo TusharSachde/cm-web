@@ -5,23 +5,24 @@
                 <div class="widget">
                     <div class="table-area">
                         <div class="widget-title">
-                            <div class="pull-right">
-                                <a class="btn btn-primary btn-relative" ui-sref="coach-blog-create">Create Blog
-                              </a>
-                            </div>
                             <h3 class="text-uppercase">Blogs</h3>
                         </div>
                         <div class="row">
                             <div class="col-md-3 col-sm-4 col-xs-12" ng-repeat="d in data">
                                 <div class="blog-list">
                                     <div class="blog-body">
+                                        <div class="blog-title">
+                                            <h4 class="card-title" ui-sref="athlete-blog-detail">
+                                            {{d.title}}
+                                        </h4>
+                                            <h5>
+                                          {{d.author}}
+                                        </h5>
+                                        </div>
                                         <div class="blog-img" ui-sref="athlete-blog-detail">
                                             <img src="{{d.img}}" class="img-responsive" alt="">
                                         </div>
                                         <div class="blog-title">
-                                            <h4 class="card-title" ui-sref="athlete-blog-detail">
-                                              {{d.title}}
-                                          </h4>
                                             <div class="rating-date" ui-sref="athlete-blog-detail">
                                                 <span class="small-text">{{d.date}}</span>
                                             </div>

@@ -732,6 +732,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         img: 'img/ground.png',
         content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
         date: '4th October 2015',
+        author:'by Jhon Hanse',
         ratingup: '4',
         ratingdown: '1',
     }, {
@@ -739,6 +740,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         img: 'img/kohlidhoni.jpg',
         content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
         date: '6th June 2015',
+            author:'by Ambrose Dzousa',
         ratingup: '3',
         ratingdown: '2',
     }, {
@@ -746,6 +748,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         img: 'img/i.jpeg',
         content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
         date: '10th May 2015',
+            author:'by Jhon Hanse',
         ratingup: '2',
         ratingdown: '2',
     }];
@@ -824,6 +827,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         img: 'img/ground.png',
         content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
         date: '4th October 2015',
+        author:'by Jhon Hanse',
         ratingup: '4',
         ratingdown: '1',
     }, {
@@ -831,6 +835,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         img: 'img/kohlidhoni.jpg',
         content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
         date: '6th June 2015',
+            author:'by Ambrose Dzousa',
         ratingup: '3',
         ratingdown: '2',
     }, {
@@ -838,6 +843,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         img: 'img/i.jpeg',
         content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
         date: '10th May 2015',
+            author:'by Jhon Hanse',
         ratingup: '2',
         ratingdown: '2',
     }];

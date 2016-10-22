@@ -47,25 +47,39 @@
                                     Other Blogs
                                   </h4>
                               </div>
-                              <a ui-ref="coach-blog-detail" ng-repeat="d in data">
-                                  <div class="blog-list blog-inside-list">
+                              <div class="other-blog">
+                                <a ui-ref="coach-blog-detail" ng-repeat="d in data">
+                                  <div class="blog-list">
                                       <div class="blog-body">
-                                          <div class="blog-img" ui-sref="coach-blog-detail">
+                                          <div class="blog-title">
+                                              <h4 class="card-title" ui-sref="athlete-blog-detail">
+                                              {{d.title}}
+                                          </h4>
+                                              <h5>
+                                            {{d.author}}
+                                          </h5>
+                                          </div>
+                                          <div class="blog-img" ui-sref="athlete-blog-detail">
                                               <img src="{{d.img}}" class="img-responsive" alt="">
                                           </div>
                                           <div class="blog-title">
-                                              <h4 class="card-title" ui-sref="coach-blog-detail">
-                                                      {{d.title}}
-                                              </h4>
+                                              <div class="rating-date" ui-sref="athlete-blog-detail">
+                                                  <span class="small-text">{{d.date}}</span>
+                                              </div>
+                                              <p class="card-cont" ui-sref="athlete-blog-detail" ng-bind-html="d.content">
+                                                  <!-- {{}} -->
+                                              </p>
                                               <div class="rating-blog">
                                                   <span class="rate-card rateup"><i class="ln ln-thumbs-up"></i>{{d.ratingup}}</span>
                                                   <span class="rate-card ratedown"><i class="ln ln-thumbs-down"></i>{{d.ratingdown}}</span>
                                               </div>
-                                              <div class="cleafix"></div>
+                                              <div class="clearfix"></div>
                                           </div>
                                       </div>
                                   </div>
-                              </a>
+                                </a>
+                              </div>
+
                           </div>
                       </div>
                   </div>
