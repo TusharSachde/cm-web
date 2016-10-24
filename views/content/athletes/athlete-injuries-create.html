@@ -1,0 +1,75 @@
+<div class="panel-content ng-scope">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget">
+                <div class="table-area">
+                    <div class="widget-title">
+                        <h3 class="text-uppercase">{{title}}</h3>
+                    </div>
+                    <form name="addinjuries" ng-submit="injuries(formData);">
+                        <div class="round-form">
+                            <!--<p>All the below fields are mandatory.</p>-->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'form-invalid': addinjuries.name.$invalid && addinjuries.name.$touched}">
+                                        <label>Name:
+                                          <!-- <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Enter the name of the injuries" popover-trigger="'mouseenter'"></i> -->
+                                        </label>
+                                        <input type="text" name="name" ng-model="formData.name" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': addinjuries.injurydate.$invalid && addinjuries.injurydate.$touched}">
+                                        <label>Injury Date:
+                                          <!-- <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Enter the date that the injuriess starts on" popover-trigger="'mouseenter'"></i> -->
+                                        </label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" uib-datepicker-popup ng-model="addinjuries.injurydate" is-open="popup.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                            <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default ht34" ng-click="popup.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                        </div>
+                                    </div>
+                                  <div class="form-group" ng-class="{'form-invalid': registerAthletes.severity.$invalid && registerAthletes.severity.$touched}">
+                                    <label>Severity:</label>
+                                    <select name="severity" ng-model="formData.severity" class="form-control" required>
+                                        <option  value=""  selected disabled>Select</option>
+                                        <option value="Minor">Minor</option>
+                                        <option value="Moderate">Moderate</option>
+                                        <option value="Severe">Severe</option>
+                                    </select>
+                                  </div>
+                                    <div class="form-group" ng-class="{'form-invalid': addinjuries.resumedate.$invalid && addinjuries.resumedate.$touched}">
+                                        <label>Resume Training Date:
+                                          <!-- <i class="fa fa-info-circle" aria-hidden="true" uib-popover="Enter the date that the injuries ends on (this maybe the same as the start date for single day injuriess)" popover-trigger="'mouseenter'"></i> -->
+                                        </label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" uib-datepicker-popup ng-model="addinjuries.resumedate" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                            <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default ht34" ng-click="popup1.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'form-invalid': addinjuries.practitioner.$invalid && addinjuries.practitioner.$touched}">
+                                        <label>Prescribing Practitioner:
+                                          <!-- <i class="fa fa-info-circle" aria-hidden="true" uib-popover="EFree text, include any information you want your athletes to see prior to the injuries. This could include Key information, goals and objectives, target performances etc." popover-trigger="'mouseenter'"></i> -->
+                                        </label>
+                                        <textarea name="freeText" ng-model="addinjuries.practitioner" class="form-control" rows="9" cols="50" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="made-form text-center login-section ">
+                            <button class="btn btn-blue btn-round" type="submit">Save</button>
+                            <a class="btn btn-red btn-round" type="submit" ui-sref="athlete-injuries">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

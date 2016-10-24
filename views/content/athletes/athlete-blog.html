@@ -26,12 +26,10 @@
                                             <div class="rating-date" ui-sref="athlete-blog-detail">
                                                 <span class="small-text">{{d.date}}</span>
                                             </div>
-                                            <p class="card-cont" ui-sref="athlete-blog-detail" ng-bind-html="d.content">
-                                                <!-- {{}} -->
-                                            </p>
+                                            <p class="card-cont" ui-sref="athlete-blog-detail" ng-bind-html="d.content">                                            </p>
                                             <div class="rating-blog">
-                                                <span class="rate-card rateup"><i class="ln ln-thumbs-up"></i>{{d.ratingup}}</span>
-                                                <span class="rate-card ratedown"><i class="ln ln-thumbs-down"></i>{{d.ratingdown}}</span>
+                                                <span class="rate-card rateup" ng-class="{'up': like==1}" ng-click="goLike(1)"><i class="ln ln-thumbs-up"></i>{{d.ratingup}}</span>
+                                                <span class="rate-card ratedown"><i class="ln ln-thumbs-down" ng-class="{'dn': like==-1}" ng-click="goLike(-1)"></i>{{d.ratingdown}}</span>
                                             </div>
                                             <div class="clearfix"></div>
                                         </div>

@@ -55,20 +55,6 @@
                             </div>
                         </div>
                     </div>
-                    <!--<div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group" ng-class="{'form-invalid': editprofile.password.$invalid && editprofile.password.$touched}">
-                                            <label>Password:</label>
-                                            <input type="password" name="password" ng-model="formData.password" class="form-control" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group" ng-class="{'form-invalid': editprofile.password2.$invalid && editprofile.password2.$touched}">
-                                            <label>Re-enter Password:</label>
-                                            <input type="password" name="password2" ng-model="formData.password2" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>-->
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group" ng-class="{'form-invalid': editprofile.gender.$invalid && editprofile.gender.$touched}">
@@ -206,32 +192,32 @@
                 </div>
                 </form>
                 <div class="change-pwsd">
-                    <form name="editprofilepassword" ng-submit="editprofilepassword(formData); "">
+                    <form name="editprofilepassword" ng-submit="editprofilepassword(formData); " ">
                         <label>Change Password:</label>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group" ng-class="{'form-invalid': editprofilepassword.password.$invalid && editprofilepassword.password.$touched}">
+                        <div class="row ">
+                            <div class="col-md-6 ">
+                                <div class="form-group " ng-class="{ 'form-invalid': editprofilepassword.password.$invalid && editprofilepassword.password.$touched} ">
                                     <label>Enter Current Password:</label>
-                                    <input type="password" name="password" ng-model="formData.password" class="form-control" required>
+                                    <input type="password " name="password " ng-model="formData.password " class="form-control " required>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group" ng-class="{'form-invalid': editprofilepassword.password.$invalid && editprofilepassword.password.$touched}">
+                        <div class="row ">
+                            <div class="col-md-6 ">
+                                <div class="form-group " ng-class="{ 'form-invalid': editprofilepassword.password.$invalid && editprofilepassword.password.$touched} ">
                                     <label>New Password:</label>
-                                    <input type="password" name="password" ng-model="formData.password" class="form-control" required>
+                                    <input type="password " name="password " ng-model="formData.password " class="form-control " required>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group" ng-class="{'form-invalid': editprofilepassword.password2.$invalid && editprofilepassword.password2.$touched}">
+                            <div class="col-md-6 ">
+                                <div class="form-group " ng-class="{ 'form-invalid': editprofilepassword.password2.$invalid && editprofilepassword.password2.$touched} ">
                                     <label>Confirm Password:</label>
-                                    <input type="password" name="password2" ng-model="formData.password2" class="form-control" required>
+                                    <input type="password " name="password2 " ng-model="formData.password2 " class="form-control " required>
                                 </div>
                             </div>
                         </div>
-                        <div class="made-form text-right">
-                            <button class="btn btn-blue btn-round" type="submit">Save</button>
+                        <div class="made-form text-right ">
+                            <button class="btn btn-blue btn-round " type="submit ">Save</button>
                         </div>
                     </form>
                 </div>

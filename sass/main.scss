@@ -447,7 +447,7 @@ $trans-black: rgba( black, .15);
         display: inline-block;
         min-width: 70px;
         overflow: hidden;
-        margin: 0 2px;
+        margin: 0 10px;
 
         > p {
             line-height: 100%;
@@ -2704,6 +2704,11 @@ textarea {
 .filter-label {
     padding: 8px 20px;
     cursor: pointer;
+}
+@media screen\0 {
+  .admin-details {
+    background:#fff;
+  }
 }
 @import "fancybox-override";
 @import "template/responsive";

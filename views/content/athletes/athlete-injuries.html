@@ -4,54 +4,43 @@
             <div class="widget">
                 <div class="table-area">
                     <div class="widget-title">
-                        <div class="pull-right">
-                            <form class="search-form mr-form ng-pristine ng-valid"><input type="text" ng-change="showAllCountries(true)" placeholder="Coach Name or Country..." ng-model="search.keyword" class="form-control"> <button type="submit"><i class="fa fa-search"></i></button></form>
-                        </div>
-                        <div class="pull-right filter-label" ng-click="athletesFilter()">
-                            <i class="fa fa-filter"></i> Filter
-                            <!-- by Age / Coaching Focus / Gender / Credentials / Coaching Experience  -->
-                        </div>
-                        <h3 class="text-uppercase">Coaches</h3>
+                      <div class="pull-right">
+                          <a class="btn btn-primary" ui-sref="athlete-injuries-create">Add Injury
+                          </a>
+                      </div>
+                        <h3 class="text-uppercase">Injuries</h3>
                     </div>
                     <div class="table-responsive" style="">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th></th>
-                                    <th>Name</th>
-                                    <th>Qualification &amp; Credentials</th>
-                                    <th>YEARS COACHING</th>
-                                    <th>Status</th>
+                                    <th>Injury Name(s)</th>
+                                    <th>Injury Date</th>
+                                    <th>Severity</th>
+                                    <th>Resume Training date</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="">
+                                <tr>
+                                    <td>Leg Injury</td>
+                                    <td>30-Jan-2016</td>
+                                    <td>Minor</td>
+                                    <td>3-Feb-2016</td>
                                     <td>
-                                        <div class="user-img">
-                                            <img src="img/img-placeholder.png" class="dp" alt="Rahul Dravid">
-                                        </div>
-                                    </td>
-                                    <td>John Damon</td>
-                                    <td>Level 4</td>
-                                    <td>2 years</td>
-                                    <td><span class="primary">Available</span></td>
-                                    <td>
-                                        <a class="btn btn-primary" tooltip-placement="top" uib-tooltip="View" ui-sref="athlete-coach-profile"><i class="ln ln-eye"></i></a>
+                                        <a class="btn btn-blue" ui-sref="athlete-injuries-edit" tooltip-placement="bottom" uib-tooltip="Edit"><i class="ln ln-pencil"></i></a>
+                                        <a class="btn btn-red" tooltip-placement="bottom" uib-tooltip="Delete"><span class="ln ln-trash2"></span></a>
                                     </td>
                                 </tr>
-                                <tr class="ng-scope">
+
+                                <tr>
+                                    <td>Arm Injury</td>
+                                    <td>12-Dec-2015</td>
+                                    <td>Major</td>
+                                    <td>24-Dec-2015</td>
                                     <td>
-                                        <div class="user-img">
-                                            <img src="img/img-placeholder.png" class="dp" alt="Rahul Dravid">
-                                        </div>
-                                    </td>
-                                    <td>Matt Smith</td>
-                                    <td>Level 3</td>
-                                    <td>4 years</td>
-                                    <td> <span class="danger">Fully Subscribed</span></td>
-                                    <td>
-                                        <a class="btn btn-primary" tooltip-placement="top" uib-tooltip="View" ui-sref="athlete-coach-profile"><i class="ln ln-eye"></i></a>
+                                        <a class="btn btn-blue" ui-sref="athlete-injuries-edit" tooltip-placement="bottom" uib-tooltip="Edit"><i class="ln ln-pencil"></i></a>
+                                        <a class="btn btn-red" tooltip-placement="bottom" uib-tooltip="Delete"><span class="ln ln-trash2"></span></a>
                                     </td>
                                 </tr>
                             </tbody>

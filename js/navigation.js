@@ -65,6 +65,12 @@ var navigationservice = angular.module('navigationservice', [])
         icon: "magnifier",
         subnav: []
     },{
+        name: "Injuries",
+        classis: "active",
+        sref: "athlete-injuries", //Keep sref empty if subnav
+        icon: "first-aid",
+        subnav: []
+    },{
         name: "Blogs",
         classis: "active",
         sref: "athlete-blog", //Keep sref empty if subnav

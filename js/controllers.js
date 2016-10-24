@@ -678,8 +678,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         email: 'sachin@gmail.com',
         gender: 'male',
         contact: '+919098765324',
-        dob: new Date(),
+        dob: new Date('January 14, 2017'),
         country: 'ind',
+        sport: 'Cricket',
+        about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien. Vivamus sodales et libero ac consectetur. Curabitur hendrerit',
         details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien. Vivamus sodales et libero ac consectetur. Curabitur hendrerit lacus nisi, eget euismod felis gravida vitae. Nullam faucibus maximus eros, non facilisis magna tincidunt quis. Ut suscipit fringilla quam eu scelerisque. Proin orci lacus, condimentum eget urna at, aliquam pellentesque mauris. Aenean rutrum diam tortor, sed finibus nibh condimentum ac. Sed et blandit arcu.',
         achivements: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien. Vivamus sodales et libero ac consectetur. Curabitur hendrerit lacus nisi, eget euismod felis gravida vitae. Nullam faucibus maximus eros, non facilisis magna tincidunt quis. Ut suscipit fringilla quam eu scelerisque. Proin orci lacus, condimentum eget urna at, aliquam pellentesque mauris. Aenean rutrum diam tortor, sed finibus nibh condimentum ac. Sed et blandit arcu.',
         review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, turpis at auctor interdum, enim neque placerat diam, ac faucibus sem elit in sapien. Vivamus sodales et libero ac consectetur. Curabitur hendrerit lacus nisi, eget euismod felis gravida vitae. Nullam faucibus maximus eros, non facilisis magna tincidunt quis. Ut suscipit fringilla quam eu scelerisque. Proin orci lacus, condimentum eget urna at, aliquam pellentesque mauris. Aenean rutrum diam tortor, sed finibus nibh condimentum ac. Sed et blandit arcu.',
@@ -707,52 +709,87 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('AthleteMyCoachCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("athletes/athlete-mycoach");
-    $scope.menutitle = NavigationService.makeActiveCoach("My Coach");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getNavAthlete();
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("athletes/athlete-mycoach");
+        $scope.menutitle = NavigationService.makeActiveCoach("My Coach");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getNavAthlete();
 
-    $scope.openReject = function() {
-        var modalInstance = $uibModal.open({
-            scope: $scope,
-            templateUrl: 'views/modal/modal-reject.html'
-        });
-    };
-})
-
-.controller('AthleteBlogCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("athletes/athlete-blog");
-    $scope.menutitle = NavigationService.makeActiveCoach("Blog");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getNavAthlete();
-    $scope.data = [{
-        title: 'The Strongest Woman I’ve Ever Known Ever Known',
-        img: 'img/ground.png',
-        content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
-        date: '4th October 2015',
-        author:'by Jhon Hanse',
-        ratingup: '4',
-        ratingdown: '1',
-    }, {
-        title: 'Dhoni and Kohli Together',
-        img: 'img/kohlidhoni.jpg',
-        content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
-        date: '6th June 2015',
-            author:'by Ambrose Dzousa',
-        ratingup: '3',
-        ratingdown: '2',
-    }, {
-        title: 'What You Dont Know About: Being a GM',
-        img: 'img/i.jpeg',
-        content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
-        date: '10th May 2015',
-            author:'by Jhon Hanse',
-        ratingup: '2',
-        ratingdown: '2',
-    }];
-})
+        $scope.openReject = function() {
+            var modalInstance = $uibModal.open({
+                scope: $scope,
+                templateUrl: 'views/modal/modal-reject.html'
+            });
+        };
+    })
+    .controller('AthleteInjuriesCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("athletes/athlete-injuries");
+        $scope.menutitle = NavigationService.makeActiveCoach("Injuries");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getNavAthlete();
+    })
+    .controller('AthleteInjuriesCreateCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("athletes/athlete-injuries-create");
+        $scope.menutitle = NavigationService.makeActiveCoach("Injuries");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getNavAthlete();
+        $scope.title = "Create Injury";
+    })
+    .controller('AthleteInjuriesEditCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("athletes/athlete-injuries-create");
+        $scope.menutitle = NavigationService.makeActiveCoach("Injuries");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getNavAthlete();
+        $scope.title = "Edit Injury";
+        $scope.formData = [{
+            name: 'Leg Injury',
+            injuryDate: new Date("January 14, 2017 11:13:00"),
+            severity: 'Minor',
+            resumeDate: new Date("January 15, 2017 11:13:00"),
+            prescribingPractitioner: ''
+        }, {
+            name: 'Arm Injury',
+            injuryDate: new Date("January 14, 2017 11:13:00"),
+            severity: 'Minor',
+            resumeDate: new Date("January 15, 2017 11:13:00"),
+            prescribingPractitioner: ''
+        }];
+    })
+    .controller('AthleteBlogCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("athletes/athlete-blog");
+        $scope.menutitle = NavigationService.makeActiveCoach("Blog");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getNavAthlete();
+        $scope.data = [{
+            title: 'The Strongest Woman I’ve Ever Known Ever Known',
+            img: 'img/ground.png',
+            content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
+            date: '4th October 2015',
+            author: 'by Jhon Hanse',
+            ratingup: '4',
+            ratingdown: '1',
+        }, {
+            title: 'Dhoni and Kohli Together',
+            img: 'img/kohlidhoni.jpg',
+            content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
+            date: '6th June 2015',
+            author: 'by Ambrose Dzousa',
+            ratingup: '3',
+            ratingdown: '2',
+        }, {
+            title: 'What You Dont Know About: Being a GM',
+            img: 'img/i.jpeg',
+            content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
+            date: '10th May 2015',
+            author: 'by Jhon Hanse',
+            ratingup: '2',
+            ratingdown: '2',
+        }];
+    })
 
 .controller('AthleteSearchCtrl', function($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
     //Used to name the .html file
@@ -808,10 +845,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getNavAthlete();
 
-    $scope.openReject = function() {
+    $scope.openMessageBox = function() {
         var modalInstance = $uibModal.open({
             scope: $scope,
-            templateUrl: 'views/modal/modal-reject.html'
+            templateUrl: 'views/modal/modal-message-box.html'
         });
     };
 })
@@ -827,7 +864,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         img: 'img/ground.png',
         content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
         date: '4th October 2015',
-        author:'by Jhon Hanse',
+        author: 'by Jhon Hanse',
         ratingup: '4',
         ratingdown: '1',
     }, {
@@ -835,7 +872,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         img: 'img/kohlidhoni.jpg',
         content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
         date: '6th June 2015',
-            author:'by Ambrose Dzousa',
+        author: 'by Ambrose Dzousa',
         ratingup: '3',
         ratingdown: '2',
     }, {
@@ -843,7 +880,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         img: 'img/i.jpeg',
         content: " <p>Knowledge is power, and we were arming ourselves for the toughest fight of our lives.</p>",
         date: '10th May 2015',
-            author:'by Jhon Hanse',
+        author: 'by Jhon Hanse',
         ratingup: '2',
         ratingdown: '2',
     }];

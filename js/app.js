@@ -84,9 +84,24 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     })
 
     .state('athlete-mycoach', {
-        url: "/athlete/athlete-mycoach",
+        url: "/athlete/mycoach",
         templateUrl: "views/template.html",
         controller: 'AthleteMyCoachCtrl'
+    })
+    .state('athlete-injuries', {
+        url: "/athlete/injuries",
+        templateUrl: "views/template.html",
+        controller: 'AthleteInjuriesCtrl'
+    })
+    .state('athlete-injuries-create', {
+        url: "/athlete/injury/create",
+        templateUrl: "views/template.html",
+        controller: 'AthleteInjuriesCreateCtrl'
+    })
+    .state('athlete-injuries-edit', {
+        url: "/athlete/injury/edit",
+        templateUrl: "views/template.html",
+        controller: 'AthleteInjuriesEditCtrl'
     })
 
     .state('faq', {
